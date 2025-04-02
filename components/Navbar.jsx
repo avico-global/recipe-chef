@@ -254,7 +254,7 @@ const Navbar = () => {
       {/* Category navigation - updated to match eBay's style exactly */}
       <div className="hidden md:block bg-white border-t border-gray-200">
         <div className="container mx-auto">
-          <div className="flex items-center space-x-6 py-2 px-4 text-sm overflow-x-auto">
+          <div className="flex items-center justify-center space-x-6 py-2 px-4 text-sm overflow-x-auto">
             <Link
               href="/live-cooking"
               className="text-gray-700 hover:text-blue-600 whitespace-nowrap"
