@@ -3,12 +3,14 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import RecipeCard from "../../components/RecipeCard";
 import FilterSidebar from "../../components/FilterSidebar";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 /**
  * RecipesList component - displays a list of recipes with filtering options
- * Similar to eBay's product listings with sidebar filters and grid layout
+ * Supports filtering via both query parameters and path segments (/recipes/cuisineType)
  */
-export default function RecipesList() {
+export default function RecipesList({ cuisineTypeFromPath }) {
   const router = useRouter();
   const { search, tag } = router.query;
 
@@ -18,7 +20,7 @@ export default function RecipesList() {
   const [isLoading, setIsLoading] = useState(true);
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [currentFilters, setCurrentFilters] = useState({
-    cuisineType: tag ? [tag] : [],
+    cuisineType: cuisineTypeFromPath ? [cuisineTypeFromPath] : tag ? [tag] : [],
     dietary: [],
     mealType: [],
     difficulty: "",
@@ -231,7 +233,17 @@ export default function RecipesList() {
         cuisineType: [...prev.cuisineType, tag],
       }));
     }
-  }, [search, tag]);
+
+    if (
+      cuisineTypeFromPath &&
+      !currentFilters.cuisineType.includes(cuisineTypeFromPath)
+    ) {
+      setCurrentFilters((prev) => ({
+        ...prev,
+        cuisineType: [...prev.cuisineType, cuisineTypeFromPath],
+      }));
+    }
+  }, [search, tag, cuisineTypeFromPath]);
 
   // Apply filters and search
   useEffect(() => {
@@ -290,6 +302,14 @@ export default function RecipesList() {
 
   // Handle filter changes
   const handleFilterChange = (filters) => {
+    // If we have a cuisine type from path, make sure it stays in the filters
+    if (
+      cuisineTypeFromPath &&
+      !filters.cuisineType.includes(cuisineTypeFromPath)
+    ) {
+      filters.cuisineType = [...filters.cuisineType, cuisineTypeFromPath];
+    }
+
     setCurrentFilters(filters);
     setIsMobileFilterOpen(false);
   };
@@ -321,97 +341,120 @@ export default function RecipesList() {
   return (
     <>
       <Head>
-        <title>Browse Recipes - Recipe Chef</title>
+        <title>
+          {cuisineTypeFromPath
+            ? `${cuisineTypeFromPath} Recipes - Recipe Chef`
+            : "Browse Recipes - Recipe Chef"}
+        </title>
         <meta
           name="description"
-          content="Browse and filter delicious recipes from around the world"
+          content={
+            cuisineTypeFromPath
+              ? `Browse delicious ${cuisineTypeFromPath} recipes from around the world`
+              : "Browse and filter delicious recipes from around the world"
+          }
         />
       </Head>
+      <Navbar />
 
-      <div className="container-custom py-6">
-        <div className="flex items-center justify-between mb-6">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
-            Browse Recipes
-          </h1>
-
-          {/* Mobile filter toggle */}
-          <button
-            className="md:hidden inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
-            onClick={toggleMobileFilter}
-          >
-            <svg
-              className="-ml-0.5 mr-2 h-4 w-4"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-              />
-            </svg>
-            Filters
-          </button>
-        </div>
-
-        {/* Search Bar */}
-        <div className="mb-6">
-          <form
-            onSubmit={handleSearchSubmit}
-            className="flex rounded-md shadow-sm"
-          >
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={handleSearchChange}
-              className="flex-1 min-w-0 block w-full px-3 py-2 rounded-l-md text-sm border-gray-300 focus:outline-none focus:ring-primary focus:border-primary"
-              placeholder="Search recipes..."
-            />
-            <button
-              type="submit"
-              className="inline-flex items-center px-4 py-2 border border-transparent rounded-r-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </button>
-          </form>
-        </div>
-
-        <div className="flex flex-col md:flex-row gap-6">
-          {/* Mobile Filter Sidebar */}
-          {isMobileFilterOpen && (
-            <div className="fixed inset-0 z-40 md:hidden">
-              <div
-                className="absolute inset-0 bg-black/50"
-                onClick={toggleMobileFilter}
-              ></div>
-              <div className="absolute right-0 top-0 bottom-0 w-full max-w-xs bg-white shadow-xl p-4 overflow-y-auto">
-                <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-lg font-semibold text-gray-800">
-                    Filters
-                  </h2>
-                  <button
-                    className="text-gray-500 hover:text-gray-700"
-                    onClick={toggleMobileFilter}
+      <div className="w-full bg-gray-50">
+        <div className="container mx-auto py-8 bg-gray-50">
+          {cuisineTypeFromPath && (
+            <div className="mb-6 flex items-center">
+              <div className="bg-primary/10 text-primary px-4 py-2 rounded-lg flex items-center">
+                <span className="font-medium">
+                  Filtered by cuisine: {cuisineTypeFromPath}
+                </span>
+                <button
+                  onClick={() => router.push("/recipes")}
+                  className="ml-2 text-primary hover:text-primary-hover focus:outline-none"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
                   >
+                    <path
+                      fillRule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          )}
+
+          <div className="flex flex-col md:flex-row gap-8 mb-12">
+            {/* Mobile Filter Sidebar */}
+            {isMobileFilterOpen && (
+              <div className="fixed inset-0 z-40 md:hidden overflow-hidden">
+                <div
+                  className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                  onClick={toggleMobileFilter}
+                ></div>
+                <div className="absolute inset-y-0 right-0 w-full max-w-xs bg-white shadow-xl p-6 overflow-y-auto transform transition-transform duration-300 ease-in-out">
+                  <div className="flex items-center justify-between mb-6">
+                    <h2 className="text-xl font-bold text-gray-900">Filters</h2>
+                    <button
+                      className="text-gray-500 hover:text-gray-700 focus:outline-none"
+                      onClick={toggleMobileFilter}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <FilterSidebar
+                    onFilterChange={handleFilterChange}
+                    lockedCuisineType={cuisineTypeFromPath}
+                    initialFilters={currentFilters}
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Desktop Filter Sidebar */}
+            <div className="hidden md:block md:w-1/4 lg:w-1/5 flex-shrink-0">
+              <div className="sticky top-5">
+                <FilterSidebar
+                  onFilterChange={handleFilterChange}
+                  lockedCuisineType={cuisineTypeFromPath}
+                  initialFilters={currentFilters}
+                />
+              </div>
+            </div>
+
+            {/* Recipes Grid */}
+            <div className="flex-1">
+              {isLoading ? (
+                <div className="flex flex-col justify-center items-center py-24 space-y-4">
+                  <div className="relative">
+                    <div className="w-16 h-16 border-t-4 border-b-4 border-primary rounded-full animate-spin"></div>
+                    <div className="w-16 h-16 border-t-4 border-primary/30 rounded-full absolute top-0 left-0 animate-ping"></div>
+                  </div>
+                  <span className="text-lg text-gray-600 font-medium">
+                    Loading delicious recipes...
+                  </span>
+                </div>
+              ) : filteredRecipes.length === 0 ? (
+                <div className="bg-white rounded-xl shadow-md p-8 text-center">
+                  <div className="inline-flex items-center justify-center p-4 bg-gray-100 rounded-full mb-6">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
+                      className="h-12 w-12 text-gray-500"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -420,87 +463,87 @@ export default function RecipesList() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M6 18L18 6M6 6l12 12"
+                        d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    No recipes found
+                  </h3>
+                  <p className="text-gray-500 mb-6 max-w-md mx-auto">
+                    Can&apos;t find what you&apos;re looking for? Try adjusting
+                    your filters or search for something different.
+                  </p>
+                  <button
+                    onClick={() => {
+                      setSearchTerm("");
+                      setCurrentFilters({
+                        cuisineType: cuisineTypeFromPath
+                          ? [cuisineTypeFromPath]
+                          : [],
+                        dietary: [],
+                        mealType: [],
+                        difficulty: "",
+                        cookingTime: "",
+                      });
+                    }}
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                  >
+                    Clear Filters
                   </button>
                 </div>
-                <FilterSidebar onFilterChange={handleFilterChange} />
-              </div>
+              ) : (
+                <>
+                  <div className="flex justify-between items-center mb-6">
+                    <p className="text-gray-600">
+                      Showing{" "}
+                      <span className="font-medium text-gray-900">
+                        {filteredRecipes.length}
+                      </span>{" "}
+                      {filteredRecipes.length === 1 ? "recipe" : "recipes"}
+                    </p>
+
+                    <div className="flex items-center space-x-2">
+                      <span className="text-sm text-gray-500">Sort by:</span>
+                      <select className="text-sm border-gray-300 rounded-md focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                        <option>Most Popular</option>
+                        <option>Newest</option>
+                        <option>Cook Time</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {filteredRecipes.map((recipe) => (
+                      <RecipeCard key={recipe.id} recipe={recipe} />
+                    ))}
+                  </div>
+
+                  <div className="mt-10 flex justify-center">
+                    <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                      Load More Recipes
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 ml-2"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </>
+              )}
             </div>
-          )}
-
-          {/* Desktop Filter Sidebar */}
-          <div className="hidden md:block md:w-1/4 lg:w-1/5">
-            <FilterSidebar onFilterChange={handleFilterChange} />
-          </div>
-
-          {/* Recipes Grid */}
-          <div className="flex-1">
-            {isLoading ? (
-              <div className="flex justify-center items-center py-20">
-                <svg
-                  className="animate-spin -ml-1 mr-3 h-8 w-8 text-primary"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <circle
-                    className="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                  ></circle>
-                  <path
-                    className="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                  ></path>
-                </svg>
-                <span className="text-lg text-gray-600">
-                  Loading recipes...
-                </span>
-              </div>
-            ) : filteredRecipes.length === 0 ? (
-              <div className="bg-white rounded-lg shadow-md p-6 text-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-12 w-12 mx-auto text-gray-400 mb-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                <h3 className="text-lg font-medium text-gray-900 mb-2">
-                  No recipes found
-                </h3>
-                <span className="text-sm text-gray-500">
-                  Can&apos;t find what you&apos;re looking for?
-                </span>
-              </div>
-            ) : (
-              <>
-                <div className="mb-4 text-sm text-gray-600">
-                  Showing {filteredRecipes.length}{" "}
-                  {filteredRecipes.length === 1 ? "recipe" : "recipes"}
-                </div>
-                <div className="recipe-grid">
-                  {filteredRecipes.map((recipe) => (
-                    <RecipeCard key={recipe.id} recipe={recipe} />
-                  ))}
-                </div>
-              </>
-            )}
           </div>
         </div>
+      </div>
+      <div className="container mx-auto">
+        <Footer />
       </div>
     </>
   );

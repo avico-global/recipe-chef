@@ -5,6 +5,7 @@ import Shorts from "@/components/Shorts";
 import Categories from "@/components/Categories";
 import Head from "next/head";
 import Footer from "@/components/Footer";
+import TrendingRecipes from "@/components/TrendingRecipes";
 
 export default function Home() {
   return (
@@ -21,10 +22,11 @@ export default function Home() {
 
       {/* Header */}
       <Navbar />
-      <main className="max-w-screen-xl flex flex-col items-center w-full mx-auto">
+      <main className="container flex flex-col items-center w-full mx-auto">
         <Carousel />
         <Shorts />
         <Categories />
+        <TrendingRecipes />
         <Footer />
       </main>
     </div>

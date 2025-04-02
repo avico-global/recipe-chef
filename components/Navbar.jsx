@@ -112,7 +112,7 @@ const Navbar = () => {
 
           {/* Search bar with category dropdown - UPDATED with rounded UI */}
           <div className="flex-grow">
-            <form onSubmit={handleSearch} className="flex w-full">
+            <form onSubmit={handleSearch} className="flex w-full gap-2">
               <div className="flex w-full border border-gray-400 rounded-full overflow-hidden">
                 <div
                   className="flex items-center px-4 py-2 bg-gray-100 cursor-pointer hover:bg-gray-200 border-r border-gray-400"
@@ -134,14 +134,13 @@ const Navbar = () => {
                   placeholder="Search for recipes, ingredients, cuisines..."
                   onClick={() => setIsCategoryDropdownOpen(false)}
                 />
-
-                <button
-                  type="submit"
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-5 transition-colors duration-300 border-0"
-                >
-                  Search
-                </button>
               </div>
+              <button
+                type="submit"
+                className="bg-blue-600 hover:bg-blue-700 rounded-full text-white font-medium py-2 px-6 transition-colors duration-300 border-0"
+              >
+                Search
+              </button>
 
               {/* Categories dropdown styling updated */}
               {isCategoryDropdownOpen && (

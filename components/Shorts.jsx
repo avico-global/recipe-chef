@@ -1,88 +1,95 @@
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const shortsData = [
   {
     id: 1,
-    title: "Chicken Chips 😋 🔥 🙌",
-    views: "164K",
-    thumbnail:
-      "https://media.istockphoto.com/id/1356052749/photo/barbecue-chicken-drumsticks-with-chips-and-greens-on-wooden-table.jpg?s=612x612&w=0&k=20&c=8jJcQIHEdL6nbbsBQzW8D0fB92QkstBZcydUbZf0tUw=",
-    link: "/recipes/chicken-chips",
+    title: "Rainbow Cupcake Decorating",
+    views: "7.1K",
+    thumbnail: "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7",
+    videoId: "LbMxowwNRSw",
+    link: "/shorts/1",
   },
   {
     id: 2,
     title: "Crispy Chicken Chips",
     views: "8.7M",
-    thumbnail:
-      "https://plus.unsplash.com/premium_photo-1683139916670-38113db90cb9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3Jpc3B5JTIwY2hpY2tlbnxlbnwwfHwwfHx8MA%3D%3D",
-    link: "/recipes/crispy-chicken-chips",
+    thumbnail: "https://images.unsplash.com/photo-1562967916-eb82221dfb92",
+    videoId: "U58w5FnvYsU",
+    link: "/shorts/2",
   },
   {
     id: 3,
-    title: "3-ingredient chicken chips! High-protein",
+    title: "3-ingredient Coconut Balls",
     views: "1.3K",
     thumbnail:
-      "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80",
-    link: "/recipes/3-ingredient-chicken-chips",
+      "https://media.istockphoto.com/id/1179638048/photo/handmade-chocolates-with-coconut-and-honey-gourmet-chocolate-on-a-white-background.jpg?s=612x612&w=0&k=20&c=5W8BjBYWHYcYA0dQMPDEIwoRYsktzhpfNcxi5MXkMy0=",
+    videoId: "e_y_Uz83llc",
+    link: "/shorts/3",
   },
   {
     id: 4,
-    title: "Have you tried Flamin' Hot Cheetos? Air fryer",
+    title: "Flamin' Hot Cheetos Chicken",
     views: "1.4M",
-    thumbnail:
-      "https://images.unsplash.com/photo-1621754420535-683ae10e298a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hlZXRvc3xlbnwwfHwwfHx8MA%3D%3D",
-    link: "/recipes/flamin-hot-cheetos",
+    thumbnail: "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58",
+    videoId: "YnR1wQ_bfoc",
+    link: "/shorts/4",
   },
   {
     id: 5,
-    title: "Cheesy loaded fries with hot fried chicken",
+    title: "Loaded Cheesy Fries",
     views: "313K",
     thumbnail: "https://images.unsplash.com/photo-1585109649139-366815a0d713",
-    link: "/recipes/cheesy-loaded-fries",
+    videoId: "ECET3CKoeQ8",
+    link: "/shorts/5",
   },
   {
     id: 6,
-    title: "15-minute pasta hack that went viral 🍝",
+    title: "The BEST 15 minutes PASTA",
     views: "2.8M",
     thumbnail: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9",
-    link: "/recipes/viral-pasta-hack",
+    videoId: "rJOT2017z6Q",
+    link: "/shorts/6",
   },
   {
     id: 7,
-    title: "5-ingredient banana bread 🍌 No mixer needed!",
+    title: "3 ingredient 🍌 banana bread recipe",
     views: "954K",
-    thumbnail:
-      "https://images.unsplash.com/photo-1632931057819-4eefffa8e007?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFuYW5hJTIwYnJlYWR8ZW58MHx8MHx8fDA%3D",
-    link: "/recipes/easy-banana-bread",
+    thumbnail: "https://images.unsplash.com/photo-1632931057819-4eefffa8e007",
+    videoId: "p67AskPazLU",
+    link: "/shorts/7",
   },
   {
     id: 8,
     title: "Homemade bubble tea that tastes like the real thing",
     views: "3.2M",
-    thumbnail:
-      "https://images.unsplash.com/photo-1558857563-b371033873b8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnViYmxlJTIwdGVhfGVufDB8fDB8fHww",
-    link: "/recipes/homemade-bubble-tea",
+    thumbnail: "https://images.unsplash.com/photo-1558857563-b371033873b8",
+    videoId: "JO8xh5MIneU",
+    link: "/shorts/8",
   },
   {
     id: 9,
     title: "Air fryer avocado fries 🥑 Crispy outside, creamy inside",
     views: "752K",
     thumbnail: "https://images.unsplash.com/photo-1548247661-3d7905940716",
-    link: "/recipes/avocado-fries",
+    videoId: "KdxD3zVU4XE",
+    link: "/shorts/9",
   },
   {
     id: 10,
     title: "30-second frozen yogurt bark - healthy dessert!",
     views: "1.1M",
     thumbnail: "https://images.unsplash.com/photo-1488900128323-21503983a07e",
-    link: "/recipes/frozen-yogurt-bark",
+    videoId: "pBhVhefxkcw",
+    link: "/shorts/10",
   },
 ];
 
 export default function Shorts() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [hoveredItemId, setHoveredItemId] = useState(null);
 
   const scrollRight = () => {
     if (activeIndex < shortsData.length - 1) {
@@ -97,7 +104,7 @@ export default function Shorts() {
   };
 
   // Calculate visible items based on screen size
-  const visibleItems = 4;
+  const visibleItems = 5;
   const maxIndex = shortsData.length - visibleItems;
 
   return (
@@ -138,34 +145,51 @@ export default function Shorts() {
 
         <div className="relative">
           <div
-            className="flex gap-4 transition-transform duration-300 ease-in-out"
-            style={{ transform: `translateX(-${activeIndex * (250 + 16)}px)` }}
+            className="flex gap-5 transition-transform duration-300 ease-in-out"
+            style={{ transform: `translateX(-${activeIndex * (198 + 16)}px)` }}
           >
             {shortsData.map((short) => (
-              <div
-                key={short.id}
-                className="flex-shrink-0 w-[250px] rounded-xl overflow-hidden shadow-md transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
-              >
-                <Link href={short.link}>
-                  <div className="relative aspect-[9/16] group">
-                    <div className="absolute inset-0 w-full h-full">
-                      <img
-                        src={short.thumbnail}
-                        alt={short.title}
-                        className="w-full h-full object-cover rounded-t-xl"
-                      />
+              <div key={short.id}>
+                <div
+                  className="flex-shrink-0 w-[200px] rounded-xl cursor-pointer overflow-hidden transform transition-all duration-300 hover:scale-[1.02] bg-black"
+                  onMouseEnter={() => setHoveredItemId(short.id)}
+                  onMouseLeave={() => setHoveredItemId(null)}
+                >
+                  <Link href={short.link}>
+                    <div className="relative aspect-[9/16] group bg-black">
+                      <div className="absolute inset-0 w-full h-full cursor-pointer">
+                        {hoveredItemId === short.id ? (
+                          <iframe
+                            width="100%"
+                            height="100%"
+                            src={`https://www.youtube.com/embed/${short.videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${short.videoId}`}
+                            title={short.title}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                            className="w-full h-full object-cover cursor-pointer"
+                          ></iframe>
+                        ) : (
+                          <Image
+                            src={short.thumbnail}
+                            alt={short.title}
+                            fill
+                            className="object-cover"
+                          />
+                        )}
+                      </div>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/5 to-black/30 group-hover:from-black/20 group-hover:to-black/70 transition-all"></div>
-                    <div className="absolute bottom-4 left-3 right-3 z-10">
-                      <h3 className="text-white font-medium line-clamp-2 text-sm">
-                        {short.title}
-                      </h3>
-                      <p className="text-white text-opacity-80 text-xs mt-1">
-                        {short.views} views
-                      </p>
-                    </div>
-                  </div>
-                </Link>
+                  </Link>
+                </div>
+                {/* Only title and views below */}
+                <div className="mt-2">
+                  <h3 className="font-medium line-clamp-2 text-sm">
+                    {short.title}
+                  </h3>
+                  <p className="text-gray-500 text-xs mt-1">
+                    {short.views} views
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -173,46 +197,20 @@ export default function Shorts() {
           {activeIndex > 0 && (
             <button
               onClick={scrollLeft}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-90 rounded-full p-2 shadow-md z-10 hover:bg-opacity-100 transition-all"
+              className="absolute left-2 cursor-pointer top-1/2 -translate-y-1/2 bg-white bg-opacity-90 rounded-full p-2 shadow-md z-10 hover:bg-opacity-100 transition-all"
               aria-label="Previous shorts"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-5 h-5"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15.75 19.5L8.25 12l7.5-7.5"
-                />
-              </svg>
+              <ChevronLeft className="w-5 h-5" />
             </button>
           )}
 
           {activeIndex < maxIndex && (
             <button
               onClick={scrollRight}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-90 rounded-full p-2 shadow-md z-10 hover:bg-opacity-100 transition-all"
+              className="absolute right-2 top-1/2 cursor-pointer -translate-y-1/2 bg-white bg-opacity-90 rounded-full p-2 shadow-md z-10 hover:bg-opacity-100 transition-all"
               aria-label="Next shorts"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-5 h-5"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                />
-              </svg>
+              <ChevronRight className="w-5 h-5" />
             </button>
           )}
         </div>

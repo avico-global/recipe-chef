@@ -50,7 +50,31 @@ const Categories = () => {
 
   return (
     <div className="w-full py-8">
-      <h2 className="text-2xl font-bold mb-6">Explore Popular Categories</h2>
+      <div className="flex justify-between items-center mb-8">
+        <h2 className="text-3xl font-bold text-gray-900">
+          Explore Popular <span className="text-primary">Categories</span>
+        </h2>
+        <Link
+          href="/recipes"
+          className="text-primary hover:text-primary-dark font-medium flex items-center gap-2 transition-colors"
+        >
+          View All
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </Link>
+      </div>
+
       <div className="flex overflow-x-auto gap-4 pb-4 -mx-4 px-4 w-full items-center justify-between">
         {categories.map((category) => (
           <Link
