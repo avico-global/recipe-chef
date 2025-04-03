@@ -343,8 +343,8 @@ export default function RecipesList({ cuisineTypeFromPath }) {
       <Head>
         <title>
           {cuisineTypeFromPath
-            ? `${cuisineTypeFromPath} Recipes -  Recipe Cooks`
-            : "Browse Recipes - Recipe Cooks"}
+            ? `${cuisineTypeFromPath} Recipes -  Recipe Picks`
+            : "Browse Recipes - Recipe Picks"}
         </title>
         <meta
           name="description"

@@ -168,7 +168,7 @@ export default function RecipeDetail() {
   return (
     <>
       <Head>
-        <title>{recipe.title} - Recipe Cooks</title>
+        <title>{recipe.title} - Recipe Picks</title>
         <meta name="description" content={recipe.description} />
       </Head>
 

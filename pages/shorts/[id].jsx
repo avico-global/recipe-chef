@@ -180,7 +180,7 @@ export default function ShortDetail() {
   return (
     <>
       <Head>
-        <title>{currentShort.title} - Recipe Cooks Shorts</title>
+        <title>{currentShort.title} - Recipe Picks Shorts</title>
         <meta name="description" content={currentShort.title} />
       </Head>
       <Navbar />

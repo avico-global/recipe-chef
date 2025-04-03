@@ -149,7 +149,7 @@ export default function ShortsPage() {
   return (
     <>
       <Head>
-        <title>Shorts - Recipe Cooks</title>
+        <title>Shorts - Recipe Picks</title>
         <meta
           name="description"
           content="Quick recipe videos and cooking tips"

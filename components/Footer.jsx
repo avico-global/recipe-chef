@@ -13,7 +13,7 @@ const Footer = () => {
             <Link href="/" className="flex-shrink-0 flex items-center mr-6">
               <span className="text-2xl font-bold">
                 <span className="text-red-500">Recipe</span>
-                <span className="text-blue-500">Cooks</span>
+                <span className="text-blue-500">Picks</span>
               </span>
             </Link>
             <p className="text-sm text-gray-500 mb-6">
@@ -189,7 +189,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center">
             <p className="text-sm text-gray-500">
-              &copy; {new Date().getFullYear()} Recipe Cooks. All rights
+              &copy; {new Date().getFullYear()} Recipe Picks. All rights
               reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-6">
