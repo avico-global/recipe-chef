@@ -12,10 +12,10 @@ export default function Home() {
     <div>
       {/* Head */}
       <Head>
-        <title>Recipe Chef - Discover and Share Delicious Recipes</title>
+        <title>Recipe Cooks - Discover and Share Delicious Recipes</title>
         <meta
           name="description"
-          content="Discover, share, and compete with delicious recipes on Recipe Chef"
+          content="Discover, share, and compete with delicious recipes on Recipe Cooks"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

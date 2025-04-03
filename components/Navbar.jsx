@@ -106,7 +106,7 @@ const Navbar = () => {
           <Link href="/" className="flex-shrink-0 flex items-center mr-6">
             <span className="text-2xl font-bold">
               <span className="text-red-500">Recipe</span>
-              <span className="text-blue-500">Chef</span>
+              <span className="text-blue-500">Cooks</span>
             </span>
           </Link>
 

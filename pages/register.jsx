@@ -68,10 +68,10 @@ export default function Register() {
   return (
     <div>
       <Head>
-        <title>Create Account - Recipe Chef</title>
+        <title>Create Account - Recipe Cooks</title>
         <meta
           name="description"
-          content="Create your Recipe Chef account to start sharing and discovering delicious recipes"
+          content="Create your Recipe Cooks account to start sharing and discovering delicious recipes"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -82,7 +82,7 @@ export default function Register() {
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-900">Create Account</h1>
             <p className="mt-2 text-gray-600">
-              Join Recipe Chef to share your culinary creations
+              Join Recipe Cooks to share your culinary creations
             </p>
           </div>
 
