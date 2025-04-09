@@ -1,4 +1,3 @@
-"use client";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
@@ -6,6 +5,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import { toast } from "react-hot-toast";
 import Navbar from "@/components/Navbar";
+import { useState } from "react";
 
 /**
  * RecipeDetail component - displays detailed information about a specific recipe
