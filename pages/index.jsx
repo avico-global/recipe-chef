@@ -22,7 +22,7 @@ export default function Home() {
 
       {/* Header */}
       <Navbar />
-      <main className="container flex flex-col items-center w-full mx-auto">
+      <main className="container flex flex-col items-center w-full mx-auto p-5">
         <Carousel />
         <Shorts />
         <Categories />

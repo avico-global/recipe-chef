@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { ChevronRight } from "lucide-react";
 
 const Categories = () => {
   const categories = [
@@ -56,22 +57,10 @@ const Categories = () => {
         </h2>
         <Link
           href="/recipes"
-          className="text-primary hover:text-primary-dark font-medium flex items-center gap-2 transition-colors"
+          className="text-primary font-medium hover:underline text-sm flex items-center gap-1"
         >
           View All
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
+          <ChevronRight className="w-4 h-4" />
         </Link>
       </div>
 

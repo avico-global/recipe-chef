@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, PlayCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
@@ -112,34 +112,15 @@ export default function Shorts() {
       <div className="container-custom">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="w-6 h-6 text-red-600"
-            >
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-              <path d="M10 16l6-4-6-4z" />
-            </svg>
+            <PlayCircle className="w-6 h-6 text-primary" />
             <h2 className="text-2xl font-bold ml-2">Shorts</h2>
           </div>
           <Link
             href="/shorts"
-            className="text-red-600 font-medium hover:underline text-sm flex items-center"
+            className="text-primary font-medium hover:underline text-sm flex items-center gap-1"
           >
             View All
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 ml-1"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                clipRule="evenodd"
-              />
-            </svg>
+            <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
 
@@ -221,7 +202,7 @@ export default function Shorts() {
               key={idx}
               onClick={() => setActiveIndex(idx)}
               className={`h-2 rounded-full transition-all ${
-                idx === activeIndex ? "w-6 bg-red-600" : "w-2 bg-gray-300"
+                idx === activeIndex ? "w-6 bg-primary" : "w-2 bg-gray-300"
               }`}
               aria-label={`Go to slide ${idx + 1}`}
             />

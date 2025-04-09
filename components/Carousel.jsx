@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 /**
- * Carousel component - displays rotating featured content
+ * Carousel component - displays rotating featu¬ content
  * Similar to eBay's featured carousel with pagination and autoplay
  */
 const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
@@ -86,7 +86,7 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
   }, [isPlaying, nextSlide, autoPlayInterval]);
 
   return (
-    <div className="relative w-full overflow-hidden shadow-lg xl:rounded-2xl mt-10">
+    <div className="relative w-full overflow-hidden shadow-lg xl:rounded-2xl">
       {/* Carousel slides */}
       <div
         className="relative h-[300px] md:h-[350px] w-full transition-transform duration-500 ease-out"

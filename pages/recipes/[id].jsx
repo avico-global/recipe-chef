@@ -176,181 +176,177 @@ export default function RecipeDetail() {
 
       <main className="min-h-screen bg-gray-50 container mx-auto">
         {/* Hero Section */}
-        <div className="relative bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Left Column - Image and Video */}
-              <div className="space-y-8">
-                {/* Main Image */}
-                <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
-                  <Image
-                    src={recipe.thumbnail}
-                    alt={recipe.title}
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {recipe.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/90 text-gray-900"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="flex items-center gap-4 text-white/90">
-                      <span className="flex items-center">
-                        <svg
-                          className="w-5 h-5 mr-1"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
-                        {recipe.duration}
+        <div className="relative bg-white w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 py-12">
+            {/* Left Column - Image and Video */}
+            <div className="space-y-8">
+              {/* Main Image
+              <div className="relative h-[200px] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src={recipe.thumbnail}
+                  alt={recipe.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {recipe.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/90 text-gray-900"
+                      >
+                        {tag}
                       </span>
-                      <span className="flex items-center">
-                        <svg
-                          className="w-5 h-5 mr-1"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M13 10V3L4 14h7v7l9-11h-7z"
-                          />
-                        </svg>
-                        {recipe.difficulty}
-                      </span>
-                    </div>
+                    ))}
                   </div>
-                </div>
-
-                {/* Video Section */}
-                <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                  <div className="aspect-w-16 aspect-h-9">
-                    <iframe
-                      src={recipe.videoUrl}
-                      title={recipe.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full"
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Column - Content */}
-              <div className="flex flex-col justify-center">
-                <div className="flex items-center mb-6">
-                  <div className="relative h-12 w-12 rounded-full overflow-hidden mr-4">
-                    <Image
-                      src={recipe.authorAvatar}
-                      alt={recipe.authorName}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500">By</p>
-                    <Link
-                      href={`/profile/${recipe.authorId}`}
-                      className="text-gray-900 font-medium hover:text-primary transition-colors"
-                    >
-                      {recipe.authorName}
-                    </Link>
-                  </div>
-                </div>
-
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                  {recipe.title}
-                </h1>
-
-                <p className="text-lg text-gray-600 mb-8">
-                  {recipe.description}
-                </p>
-
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="flex items-center">
-                    <div className="flex">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <svg
-                          key={star}
-                          className={`w-5 h-5 ${
-                            star <= Math.floor(recipe.ratings.average)
-                              ? "text-yellow-400"
-                              : "text-gray-300"
-                          }`}
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
-                    </div>
-                    <span className="ml-2 text-sm text-gray-500">
-                      ({recipe.ratings.count} reviews)
+                  <div className="flex items-center gap-4 text-white/90">
+                    <span className="flex items-center">
+                      <svg
+                        className="w-5 h-5 mr-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      {recipe.duration}
+                    </span>
+                    <span className="flex items-center">
+                      <svg
+                        className="w-5 h-5 mr-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"
+                        />
+                      </svg>
+                      {recipe.difficulty}
                     </span>
                   </div>
                 </div>
+              </div> */}
 
-                <div className="flex flex-wrap gap-4">
-                  <button
-                    onClick={handleSave}
-                    className={`flex items-center justify-center py-3 px-6 rounded-lg font-medium transition ${
-                      saved
-                        ? "bg-primary text-white"
-                        : "bg-white text-gray-800 border border-gray-300 hover:bg-gray-50"
-                    }`}
-                  >
-                    <svg
-                      className="w-5 h-5 mr-2"
-                      fill={saved ? "currentColor" : "none"}
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                      />
-                    </svg>
-                    {saved ? "Saved" : "Save Recipe"}
-                  </button>
-                  <button
-                    onClick={handlePrint}
-                    className="flex items-center justify-center py-3 px-6 rounded-lg font-medium bg-primary text-white hover:bg-primary-hover transition"
-                  >
-                    <svg
-                      className="w-5 h-5 mr-2"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2z"
-                      />
-                    </svg>
-                    Print Recipe
-                  </button>
+              {/* Video Section */}
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div className="aspect-w-16 aspect-h-9 h-[350px]">
+                  <iframe
+                    src={recipe.videoUrl}
+                    title={recipe.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
                 </div>
+              </div>
+            </div>
+
+            {/* Right Column - Content */}
+            <div className="flex flex-col justify-center">
+              <div className="flex items-center mb-6">
+                <div className="relative h-12 w-12 rounded-full overflow-hidden mr-4">
+                  <Image
+                    src={recipe.authorAvatar}
+                    alt={recipe.authorName}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">By</p>
+                  <Link
+                    href={`/profile/${recipe.authorId}`}
+                    className="text-gray-900 font-medium hover:text-primary transition-colors"
+                  >
+                    {recipe.authorName}
+                  </Link>
+                </div>
+              </div>
+
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                {recipe.title}
+              </h1>
+
+              <p className="text-lg text-gray-600 mb-8">{recipe.description}</p>
+
+              <div className="flex items-center gap-4 mb-8">
+                <div className="flex items-center">
+                  <div className="flex">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <svg
+                        key={star}
+                        className={`w-5 h-5 ${
+                          star <= Math.floor(recipe.ratings.average)
+                            ? "text-yellow-400"
+                            : "text-gray-300"
+                        }`}
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <span className="ml-2 text-sm text-gray-500">
+                    ({recipe.ratings.count} reviews)
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-4">
+                <button
+                  onClick={handleSave}
+                  className={`flex items-center justify-center py-3 px-6 rounded-lg font-medium transition ${
+                    saved
+                      ? "bg-primary text-white"
+                      : "bg-white text-gray-800 border border-gray-300 hover:bg-gray-50"
+                  }`}
+                >
+                  <svg
+                    className="w-5 h-5 mr-2"
+                    fill={saved ? "currentColor" : "none"}
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                    />
+                  </svg>
+                  {saved ? "Saved" : "Save Recipe"}
+                </button>
+                <button
+                  onClick={handlePrint}
+                  className="flex items-center justify-center py-3 px-6 rounded-lg font-medium bg-primary text-white hover:bg-primary-hover transition"
+                >
+                  <svg
+                    className="w-5 h-5 mr-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Print Recipe
+                </button>
               </div>
             </div>
           </div>
