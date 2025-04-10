@@ -104,12 +104,6 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="flex items-center space-x-5">
-            <Link
-              href="/daily-recipes"
-              className="text-gray-700 hover:text-blue-600"
-            >
-              Daily Recipes
-            </Link>
             <Link href="/premium" className="text-gray-700 hover:text-blue-600">
               Premium Content
             </Link>
@@ -119,7 +113,7 @@ const Navbar = () => {
             >
               Meal Planner
             </Link>
-            <Link href="/help" className="text-gray-700 hover:text-blue-600">
+            <Link href="/contact" className="text-gray-700 hover:text-blue-600">
               Help & Contact
             </Link>
           </div>
@@ -427,6 +421,13 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               My Cookbook
+            </Link>
+            <Link
+              href="/contact"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Help & Contact
             </Link>
           </div>
         </div>
