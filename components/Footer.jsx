@@ -20,12 +20,12 @@ const Footer = () => {
               <Image
                 src="/assets/logo.png"
                 alt="Recipe Picks"
-                width={100}
+                width={250}
                 height={100}
               />
             </Link>
 
-            <p className="text-sm text-gray-500 my-6">
+            <p className="text-sm text-gray-500 my-4">
               Discover, share, and compete with your favorite recipes
             </p>
             <div className="flex space-x-5">

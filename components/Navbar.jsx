@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import {
   ChevronDown,
@@ -19,6 +19,35 @@ const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [isCategoryDropdownOpen, setIsCategoryDropdownOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
+
+  const desktopDropdownRef = useRef(null);
+  const mobileDropdownRef = useRef(null);
+
+  // Handle outside clicks to close the dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Check if click was outside both dropdown containers
+      const isOutsideDesktop =
+        desktopDropdownRef.current &&
+        !desktopDropdownRef.current.contains(event.target);
+      const isOutsideMobile =
+        mobileDropdownRef.current &&
+        !mobileDropdownRef.current.contains(event.target);
+
+      if (
+        (isOutsideDesktop && isOutsideMobile) ||
+        (isOutsideDesktop && !mobileDropdownRef.current) ||
+        (isOutsideMobile && !desktopDropdownRef.current)
+      ) {
+        setIsCategoryDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -108,20 +137,46 @@ const Navbar = () => {
             <Image
               src="/assets/logo.png"
               alt="Recipe Picks"
-              width={100}
+              width={190}
               height={100}
             />
           </Link>
 
-          {/* Search bar - improved responsive layout */}
+          {/* Search bar - desktop */}
           <div className="flex-grow hidden sm:block">
             <form onSubmit={handleSearch} className="flex w-full gap-2">
-              <div className="flex w-full border border-black rounded-full overflow-hidden">
-                <div className="flex items-center px-2 sm:px-4 py-2 bg-gray-100 cursor-pointer hover:bg-gray-200 border-r border-gray-400">
+              <div className="flex w-full border border-black rounded-full relative">
+                <div
+                  className="flex items-center px-2 sm:px-4 py-2 cursor-pointer border-r border-gray-400"
+                  onClick={() =>
+                    setIsCategoryDropdownOpen(!isCategoryDropdownOpen)
+                  }
+                  ref={desktopDropdownRef}
+                >
                   <span className="text-xs sm:text-sm whitespace-nowrap">
                     {selectedCategory}
                   </span>
                   <ChevronDown className="h-3 w-3 sm:h-4 sm:w-4 ml-1 text-gray-500" />
+
+                  {/* Desktop category dropdown */}
+                  {isCategoryDropdownOpen && (
+                    <div className="absolute top-full left-0 mt-1 bg-white border border-gray-300 rounded-md shadow-md z-50 max-h-96 overflow-y-auto w-48">
+                      {recipeCategories.map((category) => (
+                        <div
+                          key={category}
+                          className={`px-4 py-2 text-sm cursor-pointer hover:bg-blue-50 ${
+                            selectedCategory === category ? "bg-blue-100" : ""
+                          }`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleCategorySelect(category);
+                          }}
+                        >
+                          {category}
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 <input
@@ -176,11 +231,19 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile search - improved responsive padding */}
+        {/* Mobile search */}
         <div className="sm:hidden mt-3">
           <form onSubmit={handleSearch} className="w-full">
-            <div className="flex border border-gray-400 rounded-full overflow-hidden">
-              <div className="flex items-center justify-between px-3 py-1.5 bg-gray-100 w-full cursor-pointer border-b border-gray-400">
+            <div
+              className="flex border border-gray-400 rounded-full overflow-hidden"
+              ref={mobileDropdownRef}
+            >
+              <div
+                className="flex items-center justify-between px-3 py-1.5 bg-gray-100 w-full cursor-pointer border-b border-gray-400"
+                onClick={() =>
+                  setIsCategoryDropdownOpen(!isCategoryDropdownOpen)
+                }
+              >
                 <span className="text-xs sm:text-sm">{selectedCategory}</span>
                 <ChevronDown className="h-3 w-3 sm:h-4 sm:w-4 text-gray-500" />
               </div>
@@ -194,7 +257,10 @@ const Navbar = () => {
                     className={`px-4 py-2.5 text-sm cursor-pointer border-b border-gray-100 ${
                       selectedCategory === category ? "bg-blue-100" : ""
                     }`}
-                    onClick={() => handleCategorySelect(category)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleCategorySelect(category);
+                    }}
                   >
                     {category}
                   </div>
@@ -209,7 +275,6 @@ const Navbar = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="flex-grow py-2 px-4 border-0 focus:ring-0 focus:outline-none"
                 placeholder="Search recipes..."
-                onClick={() => setIsCategoryDropdownOpen(false)}
               />
               <button
                 type="submit"
