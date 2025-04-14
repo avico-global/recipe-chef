@@ -1,0 +1,3593 @@
+[
+  {
+    "id": "1",
+    "title": "Classic Margherita Pizza",
+    "description": "Detailed recipe for Classic Margherita Pizza with step-by-step instructions and fresh ingredients.",
+    "thumbnail": "/assets/recipes/margherita-pizza.jpg",
+    "videoId": "bSMOMzyhGtI",
+    "authorName": "John Smith",
+    "authorAvatar": "/assets/avatars/avatar-1.jpg",
+    "authorId": "john-smith",
+    "datePosted": "2023-04-15",
+    "duration": "45 min",
+    "difficulty": "Medium",
+    "servings": 4,
+    "cuisineType": "Italian",
+    "mealType": "Dinner",
+    "tags": [],
+    "dietary": ["Vegetarian"],
+    "prepTime": "15 min",
+    "cookTime": "20 min",
+    "ingredients": [
+      "1 tbsp olive oil",
+      "2 cloves garlic, minced",
+      "Salt and pepper to taste",
+      "Main ingredient(s) specific to recipe",
+      "Fresh herbs or garnish"
+    ],
+    "instructions": [
+      "Gather all ingredients and prepare your workspace.",
+      "Preheat oven or heat pan as required.",
+      "Cook main ingredients according to recipe guidelines.",
+      "Season, adjust flavors, and finish cooking.",
+      "Serve hot and enjoy!"
+    ],
+    "nutritionFacts": {
+      "calories": 332,
+      "protein": "21g",
+      "carbs": "59g",
+      "fat": "17g",
+      "fiber": "6g"
+    },
+    "ratings": {
+      "average": 4.7,
+      "count": 192
+    },
+    "comments": [
+      {
+        "id": "c1",
+        "user": {
+          "name": "Sample User",
+          "avatar": "https://randomuser.me/api/portraits/men/45.jpg"
+        },
+        "date": "2023-06-20",
+        "rating": 5,
+        "text": "Absolutely delicious! Will make again."
+      },
+      {
+        "id": "c2",
+        "user": {
+          "name": "Another User",
+          "avatar": "https://randomuser.me/api/portraits/women/55.jpg"
+        },
+        "date": "2023-06-15",
+        "rating": 4,
+        "text": "Great recipe, added my own twist and it turned out perfect."
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Spicy Thai Basil Chicken",
+    "description": "Detailed recipe for Spicy Thai Basil Chicken with step-by-step instructions and fresh ingredients.",
+    "thumbnail": "/assets/recipes/thai-basil-chicken.jpg",
+    "videoId": "SoFSmNaKTVU",
+    "authorName": "Emily Chen",
+    "authorAvatar": "/assets/avatars/avatar-2.jpg",
+    "authorId": "emily-chen",
+    "datePosted": "2023-04-16",
+    "duration": "30 min",
+    "difficulty": "Easy",
+    "servings": 4,
+    "cuisineType": "Asian",
+    "mealType": "Dinner",
+    "tags": [],
+    "dietary": ["Gluten-Free"],
+    "prepTime": "15 min",
+    "cookTime": "20 min",
+    "ingredients": [
+      "1 tbsp olive oil",
+      "2 cloves garlic, minced",
+      "Salt and pepper to taste",
+      "Main ingredient(s) specific to recipe",
+      "Fresh herbs or garnish"
+    ],
+    "instructions": [
+      "Gather all ingredients and prepare your workspace.",
+      "Preheat oven or heat pan as required.",
+      "Cook main ingredients according to recipe guidelines.",
+      "Season, adjust flavors, and finish cooking.",
+      "Serve hot and enjoy!"
+    ],
+    "nutritionFacts": {
+      "calories": 339,
+      "protein": "28g",
+      "carbs": "47g",
+      "fat": "13g",
+      "fiber": "3g"
+    },
+    "ratings": {
+      "average": 4.6,
+      "count": 262
+    },
+    "comments": [
+      {
+        "id": "c1",
+        "user": {
+          "name": "Sample User",
+          "avatar": "https://randomuser.me/api/portraits/men/45.jpg"
+        },
+        "date": "2023-06-20",
+        "rating": 5,
+        "text": "Absolutely delicious! Will make again."
+      },
+      {
+        "id": "c2",
+        "user": {
+          "name": "Another User",
+          "avatar": "https://randomuser.me/api/portraits/women/55.jpg"
+        },
+        "date": "2023-06-15",
+        "rating": 4,
+        "text": "Great recipe, added my own twist and it turned out perfect."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Chocolate Lava Cake",
+    "description": "Detailed recipe for Chocolate Lava Cake with step-by-step instructions and fresh ingredients.",
+    "thumbnail": "/assets/recipes/chocolate-lava-cake.jpg",
+    "videoId": "qXQI3AN8bpY",
+    "authorName": "Michael Brown",
+    "authorAvatar": "/assets/avatars/avatar-3.jpg",
+    "authorId": "michael-brown",
+    "datePosted": "2023-04-17",
+    "duration": "40 min",
+    "difficulty": "Medium",
+    "servings": 8,
+    "cuisineType": "American",
+    "mealType": "Dessert",
+    "tags": [],
+    "dietary": ["Vegetarian"],
+    "prepTime": "15 min",
+    "cookTime": "20 min",
+    "ingredients": [
+      "1 tbsp olive oil",
+      "2 cloves garlic, minced",
+      "Salt and pepper to taste",
+      "Main ingredient(s) specific to recipe",
+      "Fresh herbs or garnish"
+    ],
+    "instructions": [
+      "Gather all ingredients and prepare your workspace.",
+      "Preheat oven or heat pan as required.",
+      "Cook main ingredients according to recipe guidelines.",
+      "Season, adjust flavors, and finish cooking.",
+      "Serve hot and enjoy!"
+    ],
+    "nutritionFacts": {
+      "calories": 294,
+      "protein": "19g",
+      "carbs": "34g",
+      "fat": "13g",
+      "fiber": "7g"
+    },
+    "ratings": {
+      "average": 4.7,
+      "count": 279
+    },
+    "comments": [
+      {
+        "id": "c1",
+        "user": {
+          "name": "Sample User",
+          "avatar": "https://randomuser.me/api/portraits/men/45.jpg"
+        },
+        "date": "2023-06-20",
+        "rating": 5,
+        "text": "Absolutely delicious! Will make again."
+      },
+      {
+        "id": "c2",
+        "user": {
+          "name": "Another User",
+          "avatar": "https://randomuser.me/api/portraits/women/55.jpg"
+        },
+        "date": "2023-06-15",
+        "rating": 4,
+        "text": "Great recipe, added my own twist and it turned out perfect."
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Mediterranean Grilled Vegetable Salad",
+    "description": "Detailed recipe for Mediterranean Grilled Vegetable Salad with step-by-step instructions and fresh ingredients.",
+    "thumbnail": "/assets/recipes/mediterranean-salad.jpg",
+    "videoId": "MmMQmoZNot4",
+    "authorName": "Sarah Johnson",
+    "authorAvatar": "/assets/avatars/avatar-4.jpg",
+    "authorId": "sarah-johnson",
+    "datePosted": "2023-04-18",
+    "duration": "25 min",
+    "difficulty": "Easy",
+    "servings": 2,
+    "cuisineType": "Mediterranean",
+    "mealType": "Lunch",
+    "tags": [],
+    "dietary": ["Vegetarian", "Vegan", "Gluten-Free"],
+    "prepTime": "15 min",
+    "cookTime": "20 min",
+    "ingredients": [
+      "1 tbsp olive oil",
+      "2 cloves garlic, minced",
+      "Salt and pepper to taste",
+      "Main ingredient(s) specific to recipe",
+      "Fresh herbs or garnish"
+    ],
+    "instructions": [
+      "Gather all ingredients and prepare your workspace.",
+      "Preheat oven or heat pan as required.",
+      "Cook main ingredients according to recipe guidelines.",
+      "Season, adjust flavors, and finish cooking.",
+      "Serve hot and enjoy!"
+    ],
+    "nutritionFacts": {
+      "calories": 296,
+      "protein": "26g",
+      "carbs": "24g",
+      "fat": "10g",
+      "fiber": "6g"
+    },
+    "ratings": {
+      "average": 4.7,
+      "count": 104
+    },
+    "comments": [
+      {
+        "id": "c1",
+        "user": {
+          "name": "Sample User",
+          "avatar": "https://randomuser.me/api/portraits/men/45.jpg"
+        },
+        "date": "2023-06-20",
+        "rating": 5,
+        "text": "Absolutely delicious! Will make again."
+      },
+      {
+        "id": "c2",
+        "user": {
+          "name": "Another User",
+          "avatar": "https://randomuser.me/api/portraits/women/55.jpg"
+        },
+        "date": "2023-06-15",
+        "rating": 4,
+        "text": "Great recipe, added my own twist and it turned out perfect."
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Creamy Mushroom Risotto",
+    "description": "Detailed recipe for Creamy Mushroom Risotto with step-by-step instructions and fresh ingredients.",
+    "thumbnail": "/assets/recipes/mushroom-risotto.jpg",
+    "videoId": "byODxC3LS2c",
+    "authorName": "David Wilson",
+    "authorAvatar": "/assets/avatars/avatar-5.jpg",
+    "authorId": "david-wilson",
+    "datePosted": "2023-04-19",
+    "duration": "50 min",
+    "difficulty": "Hard",
+    "servings": 4,
+    "cuisineType": "Italian",
+    "mealType": "Dinner",
+    "tags": [],
+    "dietary": ["Vegetarian"],
+    "prepTime": "15 min",
+    "cookTime": "20 min",
+    "ingredients": [
+      "1 tbsp olive oil",
+      "2 cloves garlic, minced",
+      "Salt and pepper to taste",
+      "Main ingredient(s) specific to recipe",
+      "Fresh herbs or garnish"
+    ],
+    "instructions": [
+      "Gather all ingredients and prepare your workspace.",
+      "Preheat oven or heat pan as required.",
+      "Cook main ingredients according to recipe guidelines.",
+      "Season, adjust flavors, and finish cooking.",
+      "Serve hot and enjoy!"
+    ],
+    "nutritionFacts": {
+      "calories": 376,
+      "protein": "8g",
+      "carbs": "54g",
+      "fat": "20g",
+      "fiber": "4g"
+    },
+    "ratings": {
+      "average": 4.7,
+      "count": 155
+    },
+    "comments": [
+      {
+        "id": "c1",
+        "user": {
+          "name": "Sample User",
+          "avatar": "https://randomuser.me/api/portraits/men/45.jpg"
+        },
+        "date": "2023-06-20",
+        "rating": 5,
+        "text": "Absolutely delicious! Will make again."
+      },
+      {
+        "id": "c2",
+        "user": {
+          "name": "Another User",
+          "avatar": "https://randomuser.me/api/portraits/women/55.jpg"
+        },
+        "date": "2023-06-15",
+        "rating": 4,
+        "text": "Great recipe, added my own twist and it turned out perfect."
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Homemade Beef Tacos",
+    "description": "Detailed recipe for Homemade Beef Tacos with step-by-step instructions and fresh ingredients.",
+    "thumbnail": "/assets/recipes/beef-tacos.jpg",
+    "videoId": "hq6NEcrN0Es",
+    "authorName": "Maria Rodriguez",
+    "authorAvatar": "/assets/avatars/avatar-6.jpg",
+    "authorId": "maria-rodriguez",
+    "datePosted": "2023-04-20",
+    "duration": "35 min",
+    "difficulty": "Medium",
+    "servings": 4,
+    "cuisineType": "Mexican",
+    "mealType": "Dinner",
+    "tags": [],
+    "dietary": [],
+    "prepTime": "15 min",
+    "cookTime": "20 min",
+    "ingredients": [
+      "1 tbsp olive oil",
+      "2 cloves garlic, minced",
+      "Salt and pepper to taste",
+      "Main ingredient(s) specific to recipe",
+      "Fresh herbs or garnish"
+    ],
+    "instructions": [
+      "Gather all ingredients and prepare your workspace.",
+      "Preheat oven or heat pan as required.",
+      "Cook main ingredients according to recipe guidelines.",
+      "Season, adjust flavors, and finish cooking.",
+      "Serve hot and enjoy!"
+    ],
+    "nutritionFacts": {
+      "calories": 305,
+      "protein": "27g",
+      "carbs": "36g",
+      "fat": "6g",
+      "fiber": "5g"
+    },
+    "ratings": {
+      "average": 4.7,
+      "count": 263
+    },
+    "comments": [
+      {
+        "id": "c1",
+        "user": {
+          "name": "Sample User",
+          "avatar": "https://randomuser.me/api/portraits/men/45.jpg"
+        },
+        "date": "2023-06-20",
+        "rating": 5,
+        "text": "Absolutely delicious! Will make again."
+      },
+      {
+        "id": "c2",
+        "user": {
+          "name": "Another User",
+          "avatar": "https://randomuser.me/api/portraits/women/55.jpg"
+        },
+        "date": "2023-06-15",
+        "rating": 4,
+        "text": "Great recipe, added my own twist and it turned out perfect."
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Fresh Berry Smoothie Bowl",
+    "description": "A nutrient‑packed breakfast bowl blended silky‑smooth, then crowned with vibrant berries, granola, and a drizzle of honey.",
+    "thumbnail": "/assets/recipes/smoothie-bowl.jpg",
+    "videoId": "NF2ugFuQxpA",
+    "authorName": "Jessica Lee",
+    "authorAvatar": "/assets/avatars/avatar-7.jpg",
+    "authorId": "jessicalee",
+    "datePosted": "2023-05-12",
+    "duration": "15 min",
+    "difficulty": "Easy",
+    "servings": 2,
+    "cuisineType": "American",
+    "mealType": "Breakfast",
+    "tags": ["Breakfast", "Smoothie", "Healthy"],
+    "dietary": ["Vegetarian", "Vegan", "Gluten-Free"],
+    "prepTime": "10 min",
+    "cookTime": "5 min",
+    "ingredients": [
+      "1 frozen banana",
+      "1 cup frozen mixed berries",
+      "½ cup Greek yogurt (or coconut yogurt for vegan)",
+      "½ cup almond milk",
+      "1 tbsp chia seeds",
+      "½ cup fresh strawberries, sliced",
+      "¼ cup blueberries",
+      "¼ cup granola",
+      "1 tbsp honey or maple syrup (optional)"
+    ],
+    "instructions": [
+      "Add frozen banana, frozen berries, yogurt, almond milk, and chia seeds to a blender.",
+      "Blend until thick and creamy, stopping to scrape down sides if needed.",
+      "Pour the smoothie into two shallow bowls.",
+      "Top with fresh strawberries, blueberries, and granola.",
+      "Drizzle with honey or maple syrup if desired and serve immediately."
+    ],
+    "nutritionFacts": {
+      "calories": 280,
+      "protein": "10g",
+      "carbs": "50g",
+      "fat": "6g",
+      "fiber": "9g"
+    },
+    "ratings": {
+      "average": 4.8,
+      "count": 89
+    },
+    "comments": [
+      {
+        "id": "c7-1",
+        "user": {
+          "name": "Amelia Watson",
+          "avatar": "https://randomuser.me/api/portraits/women/21.jpg"
+        },
+        "date": "2023-07-01",
+        "rating": 5,
+        "text": "Perfect post‑workout fuel! Loved the crunch from the granola."
+      },
+      {
+        "id": "c7-2",
+        "user": {
+          "name": "Daniel Park",
+          "avatar": "https://randomuser.me/api/portraits/men/54.jpg"
+        },
+        "date": "2023-06-18",
+        "rating": 4,
+        "text": "Added a scoop of protein powder—worked great and kept me full till lunch."
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Garlic Butter Shrimp Pasta",
+    "description": "Tender shrimp tossed with spaghetti in a rich garlic‑butter sauce, brightened with lemon and parsley for a 30‑minute dinner hero.",
+    "thumbnail": "/assets/recipes/shrimp-pasta.jpg",
+    "videoId": "XLbMvY7ZxAk",
+    "authorName": "Robert Taylor",
+    "authorAvatar": "/assets/avatars/avatar-8.jpg",
+    "authorId": "roberttaylor",
+    "datePosted": "2023-08-22",
+    "duration": "30 min",
+    "difficulty": "Medium",
+    "servings": 4,
+    "cuisineType": "Italian",
+    "mealType": "Dinner",
+    "tags": ["Pasta", "Seafood", "Quick"],
+    "dietary": [],
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "ingredients": [
+      "340 g (12 oz) spaghetti",
+      "450 g (1 lb) large shrimp, peeled & deveined",
+      "4 tbsp unsalted butter, divided",
+      "3 tbsp olive oil",
+      "5 cloves garlic, minced",
+      "¼ tsp red‑pepper flakes",
+      "½ cup dry white wine (or chicken broth)",
+      "Juice & zest of 1 lemon",
+      "¼ cup chopped fresh parsley",
+      "Salt & freshly ground black pepper"
+    ],
+    "instructions": [
+      "Cook spaghetti in salted boiling water until al dente; reserve ½ cup pasta water, drain.",
+      "Pat shrimp dry, season with salt & pepper.",
+      "In a large skillet, heat 2 tbsp butter and olive oil over medium‑high. Sauté shrimp 1‑2 min per side; transfer to plate.",
+      "Lower heat, add remaining butter, garlic, and pepper flakes; cook 30 sec until fragrant.",
+      "Deglaze with wine, simmer 2 min. Stir in lemon juice/zest.",
+      "Return shrimp, add pasta and a splash of reserved water; toss until glossy.",
+      "Fold in parsley, season to taste, and serve hot."
+    ],
+    "nutritionFacts": {
+      "calories": 520,
+      "protein": "30g",
+      "carbs": "60g",
+      "fat": "18g",
+      "fiber": "3g"
+    },
+    "ratings": {
+      "average": 4.6,
+      "count": 142
+    },
+    "comments": [
+      {
+        "id": "c8-1",
+        "user": {
+          "name": "Sophia Nguyen",
+          "avatar": "https://randomuser.me/api/portraits/women/30.jpg"
+        },
+        "date": "2024-01-14",
+        "rating": 5,
+        "text": "Restaurant quality in half an hour—family loved it!"
+      },
+      {
+        "id": "c8-2",
+        "user": {
+          "name": "Henry Ortiz",
+          "avatar": "https://randomuser.me/api/portraits/men/39.jpg"
+        },
+        "date": "2023-11-02",
+        "rating": 4,
+        "text": "Great flavor, but I’d cut back a bit on the butter next time."
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Vegetarian Buddha Bowl",
+    "description": "A rainbow of roasted and fresh veggies, quinoa, and crispy chickpeas, finished with a creamy tahini‑lime dressing.",
+    "thumbnail": "/assets/recipes/buddha-bowl.jpg",
+    "videoId": "8Vg72ixzlxA",
+    "authorName": "Rachel Green",
+    "authorAvatar": "/assets/avatars/avatar-9.jpg",
+    "authorId": "rachelgreen",
+    "datePosted": "2024-02-10",
+    "duration": "20 min",
+    "difficulty": "Easy",
+    "servings": 2,
+    "cuisineType": "Asian",
+    "mealType": "Lunch",
+    "tags": ["Vegetarian", "Bowl", "Healthy"],
+    "dietary": ["Vegetarian", "Vegan", "Gluten-Free"],
+    "prepTime": "15 min",
+    "cookTime": "5 min",
+    "ingredients": [
+      "1 cup cooked quinoa",
+      "1 cup roasted sweet potato cubes",
+      "1 cup steamed broccoli florets",
+      "½ cup shredded red cabbage",
+      "½ cup cucumber slices",
+      "½ cup cherry tomatoes, halved",
+      "½ cup crispy roasted chickpeas",
+      "2 tbsp pumpkin seeds",
+      "For dressing: 3 tbsp tahini, juice of 1 lime, 1 tbsp maple syrup, 1 tbsp soy sauce, 2 tbsp water"
+    ],
+    "instructions": [
+      "Whisk dressing ingredients until smooth; thin with water to drizzle consistency.",
+      "Divide quinoa between two bowls.",
+      "Arrange sweet potato, broccoli, cabbage, cucumber, tomatoes, and chickpeas over quinoa.",
+      "Sprinkle with pumpkin seeds.",
+      "Drizzle with tahini‑lime dressing and serve."
+    ],
+    "nutritionFacts": {
+      "calories": 410,
+      "protein": "15g",
+      "carbs": "60g",
+      "fat": "14g",
+      "fiber": "12g"
+    },
+    "ratings": {
+      "average": 4.9,
+      "count": 76
+    },
+    "comments": [
+      {
+        "id": "c9-1",
+        "user": {
+          "name": "Olivia Chen",
+          "avatar": "https://randomuser.me/api/portraits/women/11.jpg"
+        },
+        "date": "2024-03-05",
+        "rating": 5,
+        "text": "So colorful and filling—perfect meal‑prep lunch!"
+      },
+      {
+        "id": "c9-2",
+        "user": {
+          "name": "Mark Evans",
+          "avatar": "https://randomuser.me/api/portraits/men/61.jpg"
+        },
+        "date": "2024-02-18",
+        "rating": 4,
+        "text": "Loved it, but added a pinch of chili flakes for heat."
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Slow Cooker Beef Stew",
+    "description": "Fork‑tender beef, root vegetables, and a rich red‑wine gravy—comfort food that simmers all day while you work.",
+    "thumbnail": "/assets/recipes/beef-stew.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID10jkl012",
+    "authorName": "James Wilson",
+    "authorAvatar": "/assets/avatars/avatar-10.jpg",
+    "authorId": "jameswilson",
+    "datePosted": "2023-10-01",
+    "duration": "6 hrs",
+    "difficulty": "Easy",
+    "servings": 6,
+    "cuisineType": "American",
+    "mealType": "Dinner",
+    "tags": ["Beef", "Slow Cooker", "Winter"],
+    "dietary": ["Dairy-Free"],
+    "prepTime": "25 min",
+    "cookTime": "5 hrs 30 min",
+    "ingredients": [
+      "1.5 kg (3 lb) beef chuck, cut into 1‑inch cubes",
+      "3 tbsp flour",
+      "2 tbsp olive oil",
+      "1 large onion, diced",
+      "3 cloves garlic, minced",
+      "2 tbsp tomato paste",
+      "1 cup red wine",
+      "3 cups beef broth",
+      "3 carrots, sliced",
+      "3 potatoes, cubed",
+      "2 celery stalks, sliced",
+      "2 bay leaves",
+      "1 tsp dried thyme",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Toss beef with flour, salt, and pepper.",
+      "Brown beef in olive oil over medium‑high; transfer to slow cooker.",
+      "In same pan, sauté onion and garlic 2 min; stir in tomato paste.",
+      "Deglaze with wine, scraping browned bits; pour into slow cooker.",
+      "Add broth, carrots, potatoes, celery, bay leaves, and thyme.",
+      "Cook on LOW 8 hrs or HIGH 5 hrs until beef is tender.",
+      "Adjust seasoning; discard bay leaves before serving."
+    ],
+    "nutritionFacts": {
+      "calories": 540,
+      "protein": "45g",
+      "carbs": "30g",
+      "fat": "25g",
+      "fiber": "5g"
+    },
+    "ratings": {
+      "average": 4.7,
+      "count": 210
+    },
+    "comments": [
+      {
+        "id": "c10-1",
+        "user": {
+          "name": "Lisa Moore",
+          "avatar": "https://randomuser.me/api/portraits/women/66.jpg"
+        },
+        "date": "2023-12-11",
+        "rating": 5,
+        "text": "Set it before work and came home to the best aroma—delicious!"
+      },
+      {
+        "id": "c10-2",
+        "user": {
+          "name": "George King",
+          "avatar": "https://randomuser.me/api/portraits/men/73.jpg"
+        },
+        "date": "2023-11-03",
+        "rating": 4,
+        "text": "Great stew, but I thickened the gravy with a cornstarch slurry at the end."
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "title": "Homemade Sourdough Bread",
+    "description": "Artisanal loaf with blistered crust and open crumb—perfect for toast, sandwiches, or straight‑up tearing apart warm.",
+    "thumbnail": "/assets/recipes/sourdough-bread.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID11mno345",
+    "authorName": "Alice Thompson",
+    "authorAvatar": "/assets/avatars/avatar-11.jpg",
+    "authorId": "alicethompson",
+    "datePosted": "2024-01-05",
+    "duration": "3 hrs (plus ferment)",
+    "difficulty": "Hard",
+    "servings": 1,
+    "cuisineType": "American",
+    "mealType": "Breakfast",
+    "tags": ["Bread", "Baking", "Sourdough"],
+    "dietary": ["Vegetarian"],
+    "prepTime": "30 min (active)",
+    "cookTime": "45 min",
+    "ingredients": [
+      "500 g bread flour",
+      "375 g water (75% hydration)",
+      "100 g active sourdough starter (20%)",
+      "10 g sea salt",
+      "Rice flour for dusting"
+    ],
+    "instructions": [
+      "Autolyse: mix flour and water; rest 30 min.",
+      "Add starter and salt; mix until combined.",
+      "Bulk ferment 3–4 hrs at 75 °F, performing 4 stretch‑and‑folds.",
+      "Shape dough, place seam‑side up in floured banneton; proof 2 hrs or overnight in fridge.",
+      "Preheat Dutch oven to 475 °F (245 °C).",
+      "Score loaf, transfer to Dutch oven, cover, and bake 20 min.",
+      "Remove lid, reduce to 450 °F (230 °C), bake 25 min until deep golden.",
+      "Cool on rack at least 1 hr before slicing."
+    ],
+    "nutritionFacts": {
+      "calories": 150,
+      "protein": "5g",
+      "carbs": "30g",
+      "fat": "0g",
+      "fiber": "1g"
+    },
+    "ratings": {
+      "average": 4.5,
+      "count": 98
+    },
+    "comments": [
+      {
+        "id": "c11-1",
+        "user": {
+          "name": "Brandon Lee",
+          "avatar": "https://randomuser.me/api/portraits/men/24.jpg"
+        },
+        "date": "2024-02-02",
+        "rating": 5,
+        "text": "My best crust yet! Instructions were super clear."
+      },
+      {
+        "id": "c11-2",
+        "user": {
+          "name": "Emily Davis",
+          "avatar": "https://randomuser.me/api/portraits/women/58.jpg"
+        },
+        "date": "2024-01-20",
+        "rating": 4,
+        "text": "Great loaf, but I needed a bit more hydration in my dry climate."
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "title": "Classic French Omelette",
+    "description": "Silky‑soft, pale yellow omelette with no browning—folded around a buttery, custardy center.",
+    "thumbnail": "/assets/recipes/french-omelette.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID12pqr678",
+    "authorName": "Pierre Martin",
+    "authorAvatar": "/assets/avatars/avatar-12.jpg",
+    "authorId": "pierremartin",
+    "datePosted": "2023-09-14",
+    "duration": "10 min",
+    "difficulty": "Medium",
+    "servings": 1,
+    "cuisineType": "Mediterranean",
+    "mealType": "Breakfast",
+    "tags": ["Eggs", "French", "Quick"],
+    "dietary": ["Vegetarian", "Gluten-Free"],
+    "prepTime": "5 min",
+    "cookTime": "5 min",
+    "ingredients": [
+      "3 large eggs",
+      "1 tbsp cold butter, cubed",
+      "1 tbsp fresh chives, finely chopped",
+      "Salt & white pepper"
+    ],
+    "instructions": [
+      "Beat eggs with a pinch of salt and white pepper until fully combined but not frothy.",
+      "Heat a non‑stick pan over medium‑low; add half the butter.",
+      "Pour in eggs; stir constantly with spatula, shaking pan until curds form but surface is still glossy.",
+      "Stop stirring, smooth into an even layer; sprinkle chives.",
+      "Tilt pan, roll omelette onto itself using spatula, forming a cigar shape.",
+      "Slide onto plate, seam‑side down; rub with remaining butter for sheen."
+    ],
+    "nutritionFacts": {
+      "calories": 230,
+      "protein": "14g",
+      "carbs": "1g",
+      "fat": "19g",
+      "fiber": "0g"
+    },
+    "ratings": {
+      "average": 4.8,
+      "count": 63
+    },
+    "comments": [
+      {
+        "id": "c12-1",
+        "user": {
+          "name": "Isabella Rossi",
+          "avatar": "https://randomuser.me/api/portraits/women/9.jpg"
+        },
+        "date": "2023-10-05",
+        "rating": 5,
+        "text": "Finally nailed the no‑browning technique—merci!"
+      },
+      {
+        "id": "c12-2",
+        "user": {
+          "name": "Noah Baker",
+          "avatar": "https://randomuser.me/api/portraits/men/85.jpg"
+        },
+        "date": "2023-09-30",
+        "rating": 4,
+        "text": "Needed a bit more salt for my taste, but texture was perfect."
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "title": "Korean Bibimbap",
+    "description": "Steaming rice topped with seasoned vegetables, marinated beef, gochujang, and a runny fried egg—mix it all up for pure comfort.",
+    "thumbnail": "/assets/recipes/bibimbap.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID13stu901",
+    "authorName": "Joon Kim",
+    "authorAvatar": "/assets/avatars/avatar-13.jpg",
+    "authorId": "joonkim",
+    "datePosted": "2024-03-21",
+    "duration": "45 min",
+    "difficulty": "Medium",
+    "servings": 4,
+    "cuisineType": "Asian",
+    "mealType": "Dinner",
+    "tags": ["Korean", "Rice", "Healthy"],
+    "dietary": [],
+    "prepTime": "25 min",
+    "cookTime": "20 min",
+    "ingredients": [
+      "2 cups short‑grain rice, cooked",
+      "200 g beef sirloin, thinly sliced",
+      "2 tbsp soy sauce",
+      "1 tbsp sesame oil",
+      "1 tsp sugar",
+      "1 zucchini, julienned",
+      "1 carrot, julienned",
+      "2 cups spinach",
+      "1 cup bean sprouts",
+      "4 shiitake mushrooms, sliced",
+      "4 eggs",
+      "2 tbsp vegetable oil",
+      "4 tbsp gochujang",
+      "Sesame seeds & sliced scallions"
+    ],
+    "instructions": [
+      "Marinate beef with soy sauce, sesame oil, and sugar 15 min.",
+      "Blanch spinach & bean sprouts separately; season each with salt and sesame oil.",
+      "Sauté zucchini, carrot, and mushrooms with a pinch of salt until tender.",
+      "Stir‑fry beef over high heat 2 min.",
+      "Fry eggs sunny‑side‑up.",
+      "Assemble bowls: rice base, arrange veggies & beef, top with egg.",
+      "Serve with gochujang; sprinkle sesame seeds & scallions. Mix before eating."
+    ],
+    "nutritionFacts": {
+      "calories": 620,
+      "protein": "28g",
+      "carbs": "80g",
+      "fat": "20g",
+      "fiber": "6g"
+    },
+    "ratings": {
+      "average": 4.7,
+      "count": 134
+    },
+    "comments": [
+      {
+        "id": "c13-1",
+        "user": {
+          "name": "Mina Patel",
+          "avatar": "https://randomuser.me/api/portraits/women/47.jpg"
+        },
+        "date": "2024-04-02",
+        "rating": 5,
+        "text": "Tasted just like the bibimbap I had in Seoul—so good!"
+      },
+      {
+        "id": "c13-2",
+        "user": {
+          "name": "Aaron Hughes",
+          "avatar": "https://randomuser.me/api/portraits/men/17.jpg"
+        },
+        "date": "2024-03-28",
+        "rating": 4,
+        "text": "Prep took me longer, but worth every minute."
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "title": "Vegan Chickpea Curry",
+    "description": "Creamy tomato‑coconut curry loaded with chickpeas and warming Indian spices—weeknight‑easy and freezer‑friendly.",
+    "thumbnail": "/assets/recipes/chickpea-curry.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID14vwx234",
+    "authorName": "Maya Patel",
+    "authorAvatar": "/assets/avatars/avatar-14.jpg",
+    "authorId": "mayapatel",
+    "datePosted": "2023-11-17",
+    "duration": "35 min",
+    "difficulty": "Easy",
+    "servings": 4,
+    "cuisineType": "Asian",
+    "mealType": "Dinner",
+    "tags": ["Curry", "Indian", "Healthy"],
+    "dietary": ["Vegan", "Vegetarian", "Gluten-Free"],
+    "prepTime": "10 min",
+    "cookTime": "25 min",
+    "ingredients": [
+      "2 cans (400 g each) chickpeas, drained",
+      "1 tbsp coconut oil",
+      "1 large onion, diced",
+      "3 cloves garlic, minced",
+      "1‑inch ginger, grated",
+      "2 tbsp curry powder",
+      "1 tsp ground cumin",
+      "½ tsp turmeric",
+      "1 can (400 g) crushed tomatoes",
+      "1 can (400 ml) coconut milk",
+      "1 cup vegetable broth",
+      "Juice of ½ lime",
+      "Salt & pepper",
+      "Fresh cilantro for garnish"
+    ],
+    "instructions": [
+      "Heat coconut oil; sauté onion until translucent.",
+      "Add garlic & ginger; cook 1 min.",
+      "Stir in spices; toast 30 sec.",
+      "Pour in tomatoes, coconut milk, broth; bring to simmer.",
+      "Add chickpeas; simmer 15 min until thickened.",
+      "Season with lime juice, salt, and pepper.",
+      "Serve over rice; garnish with cilantro."
+    ],
+    "nutritionFacts": {
+      "calories": 410,
+      "protein": "13g",
+      "carbs": "46g",
+      "fat": "20g",
+      "fiber": "12g"
+    },
+    "ratings": {
+      "average": 4.9,
+      "count": 187
+    },
+    "comments": [
+      {
+        "id": "c14-1",
+        "user": {
+          "name": "Carlos Diaz",
+          "avatar": "https://randomuser.me/api/portraits/men/34.jpg"
+        },
+        "date": "2024-01-08",
+        "rating": 5,
+        "text": "Even my meat‑loving dad asked for seconds—stellar recipe!"
+      },
+      {
+        "id": "c14-2",
+        "user": {
+          "name": "Grace Kim",
+          "avatar": "https://randomuser.me/api/portraits/women/72.jpg"
+        },
+        "date": "2023-12-02",
+        "rating": 4,
+        "text": "Great base—added spinach for extra greens."
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "title": "New York Style Cheesecake",
+    "description": "Ultra‑creamy, tall cheesecake on a buttery graham crust, baked low‑and‑slow for that signature dense yet silky bite.",
+    "thumbnail": "/assets/recipes/cheesecake.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID15yzA567",
+    "authorName": "Rebecca Adams",
+    "authorAvatar": "/assets/avatars/avatar-15.jpg",
+    "authorId": "rebeccaadams",
+    "datePosted": "2024-02-28",
+    "duration": "2 hrs (plus chill)",
+    "difficulty": "Hard",
+    "servings": 12,
+    "cuisineType": "American",
+    "mealType": "Dessert",
+    "tags": ["Dessert", "Cheesecake", "Baking"],
+    "dietary": ["Vegetarian"],
+    "prepTime": "30 min",
+    "cookTime": "1 hr 30 min",
+    "ingredients": [
+      "2 cups graham‑cracker crumbs",
+      "6 tbsp melted butter",
+      "¼ cup sugar",
+      "1 kg (2.2 lb) cream cheese, room temp",
+      "1½ cups sugar",
+      "1 cup sour cream",
+      "4 large eggs, room temp",
+      "2 tsp vanilla extract",
+      "2 tbsp all‑purpose flour",
+      "Zest of 1 lemon"
+    ],
+    "instructions": [
+      "Preheat oven to 325 °F (160 °C). Line 9‑inch springform pan with parchment; wrap outside with foil.",
+      "Combine crumbs, melted butter, and ¼ cup sugar; press into pan. Bake 10 min; cool.",
+      "Beat cream cheese and sugar until smooth. Mix in sour cream, flour, vanilla, and lemon zest.",
+      "Add eggs one at a time on low speed.",
+      "Pour filling over crust; place pan in water bath.",
+      "Bake 1 hr 30 min until edges set but center jiggles.",
+      "Cool 1 hr, then chill at least 6 hrs before slicing."
+    ],
+    "nutritionFacts": {
+      "calories": 480,
+      "protein": "8g",
+      "carbs": "36g",
+      "fat": "34g",
+      "fiber": "0g"
+    },
+    "ratings": {
+      "average": 4.6,
+      "count": 152
+    },
+    "comments": [
+      {
+        "id": "c15-1",
+        "user": {
+          "name": "Hannah Lee",
+          "avatar": "https://randomuser.me/api/portraits/women/25.jpg"
+        },
+        "date": "2024-03-15",
+        "rating": 5,
+        "text": "Cracked a bit on top but tasted like a bakery masterpiece!"
+      },
+      {
+        "id": "c15-2",
+        "user": {
+          "name": "Patrick Young",
+          "avatar": "https://randomuser.me/api/portraits/men/49.jpg"
+        },
+        "date": "2024-03-10",
+        "rating": 4,
+        "text": "Rich and delicious—next time I’ll use a raspberry swirl."
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "title": "Avocado Toast with Poached Eggs",
+    "description": "Smashed avocado on toasted sourdough, topped with perfectly poached eggs and a sprinkle of chili flakes.",
+    "thumbnail": "/assets/recipes/avocado-toast.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID16bcd890",
+    "authorName": "Thomas Wright",
+    "authorAvatar": "/assets/avatars/avatar-16.jpg",
+    "authorId": "thomaswright",
+    "datePosted": "2023-06-07",
+    "duration": "20 min",
+    "difficulty": "Medium",
+    "servings": 2,
+    "cuisineType": "American",
+    "mealType": "Breakfast",
+    "tags": ["Breakfast", "Eggs", "Healthy"],
+    "dietary": ["Vegetarian"],
+    "prepTime": "10 min",
+    "cookTime": "10 min",
+    "ingredients": [
+      "2 slices sourdough bread, toasted",
+      "1 ripe avocado",
+      "1 tsp lemon juice",
+      "2 large eggs",
+      "1 tsp white vinegar",
+      "Salt & pepper",
+      "Chili flakes & microgreens"
+    ],
+    "instructions": [
+      "Mash avocado with lemon juice, salt, and pepper.",
+      "Bring pot of water to simmer; add vinegar.",
+      "Crack eggs into ramekins; gently slide into water, poach 3 min.",
+      "Spread avocado on toast; top each with poached egg.",
+      "Season with chili flakes and garnish with microgreens."
+    ],
+    "nutritionFacts": {
+      "calories": 340,
+      "protein": "14g",
+      "carbs": "28g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "ratings": {
+      "average": 4.8,
+      "count": 112
+    },
+    "comments": [
+      {
+        "id": "c16-1",
+        "user": {
+          "name": "Ella Scott",
+          "avatar": "https://randomuser.me/api/portraits/women/18.jpg"
+        },
+        "date": "2023-07-12",
+        "rating": 5,
+        "text": "Sunday brunch staple—poached egg hack worked perfectly!"
+      },
+      {
+        "id": "c16-2",
+        "user": {
+          "name": "Jason Reed",
+          "avatar": "https://randomuser.me/api/portraits/men/92.jpg"
+        },
+        "date": "2023-06-20",
+        "rating": 4,
+        "text": "Added feta crumbles—so good."
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "title": "Classic Beef Bourguignon",
+    "description": "Beef braised for hours in Burgundy wine with mushrooms, pearl onions, and smoky bacon—French comfort in a bowl.",
+    "thumbnail": "/assets/recipes/beef-bourguignon.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID17efg123",
+    "authorName": "Julia Miller",
+    "authorAvatar": "/assets/avatars/avatar-17.jpg",
+    "authorId": "juliamiller",
+    "datePosted": "2024-01-18",
+    "duration": "3 hrs",
+    "difficulty": "Hard",
+    "servings": 6,
+    "cuisineType": "Mediterranean",
+    "mealType": "Dinner",
+    "tags": ["French", "Beef", "Stew"],
+    "dietary": [],
+    "prepTime": "40 min",
+    "cookTime": "2 hrs 20 min",
+    "ingredients": [
+      "1 kg (2.2 lb) beef chuck, 2‑inch cubes",
+      "150 g bacon, diced",
+      "2 tbsp olive oil",
+      "1 onion, chopped",
+      "2 carrots, sliced",
+      "3 cloves garlic, minced",
+      "2 tbsp tomato paste",
+      "2 tbsp flour",
+      "3 cups Burgundy wine",
+      "2 cups beef stock",
+      "1 bouquet garni",
+      "200 g pearl onions",
+      "200 g mushrooms, halved",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Render bacon in Dutch oven; set aside.",
+      "Brown beef in bacon fat & oil; remove.",
+      "Sauté onion & carrots; add garlic and tomato paste.",
+      "Sprinkle flour; cook 1 min.",
+      "Return beef & bacon; pour in wine & stock, add bouquet garni.",
+      "Cover; simmer 2 hrs until beef is tender.",
+      "Sauté mushrooms & pearl onions; add to stew last 20 min.",
+      "Season to taste; serve with mashed potatoes."
+    ],
+    "nutritionFacts": {
+      "calories": 650,
+      "protein": "42g",
+      "carbs": "20g",
+      "fat": "40g",
+      "fiber": "3g"
+    },
+    "ratings": {
+      "average": 4.7,
+      "count": 77
+    },
+    "comments": [
+      {
+        "id": "c17-1",
+        "user": {
+          "name": "Sarah Bell",
+          "avatar": "https://randomuser.me/api/portraits/women/41.jpg"
+        },
+        "date": "2024-02-09",
+        "rating": 5,
+        "text": "Followed step‑by‑step—result rivaled my favorite bistro!"
+      },
+      {
+        "id": "c17-2",
+        "user": {
+          "name": "Leo Turner",
+          "avatar": "https://randomuser.me/api/portraits/men/13.jpg"
+        },
+        "date": "2024-01-30",
+        "rating": 4,
+        "text": "Time‑intensive, but the depth of flavor is unbeatable."
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "title": "Japanese Miso Soup",
+    "description": "Light, savory dashi broth with silky tofu, wakame seaweed, and green onions—five ingredients, endless comfort.",
+    "thumbnail": "/assets/recipes/miso-soup.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID18hij456",
+    "authorName": "Yuki Tanaka",
+    "authorAvatar": "/assets/avatars/avatar-18.jpg",
+    "authorId": "yukitanaka",
+    "datePosted": "2023-04-27",
+    "duration": "15 min",
+    "difficulty": "Easy",
+    "servings": 4,
+    "cuisineType": "Asian",
+    "mealType": "Appetizer",
+    "tags": ["Japanese", "Soup", "Healthy"],
+    "dietary": [],
+    "prepTime": "5 min",
+    "cookTime": "10 min",
+    "ingredients": [
+      "4 cups dashi stock",
+      "3 tbsp white miso paste",
+      "100 g silken tofu, cubed",
+      "2 tbsp dried wakame, rehydrated",
+      "2 green onions, sliced"
+    ],
+    "instructions": [
+      "Bring dashi to gentle simmer.",
+      "Place miso in ladle; whisk with a little hot dashi until smooth, then stir into pot (do not boil).",
+      "Add tofu and wakame; heat 2 min.",
+      "Garnish with green onions and serve immediately."
+    ],
+    "nutritionFacts": {
+      "calories": 60,
+      "protein": "5g",
+      "carbs": "4g",
+      "fat": "3g",
+      "fiber": "1g"
+    },
+    "ratings": {
+      "average": 4.9,
+      "count": 54
+    },
+    "comments": [
+      {
+        "id": "c18-1",
+        "user": {
+          "name": "Akira Sato",
+          "avatar": "https://randomuser.me/api/portraits/men/62.jpg"
+        },
+        "date": "2023-05-10",
+        "rating": 5,
+        "text": "Tastes like home—simple and authentic."
+      },
+      {
+        "id": "c18-2",
+        "user": {
+          "name": "Megan Brooks",
+          "avatar": "https://randomuser.me/api/portraits/women/83.jpg"
+        },
+        "date": "2023-05-04",
+        "rating": 4,
+        "text": "Added mushrooms for extra body—delicious."
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "title": "Stuffed Bell Peppers",
+    "description": "Roasted bell peppers brimming with a savory mix of beef, rice, and veggies—melty cheese cap optional but encouraged.",
+    "thumbnail": "/assets/recipes/stuffed-peppers.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID19klm789",
+    "authorName": "Laura Martinez",
+    "authorAvatar": "/assets/avatars/avatar-19.jpg",
+    "authorId": "lauramartinez",
+    "datePosted": "2023-09-08",
+    "duration": "45 min",
+    "difficulty": "Medium",
+    "servings": 4,
+    "cuisineType": "Mediterranean",
+    "mealType": "Dinner",
+    "tags": ["Healthy", "Beef", "Rice"],
+    "dietary": ["Gluten-Free"],
+    "prepTime": "15 min",
+    "cookTime": "30 min",
+    "ingredients": [
+      "4 large bell peppers, tops sliced, seeds removed",
+      "300 g ground beef",
+      "1 cup cooked rice",
+      "1 small onion, diced",
+      "2 cloves garlic, minced",
+      "1 can (400 g) diced tomatoes, drained",
+      "1 tsp dried oregano",
+      "1 cup shredded mozzarella (optional)",
+      "2 tbsp olive oil",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Preheat oven to 375 °F (190 °C).",
+      "Sauté onion & garlic in olive oil; add beef, cook until browned.",
+      "Stir in tomatoes, rice, oregano, salt & pepper; simmer 5 min.",
+      "Stuff peppers with mixture; place in baking dish.",
+      "Top with mozzarella; cover with foil and bake 25 min.",
+      "Uncover; bake 5 min more until cheese browns."
+    ],
+    "nutritionFacts": {
+      "calories": 420,
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "6g"
+    },
+    "ratings": {
+      "average": 4.5,
+      "count": 61
+    },
+    "comments": [
+      {
+        "id": "c19-1",
+        "user": {
+          "name": "Nina Gomez",
+          "avatar": "https://randomuser.me/api/portraits/women/31.jpg"
+        },
+        "date": "2023-10-02",
+        "rating": 5,
+        "text": "Made with quinoa instead of rice—so good!"
+      },
+      {
+        "id": "c19-2",
+        "user": {
+          "name": "Owen Clark",
+          "avatar": "https://randomuser.me/api/portraits/men/55.jpg"
+        },
+        "date": "2023-09-20",
+        "rating": 4,
+        "text": "Next time I'll add a bit more spice, but solid recipe."
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "title": "Homemade Granola",
+    "description": "Crunchy clusters of oats, nuts, and seeds lightly sweetened with maple—perfect for parfaits, cereal, or straight snacking.",
+    "thumbnail": "/assets/recipes/granola.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID20nop012",
+    "authorName": "Susan Clark",
+    "authorAvatar": "/assets/avatars/avatar-20.jpg",
+    "authorId": "susanclark",
+    "datePosted": "2024-04-04",
+    "duration": "40 min",
+    "difficulty": "Easy",
+    "servings": 10,
+    "cuisineType": "American",
+    "mealType": "Breakfast",
+    "tags": ["Breakfast", "Healthy", "Snack"],
+    "dietary": ["Vegetarian", "Vegan"],
+    "prepTime": "10 min",
+    "cookTime": "30 min",
+    "ingredients": [
+      "3 cups rolled oats",
+      "1 cup mixed nuts, roughly chopped",
+      "½ cup pumpkin seeds",
+      "½ cup shredded coconut",
+      "½ cup maple syrup",
+      "⅓ cup coconut oil, melted",
+      "1 tsp vanilla extract",
+      "½ tsp cinnamon",
+      "¼ tsp salt",
+      "½ cup dried cranberries"
+    ],
+    "instructions": [
+      "Preheat oven to 325 °F (160 °C). Line baking sheet with parchment.",
+      "Combine oats, nuts, seeds, coconut, cinnamon, and salt.",
+      "Stir together maple syrup, coconut oil, and vanilla; pour over dry mix.",
+      "Spread evenly; bake 25‑30 min, stirring halfway, until golden.",
+      "Cool completely; mix in dried cranberries. Store airtight."
+    ],
+    "nutritionFacts": {
+      "calories": 220,
+      "protein": "5g",
+      "carbs": "26g",
+      "fat": "11g",
+      "fiber": "3g"
+    },
+    "ratings": {
+      "average": 4.9,
+      "count": 95
+    },
+    "comments": [
+      {
+        "id": "c20-1",
+        "user": {
+          "name": "Jackie Long",
+          "avatar": "https://randomuser.me/api/portraits/women/12.jpg"
+        },
+        "date": "2024-04-10",
+        "rating": 5,
+        "text": "Never buying store‑bought again—addictive crunch!"
+      },
+      {
+        "id": "c20-2",
+        "user": {
+          "name": "Samuel Reed",
+          "avatar": "https://randomuser.me/api/portraits/men/70.jpg"
+        },
+        "date": "2024-04-06",
+        "rating": 5,
+        "text": "Subbed honey for maple—still perfect."
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "title": "Chicken Fajitas",
+    "description": "Sizzling strips of marinated chicken tossed with colorful bell peppers and onions—served piping‑hot with warm tortillas and your favorite toppings.",
+    "thumbnail": "/assets/recipes/chicken-fajitas.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID21abc123",
+    "authorName": "Carlos Gomez",
+    "authorAvatar": "/assets/avatars/avatar-21.jpg",
+    "authorId": "carlosgomez",
+    "datePosted": "2024-05-12",
+    "duration": "30 min",
+    "difficulty": "Easy",
+    "servings": 4,
+    "cuisineType": "Mexican",
+    "mealType": "Dinner",
+    "tags": ["Mexican", "Chicken", "Quick"],
+    "dietary": ["Dairy-Free"],
+    "prepTime": "15 min",
+    "cookTime": "15 min",
+    "ingredients": [
+      "600 g boneless skinless chicken breasts, sliced into ½‑inch strips",
+      "3 mixed bell peppers (red, yellow, green), sliced",
+      "1 large onion, sliced",
+      "2 tbsp vegetable oil",
+      "Juice of 1 lime",
+      "2 cloves garlic, minced",
+      "1 tsp ground cumin",
+      "1 tsp smoked paprika",
+      "½ tsp chili powder",
+      "½ tsp dried oregano",
+      "Salt & freshly ground black pepper",
+      "8 small flour or corn tortillas",
+      "Optional toppings: salsa, guacamole, sour cream, chopped cilantro"
+    ],
+    "instructions": [
+      "In a bowl, whisk oil, lime juice, garlic, cumin, paprika, chili powder, oregano, salt, and pepper.",
+      "Add chicken strips; marinate 10 min while prepping vegetables.",
+      "Heat a large cast‑iron skillet over high heat; sear chicken 5 min until browned; transfer to plate.",
+      "Add peppers and onion; cook 4 min until slightly charred.",
+      "Return chicken; toss 2 min until cooked through.",
+      "Warm tortillas in dry pan or microwave.",
+      "Serve chicken and veggies family‑style with tortillas and desired toppings."
+    ],
+    "nutritionFacts": {
+      "calories": 430,
+      "protein": "32g",
+      "carbs": "38g",
+      "fat": "15g",
+      "fiber": "4g"
+    },
+    "ratings": {
+      "average": 4.8,
+      "count": 88
+    },
+    "comments": [
+      {
+        "id": "c21-1",
+        "user": {
+          "name": "Maria Lopez",
+          "avatar": "https://randomuser.me/api/portraits/women/44.jpg"
+        },
+        "date": "2024-06-01",
+        "rating": 5,
+        "text": "So quick and tasty—family taco night upgrade!"
+      },
+      {
+        "id": "c21-2",
+        "user": {
+          "name": "Peter Hall",
+          "avatar": "https://randomuser.me/api/portraits/men/37.jpg"
+        },
+        "date": "2024-05-20",
+        "rating": 4,
+        "text": "Added extra chili for heat—perfect."
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "title": "Classic Tiramisu",
+    "description": "An elegant Italian dessert of espresso‑soaked ladyfingers layered with airy mascarpone cream and dusted with cocoa.",
+    "thumbnail": "/assets/recipes/tiramisu.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID22def456",
+    "authorName": "Antonio Romano",
+    "authorAvatar": "/assets/avatars/avatar-22.jpg",
+    "authorId": "antonioromano",
+    "datePosted": "2023-12-05",
+    "duration": "4 hrs (mostly chill)",
+    "difficulty": "Medium",
+    "servings": 8,
+    "cuisineType": "Italian",
+    "mealType": "Dessert",
+    "tags": ["Italian", "Dessert", "Coffee"],
+    "dietary": ["Vegetarian"],
+    "prepTime": "30 min",
+    "cookTime": "3 hrs 30 min (chill)",
+    "ingredients": [
+      "300 g ladyfinger biscuits (savoiardi)",
+      "3 large egg yolks",
+      "75 g granulated sugar",
+      "250 g mascarpone cheese, room temp",
+      "200 ml heavy cream, cold",
+      "300 ml strong espresso, cooled",
+      "3 tbsp coffee liqueur (optional)",
+      "2 tbsp unsweetened cocoa powder",
+      "Dark chocolate shavings for garnish"
+    ],
+    "instructions": [
+      "Whisk yolks and sugar over a bain‑marie until pale and thick; cool slightly.",
+      "Fold mascarpone into yolk mixture until smooth.",
+      "Whip cream to soft peaks; gently fold into mascarpone mixture.",
+      "Combine espresso and liqueur in shallow dish.",
+      "Dip ladyfingers briefly in coffee; arrange in 9×9‑inch dish.",
+      "Spread half the cream; repeat layers, ending with cream.",
+      "Cover and chill at least 3 hrs (overnight best).",
+      "Dust with cocoa and garnish with chocolate before serving."
+    ],
+    "nutritionFacts": {
+      "calories": 420,
+      "protein": "6g",
+      "carbs": "40g",
+      "fat": "26g",
+      "fiber": "1g"
+    },
+    "ratings": {
+      "average": 4.9,
+      "count": 167
+    },
+    "comments": [
+      {
+        "id": "c22-1",
+        "user": {
+          "name": "Laura Chen",
+          "avatar": "https://randomuser.me/api/portraits/women/63.jpg"
+        },
+        "date": "2024-01-10",
+        "rating": 5,
+        "text": "Authentic flavor—like eating in Rome!"
+      },
+      {
+        "id": "c22-2",
+        "user": {
+          "name": "David Kim",
+          "avatar": "https://randomuser.me/api/portraits/men/52.jpg"
+        },
+        "date": "2023-12-20",
+        "rating": 4,
+        "text": "A bit rich, but absolutely delicious."
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "title": "Quinoa Vegetable Stir-Fry",
+    "description": "Protein‑packed quinoa tossed with a medley of crisp vegetables in a light soy‑ginger sauce—weeknight healthy made easy.",
+    "thumbnail": "/assets/recipes/quinoa-stir-fry.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID23ghi789",
+    "authorName": "Grace Wilson",
+    "authorAvatar": "/assets/avatars/avatar-23.jpg",
+    "authorId": "gracewilson",
+    "datePosted": "2024-01-22",
+    "duration": "25 min",
+    "difficulty": "Easy",
+    "servings": 3,
+    "cuisineType": "American",
+    "mealType": "Dinner",
+    "tags": ["Healthy", "Vegetarian", "Quick"],
+    "dietary": ["Vegetarian", "Vegan", "Gluten-Free"],
+    "prepTime": "10 min",
+    "cookTime": "15 min",
+    "ingredients": [
+      "2 cups cooked quinoa (cooled)",
+      "1 tbsp sesame oil",
+      "1 tbsp vegetable oil",
+      "2 cloves garlic, minced",
+      "1‑inch ginger, grated",
+      "1 cup broccoli florets",
+      "1 red bell pepper, sliced",
+      "1 medium carrot, julienned",
+      "½ cup snap peas",
+      "2 tbsp low‑sodium soy sauce or tamari",
+      "1 tbsp rice vinegar",
+      "1 tbsp maple syrup",
+      "1 tsp sriracha (optional)",
+      "2 green onions, sliced",
+      "Sesame seeds for garnish"
+    ],
+    "instructions": [
+      "Heat oils in wok; sauté garlic and ginger 30 sec.",
+      "Add broccoli, carrot, and bell pepper; stir‑fry 3 min.",
+      "Add snap peas; cook 1 min.",
+      "Stir in quinoa; pour soy sauce, vinegar, maple syrup, and sriracha.",
+      "Toss until heated through and coated.",
+      "Garnish with green onions and sesame seeds; serve hot."
+    ],
+    "nutritionFacts": {
+      "calories": 360,
+      "protein": "11g",
+      "carbs": "55g",
+      "fat": "11g",
+      "fiber": "8g"
+    },
+    "ratings": {
+      "average": 4.7,
+      "count": 73
+    },
+    "comments": [
+      {
+        "id": "c23-1",
+        "user": {
+          "name": "Olivia Perez",
+          "avatar": "https://randomuser.me/api/portraits/women/14.jpg"
+        },
+        "date": "2024-02-05",
+        "rating": 5,
+        "text": "Meal‑prep superstar—stays tasty even cold."
+      },
+      {
+        "id": "c23-2",
+        "user": {
+          "name": "Lucas Brown",
+          "avatar": "https://randomuser.me/api/portraits/men/46.jpg"
+        },
+        "date": "2024-01-30",
+        "rating": 4,
+        "text": "Added tofu for extra protein—great recipe."
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "title": "Homemade Pizza Dough",
+    "description": "Foolproof dough that bakes up with a crisp exterior and chewy crumb—perfect canvas for any topping.",
+    "thumbnail": "/assets/recipes/pizza-dough.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID24jkl012",
+    "authorName": "Marco Rossi",
+    "authorAvatar": "/assets/avatars/avatar-24.jpg",
+    "authorId": "marcorossi",
+    "datePosted": "2023-10-18",
+    "duration": "2 hrs",
+    "difficulty": "Medium",
+    "servings": 2,
+    "cuisineType": "Italian",
+    "mealType": "Dinner",
+    "tags": ["Italian", "Pizza", "Baking"],
+    "dietary": ["Vegetarian", "Vegan"],
+    "prepTime": "20 min (active)",
+    "cookTime": "1 hr 40 min (rise & bake)",
+    "ingredients": [
+      "500 g bread flour",
+      "325 ml warm water",
+      "7 g instant yeast",
+      "2 tbsp olive oil",
+      "10 g fine sea salt",
+      "Semolina for dusting"
+    ],
+    "instructions": [
+      "Combine flour and yeast; stir in water and oil until shaggy dough forms.",
+      "Add salt; knead 8 min until smooth.",
+      "Place in oiled bowl; cover and rise 1 hr until doubled.",
+      "Divide into 2 balls; rest 30 min.",
+      "Shape into 12‑inch rounds on semolina‑dusted surface.",
+      "Top as desired; bake at 500 °F (260 °C) on stone 8‑10 min."
+    ],
+    "nutritionFacts": {
+      "calories": 160,
+      "protein": "5g",
+      "carbs": "32g",
+      "fat": "2g",
+      "fiber": "1g"
+    },
+    "ratings": {
+      "average": 4.6,
+      "count": 101
+    },
+    "comments": [
+      {
+        "id": "c24-1",
+        "user": {
+          "name": "Ella Johnson",
+          "avatar": "https://randomuser.me/api/portraits/women/77.jpg"
+        },
+        "date": "2023-11-02",
+        "rating": 5,
+        "text": "Best homemade crust I've tried—bubbly and light."
+      },
+      {
+        "id": "c24-2",
+        "user": {
+          "name": "Mateo Garcia",
+          "avatar": "https://randomuser.me/api/portraits/men/29.jpg"
+        },
+        "date": "2023-10-25",
+        "rating": 4,
+        "text": "Easy to work with—added a touch of honey for color."
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "title": "Lemon Garlic Roasted Chicken",
+    "description": "Whole chicken roasted with bright lemon, fragrant garlic, and herbs—juicy meat and crispy skin every time.",
+    "thumbnail": "/assets/recipes/roasted-chicken.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID25mno345",
+    "authorName": "Elizabeth Cooper",
+    "authorAvatar": "/assets/avatars/avatar-25.jpg",
+    "authorId": "elizabethcooper",
+    "datePosted": "2024-02-11",
+    "duration": "1.5 hrs",
+    "difficulty": "Medium",
+    "servings": 5,
+    "cuisineType": "American",
+    "mealType": "Dinner",
+    "tags": ["Chicken", "Roast", "Sunday Dinner"],
+    "dietary": ["Gluten-Free", "Dairy-Free"],
+    "prepTime": "15 min",
+    "cookTime": "1 hr 15 min",
+    "ingredients": [
+      "1 whole chicken (1.6 kg)",
+      "2 lemons, halved",
+      "6 cloves garlic, smashed",
+      "3 tbsp olive oil",
+      "1 tbsp fresh rosemary, chopped",
+      "1 tbsp fresh thyme leaves",
+      "Salt & freshly ground black pepper",
+      "1 cup chicken broth"
+    ],
+    "instructions": [
+      "Preheat oven to 400 °F (200 °C).",
+      "Pat chicken dry; season cavity with salt and pepper; stuff with 1 lemon and half the garlic.",
+      "Tie legs, tuck wings; rub skin with olive oil, herbs, salt, and pepper.",
+      "Place in roasting pan; scatter remaining lemon halves and garlic.",
+      "Roast 1 hr 15 min, basting with pan juices halfway.",
+      "Rest 10 min before carving; deglaze pan with broth for quick gravy."
+    ],
+    "nutritionFacts": {
+      "calories": 520,
+      "protein": "45g",
+      "carbs": "4g",
+      "fat": "35g",
+      "fiber": "1g"
+    },
+    "ratings": {
+      "average": 4.8,
+      "count": 92
+    },
+    "comments": [
+      {
+        "id": "c25-1",
+        "user": {
+          "name": "George Allen",
+          "avatar": "https://randomuser.me/api/portraits/men/80.jpg"
+        },
+        "date": "2024-03-03",
+        "rating": 5,
+        "text": "Moist and flavorful—my new go‑to roast chicken."
+      },
+      {
+        "id": "c25-2",
+        "user": {
+          "name": "Natalie Brooks",
+          "avatar": "https://randomuser.me/api/portraits/women/52.jpg"
+        },
+        "date": "2024-02-18",
+        "rating": 4,
+        "text": "Skin was extra crispy—added potatoes underneath to roast in drippings."
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "title": "Classic Greek Salad",
+    "description": "Crisp cucumbers, ripe tomatoes, briny olives, and creamy feta tossed in a simple oregano‑lemon vinaigrette.",
+    "thumbnail": "/assets/recipes/greek-salad.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID26pqr678",
+    "authorName": "Nikos Papadopoulos",
+    "authorAvatar": "/assets/avatars/avatar-26.jpg",
+    "authorId": "nikospapadopoulos",
+    "datePosted": "2023-07-09",
+    "duration": "15 min",
+    "difficulty": "Easy",
+    "servings": 4,
+    "cuisineType": "Mediterranean",
+    "mealType": "Lunch",
+    "tags": ["Greek", "Salad", "Summer"],
+    "dietary": ["Vegetarian", "Gluten-Free"],
+    "prepTime": "15 min",
+    "cookTime": "0 min",
+    "ingredients": [
+      "3 ripe tomatoes, cut into wedges",
+      "1 large cucumber, sliced",
+      "1 green bell pepper, sliced",
+      "½ red onion, thinly sliced",
+      "½ cup Kalamata olives",
+      "150 g feta cheese, thick slabs",
+      "3 tbsp extra‑virgin olive oil",
+      "1 tbsp red wine vinegar",
+      "1 tsp dried oregano",
+      "Salt & freshly ground black pepper"
+    ],
+    "instructions": [
+      "Combine tomatoes, cucumber, pepper, onion, and olives in bowl.",
+      "Whisk oil, vinegar, oregano, salt, and pepper.",
+      "Pour dressing over salad; toss gently.",
+      "Top with feta slabs; drizzle a little extra olive oil.",
+      "Serve immediately."
+    ],
+    "nutritionFacts": {
+      "calories": 210,
+      "protein": "6g",
+      "carbs": "12g",
+      "fat": "16g",
+      "fiber": "3g"
+    },
+    "ratings": {
+      "average": 4.7,
+      "count": 55
+    },
+    "comments": [
+      {
+        "id": "c26-1",
+        "user": {
+          "name": "Helena Georgiou",
+          "avatar": "https://randomuser.me/api/portraits/women/28.jpg"
+        },
+        "date": "2023-08-01",
+        "rating": 5,
+        "text": "Tastes like my summers in Crete—simple and fresh."
+      },
+      {
+        "id": "c26-2",
+        "user": {
+          "name": "James Carter",
+          "avatar": "https://randomuser.me/api/portraits/men/68.jpg"
+        },
+        "date": "2023-07-15",
+        "rating": 4,
+        "text": "Added a squeeze of lemon—delicious."
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "title": "Beef and Broccoli Stir-Fry",
+    "description": "Tender beef slices and vibrant broccoli florets coated in a savory garlic‑ginger sauce—better than takeout in 25 minutes.",
+    "thumbnail": "/assets/recipes/beef-broccoli.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID27stu901",
+    "authorName": "Daniel Wang",
+    "authorAvatar": "/assets/avatars/avatar-27.jpg",
+    "authorId": "danielwang",
+    "datePosted": "2024-03-02",
+    "duration": "25 min",
+    "difficulty": "Easy",
+    "servings": 4,
+    "cuisineType": "Asian",
+    "mealType": "Dinner",
+    "tags": ["Chinese", "Beef", "Quick"],
+    "dietary": ["Dairy-Free"],
+    "prepTime": "10 min",
+    "cookTime": "15 min",
+    "ingredients": [
+      "450 g flank steak, thinly sliced against grain",
+      "2 tbsp soy sauce",
+      "1 tbsp cornstarch",
+      "1 tbsp oyster sauce",
+      "1 tbsp hoisin sauce",
+      "1 tsp sesame oil",
+      "2 tbsp vegetable oil",
+      "3 cups broccoli florets",
+      "3 cloves garlic, minced",
+      "1‑inch ginger, minced",
+      "¼ cup beef broth",
+      "Sesame seeds & green onions for garnish"
+    ],
+    "instructions": [
+      "Toss beef with soy sauce and cornstarch; marinate 10 min.",
+      "Stir sauce: oyster, hoisin, sesame oil, and broth.",
+      "Heat oil in wok; sear beef 2 min; remove.",
+      "Add broccoli with splash of water; steam 2 min.",
+      "Add garlic and ginger; cook 30 sec.",
+      "Return beef; pour sauce; stir until thickened.",
+      "Garnish and serve over rice."
+    ],
+    "nutritionFacts": {
+      "calories": 380,
+      "protein": "29g",
+      "carbs": "18g",
+      "fat": "22g",
+      "fiber": "3g"
+    },
+    "ratings": {
+      "average": 4.8,
+      "count": 83
+    },
+    "comments": [
+      {
+        "id": "c27-1",
+        "user": {
+          "name": "Amy Liu",
+          "avatar": "https://randomuser.me/api/portraits/women/32.jpg"
+        },
+        "date": "2024-03-18",
+        "rating": 5,
+        "text": "Sauce is spot‑on—family favorite now."
+      },
+      {
+        "id": "c27-2",
+        "user": {
+          "name": "Robert Miller",
+          "avatar": "https://randomuser.me/api/portraits/men/58.jpg"
+        },
+        "date": "2024-03-10",
+        "rating": 4,
+        "text": "Added chili flakes for a kick—great quick dinner."
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "title": "Butternut Squash Soup",
+    "description": "Silky, lightly sweet squash soup finished with a hint of warming spices—comfort in a bowl.",
+    "thumbnail": "/assets/recipes/butternut-soup.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID28vwx234",
+    "authorName": "Emma Lewis",
+    "authorAvatar": "/assets/avatars/avatar-28.jpg",
+    "authorId": "emmalewis",
+    "datePosted": "2023-11-05",
+    "duration": "45 min",
+    "difficulty": "Easy",
+    "servings": 6,
+    "cuisineType": "American",
+    "mealType": "Lunch",
+    "tags": ["Soup", "Fall", "Healthy"],
+    "dietary": ["Vegetarian", "Gluten-Free"],
+    "prepTime": "10 min",
+    "cookTime": "35 min",
+    "ingredients": [
+      "1 medium butternut squash (about 1.2 kg), peeled & cubed",
+      "1 tbsp olive oil",
+      "1 onion, diced",
+      "2 cloves garlic, minced",
+      "1 tsp ground cumin",
+      "½ tsp ground cinnamon",
+      "4 cups vegetable broth",
+      "1 cup coconut milk",
+      "Salt & pepper",
+      "Pumpkin seeds & cream swirl for garnish (optional)"
+    ],
+    "instructions": [
+      "Heat oil; sauté onion 3 min.",
+      "Add garlic, cumin, cinnamon; cook 30 sec.",
+      "Add squash and broth; bring to boil, simmer 20 min until tender.",
+      "Blend until smooth; stir in coconut milk.",
+      "Season; warm through.",
+      "Serve garnished with pumpkin seeds and cream."
+    ],
+    "nutritionFacts": {
+      "calories": 190,
+      "protein": "3g",
+      "carbs": "28g",
+      "fat": "8g",
+      "fiber": "5g"
+    },
+    "ratings": {
+      "average": 4.8,
+      "count": 69
+    },
+    "comments": [
+      {
+        "id": "c28-1",
+        "user": {
+          "name": "Laura Price",
+          "avatar": "https://randomuser.me/api/portraits/women/84.jpg"
+        },
+        "date": "2023-12-01",
+        "rating": 5,
+        "text": "Perfect autumn dinner—kids loved it with grilled cheese."
+      },
+      {
+        "id": "c28-2",
+        "user": {
+          "name": "Henry Adams",
+          "avatar": "https://randomuser.me/api/portraits/men/20.jpg"
+        },
+        "date": "2023-11-15",
+        "rating": 4,
+        "text": "Added a dash of nutmeg—wonderful flavor."
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "title": "Shakshuka",
+    "description": "Eggs gently poached in a spiced tomato‑pepper sauce—scoop with crusty bread for the ultimate breakfast.",
+    "thumbnail": "/assets/recipes/shakshuka.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID29yzA567",
+    "authorName": "Amir Hassan",
+    "authorAvatar": "/assets/avatars/avatar-29.jpg",
+    "authorId": "amirhassan",
+    "datePosted": "2024-01-14",
+    "duration": "30 min",
+    "difficulty": "Medium",
+    "servings": 4,
+    "cuisineType": "Mediterranean",
+    "mealType": "Breakfast",
+    "tags": ["Middle Eastern", "Eggs", "Breakfast"],
+    "dietary": ["Vegetarian", "Gluten-Free"],
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "ingredients": [
+      "2 tbsp olive oil",
+      "1 onion, diced",
+      "1 red bell pepper, diced",
+      "3 cloves garlic, minced",
+      "1 tsp ground cumin",
+      "1 tsp paprika",
+      "¼ tsp cayenne",
+      "1 can (400 g) crushed tomatoes",
+      "4 large eggs",
+      "Salt & pepper",
+      "Fresh parsley & feta for garnish"
+    ],
+    "instructions": [
+      "Heat oil; sauté onion and pepper 5 min.",
+      "Add garlic and spices; cook 1 min.",
+      "Pour tomatoes; simmer 10 min until thickened.",
+      "Make wells; crack eggs; cover and cook 5‑6 min to desired doneness.",
+      "Season; garnish with parsley and feta; serve."
+    ],
+    "nutritionFacts": {
+      "calories": 230,
+      "protein": "11g",
+      "carbs": "14g",
+      "fat": "15g",
+      "fiber": "4g"
+    },
+    "ratings": {
+      "average": 4.9,
+      "count": 78
+    },
+    "comments": [
+      {
+        "id": "c29-1",
+        "user": {
+          "name": "Samira Ali",
+          "avatar": "https://randomuser.me/api/portraits/women/53.jpg"
+        },
+        "date": "2024-02-02",
+        "rating": 5,
+        "text": "Reminds me of home—absolutely delicious."
+      },
+      {
+        "id": "c29-2",
+        "user": {
+          "name": "Jake Wilson",
+          "avatar": "https://randomuser.me/api/portraits/men/31.jpg"
+        },
+        "date": "2024-01-25",
+        "rating": 4,
+        "text": "Great brunch dish—served with pita."
+      }
+    ]
+  },
+  {
+    "id": "30",
+    "title": "Chicken Pad Thai",
+    "description": "Rice noodles stir‑fried with tender chicken, crunchy peanuts, and tangy tamarind sauce—Thailand's favorite street food at home.",
+    "thumbnail": "/assets/recipes/pad-thai.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID30bcd890",
+    "authorName": "Sophie Nguyen",
+    "authorAvatar": "/assets/avatars/avatar-30.jpg",
+    "authorId": "sophienguyen",
+    "datePosted": "2024-03-30",
+    "duration": "35 min",
+    "difficulty": "Medium",
+    "servings": 4,
+    "cuisineType": "Asian",
+    "mealType": "Dinner",
+    "tags": ["Thai", "Noodles", "Chicken"],
+    "dietary": ["Dairy-Free"],
+    "prepTime": "15 min",
+    "cookTime": "20 min",
+    "ingredients": [
+      "200 g flat rice noodles",
+      "2 tbsp tamarind paste",
+      "3 tbsp fish sauce",
+      "1 tbsp palm sugar",
+      "2 tbsp vegetable oil",
+      "300 g chicken breast, thinly sliced",
+      "2 cloves garlic, minced",
+      "2 eggs, lightly beaten",
+      "1 cup bean sprouts",
+      "3 green onions, sliced",
+      "¼ cup roasted peanuts, crushed",
+      "Lime wedges & cilantro"
+    ],
+    "instructions": [
+      "Soak noodles in warm water 20 min; drain.",
+      "Mix tamarind, fish sauce, and sugar.",
+      "Heat oil; stir‑fry chicken 3 min.",
+      "Add garlic; cook 30 sec.",
+      "Push aside; scramble eggs; combine.",
+      "Add noodles and sauce; toss 2 min.",
+      "Fold in bean sprouts and onions.",
+      "Serve with peanuts, cilantro, and lime."
+    ],
+    "nutritionFacts": {
+      "calories": 500,
+      "protein": "30g",
+      "carbs": "60g",
+      "fat": "16g",
+      "fiber": "4g"
+    },
+    "ratings": {
+      "average": 4.7,
+      "count": 119
+    },
+    "comments": [
+      {
+        "id": "c30-1",
+        "user": {
+          "name": "Liam Carter",
+          "avatar": "https://randomuser.me/api/portraits/men/43.jpg"
+        },
+        "date": "2024-04-12",
+        "rating": 5,
+        "text": "Tastes just like Bangkok night markets!"
+      },
+      {
+        "id": "c30-2",
+        "user": {
+          "name": "Grace Lee",
+          "avatar": "https://randomuser.me/api/portraits/women/37.jpg"
+        },
+        "date": "2024-04-05",
+        "rating": 4,
+        "text": "Needed extra tamarind for my taste, but great recipe."
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "title": "Homemade Pasta Carbonara",
+    "description": "Creamy Roman classic made with eggs, Pecorino Romano, and crispy pancetta—no cream required.",
+    "thumbnail": "/assets/recipes/carbonara.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID31efg123",
+    "authorName": "Giulia Bianchi",
+    "authorAvatar": "/assets/avatars/avatar-31.jpg",
+    "authorId": "giuliabianchi",
+    "datePosted": "2023-09-25",
+    "duration": "25 min",
+    "difficulty": "Medium",
+    "servings": 4,
+    "cuisineType": "Italian",
+    "mealType": "Dinner",
+    "tags": ["Italian", "Pasta", "Quick"],
+    "dietary": [],
+    "prepTime": "10 min",
+    "cookTime": "15 min",
+    "ingredients": [
+      "400 g spaghetti",
+      "150 g pancetta, diced",
+      "3 large eggs + 1 yolk",
+      "70 g Pecorino Romano, finely grated",
+      "Freshly ground black pepper"
+    ],
+    "instructions": [
+      "Cook pasta in salted water until al dente.",
+      "Meanwhile, crisp pancetta in pan; reserve fat.",
+      "Beat eggs, yolk, cheese, and pepper.",
+      "Drain pasta, reserving ½ cup water; toss with pancetta and fat.",
+      "Off heat, add egg mixture, stirring quickly; thin with pasta water to creamy sauce.",
+      "Serve immediately with extra cheese and pepper."
+    ],
+    "nutritionFacts": {
+      "calories": 560,
+      "protein": "24g",
+      "carbs": "65g",
+      "fat": "22g",
+      "fiber": "3g"
+    },
+    "ratings": {
+      "average": 4.8,
+      "count": 138
+    },
+    "comments": [
+      {
+        "id": "c31-1",
+        "user": {
+          "name": "Marco De Luca",
+          "avatar": "https://randomuser.me/api/portraits/men/22.jpg"
+        },
+        "date": "2023-10-10",
+        "rating": 5,
+        "text": "Authentic and silky—bravo!"
+      },
+      {
+        "id": "c31-2",
+        "user": {
+          "name": "Emily Clark",
+          "avatar": "https://randomuser.me/api/portraits/women/64.jpg"
+        },
+        "date": "2023-09-30",
+        "rating": 4,
+        "text": "Used bacon instead of pancetta—still amazing."
+      }
+    ]
+  },
+  {
+    "id": "32",
+    "title": "Hearty Beef Chili",
+    "description": "Slow‑simmered chili loaded with ground beef, beans, tomatoes, and a kick of spice—game‑day essential.",
+    "thumbnail": "/assets/recipes/beef-chili.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID32hij456",
+    "authorName": "Steve Johnson",
+    "authorAvatar": "/assets/avatars/avatar-32.jpg",
+    "authorId": "stevejohnson",
+    "datePosted": "2023-12-15",
+    "duration": "1.5 hrs",
+    "difficulty": "Medium",
+    "servings": 6,
+    "cuisineType": "American",
+    "mealType": "Dinner",
+    "tags": ["Chili", "Beef", "Comfort Food"],
+    "dietary": ["Dairy-Free"],
+    "prepTime": "20 min",
+    "cookTime": "1 hr 10 min",
+    "ingredients": [
+      "1 tbsp olive oil",
+      "1 onion, diced",
+      "1 green bell pepper, diced",
+      "3 cloves garlic, minced",
+      "800 g ground beef",
+      "2 tbsp chili powder",
+      "1 tsp cumin",
+      "1 tsp smoked paprika",
+      "1 can (400 g) diced tomatoes",
+      "1 can (400 g) kidney beans, drained",
+      "1 can (400 g) black beans, drained",
+      "2 cups beef broth",
+      "Salt & pepper",
+      "Optional toppings: cheddar, sour cream, green onions"
+    ],
+    "instructions": [
+      "Heat oil; sauté onion and pepper 4 min.",
+      "Add garlic and beef; brown 8 min.",
+      "Stir in spices; cook 1 min.",
+      "Add tomatoes, beans, broth; bring to boil.",
+      "Reduce heat; simmer 45 min until thick.",
+      "Season; serve with desired toppings."
+    ],
+    "nutritionFacts": {
+      "calories": 480,
+      "protein": "36g",
+      "carbs": "30g",
+      "fat": "24g",
+      "fiber": "8g"
+    },
+    "ratings": {
+      "average": 4.6,
+      "count": 90
+    },
+    "comments": [
+      {
+        "id": "c32-1",
+        "user": {
+          "name": "Kevin Lee",
+          "avatar": "https://randomuser.me/api/portraits/men/18.jpg"
+        },
+        "date": "2024-01-08",
+        "rating": 5,
+        "text": "Perfect for cold nights—leftovers taste even better."
+      },
+      {
+        "id": "c32-2",
+        "user": {
+          "name": "Sarah Walker",
+          "avatar": "https://randomuser.me/api/portraits/women/57.jpg"
+        },
+        "date": "2023-12-28",
+        "rating": 4,
+        "text": "Added a chipotle pepper for smoky heat—fantastic."
+      }
+    ]
+  },
+  {
+    "id": "33",
+    "title": "Vegetable Biryani",
+    "description": "Fragrant basmati rice layered with spiced vegetables and herbs—served with cooling raita.",
+    "thumbnail": "/assets/recipes/biryani.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID33klm789",
+    "authorName": "Priya Sharma",
+    "authorAvatar": "/assets/avatars/avatar-33.jpg",
+    "authorId": "priyasharma",
+    "datePosted": "2024-02-28",
+    "duration": "50 min",
+    "difficulty": "Medium",
+    "servings": 4,
+    "cuisineType": "Asian",
+    "mealType": "Dinner",
+    "tags": ["Indian", "Rice", "Vegetarian"],
+    "dietary": ["Vegetarian"],
+    "prepTime": "20 min",
+    "cookTime": "30 min",
+    "ingredients": [
+      "2 cups basmati rice, rinsed",
+      "3 tbsp ghee or oil",
+      "1 bay leaf, 4 cloves, 4 cardamom pods",
+      "1 onion, thinly sliced",
+      "1 tbsp ginger‑garlic paste",
+      "1 cup mixed vegetables (carrot, peas, beans, potato), diced",
+      "½ cup yogurt",
+      "1 tsp biryani masala",
+      "½ tsp turmeric",
+      "½ tsp chili powder",
+      "2 cups vegetable broth",
+      "Saffron strands soaked in 2 tbsp warm milk",
+      "Fresh cilantro & mint, chopped",
+      "Fried onions & cashews for garnish"
+    ],
+    "instructions": [
+      "Parboil rice 5 min; drain.",
+      "Heat ghee; fry whole spices 30 sec; add onion; brown.",
+      "Add ginger‑garlic paste; cook 1 min.",
+      "Add vegetables and spices; sauté 3 min; stir in yogurt.",
+      "Layer rice over veggies; pour broth and saffron milk.",
+      "Cover; cook on low 20 min until rice is fluffy.",
+      "Garnish with herbs, fried onions, and cashews; serve."
+    ],
+    "nutritionFacts": {
+      "calories": 430,
+      "protein": "9g",
+      "carbs": "70g",
+      "fat": "12g",
+      "fiber": "4g"
+    },
+    "ratings": {
+      "average": 4.8,
+      "count": 64
+    },
+    "comments": [
+      {
+        "id": "c33-1",
+        "user": {
+          "name": "Ravi Patel",
+          "avatar": "https://randomuser.me/api/portraits/men/40.jpg"
+        },
+        "date": "2024-03-12",
+        "rating": 5,
+        "text": "Aromatic and flavorful—tastes like restaurant biryani."
+      },
+      {
+        "id": "c33-2",
+        "user": {
+          "name": "Mia Thompson",
+          "avatar": "https://randomuser.me/api/portraits/women/50.jpg"
+        },
+        "date": "2024-03-01",
+        "rating": 4,
+        "text": "Used brown basmati—still great."
+      }
+    ]
+  },
+  {
+    "id": "34",
+    "title": "Apple Cinnamon Pancakes",
+    "description": "Fluffy pancakes studded with sweet apple chunks and warm cinnamon—perfect fall breakfast.",
+    "thumbnail": "/assets/recipes/apple-pancakes.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID34nop012",
+    "authorName": "Amanda White",
+    "authorAvatar": "/assets/avatars/avatar-34.jpg",
+    "authorId": "amandawhite",
+    "datePosted": "2023-09-12",
+    "duration": "25 min",
+    "difficulty": "Easy",
+    "servings": 4,
+    "cuisineType": "American",
+    "mealType": "Breakfast",
+    "tags": ["Breakfast", "Pancakes", "Apple"],
+    "dietary": ["Vegetarian"],
+    "prepTime": "10 min",
+    "cookTime": "15 min",
+    "ingredients": [
+      "1½ cups all‑purpose flour",
+      "2 tbsp sugar",
+      "2 tsp baking powder",
+      "1 tsp ground cinnamon",
+      "¼ tsp salt",
+      "1¼ cups milk",
+      "1 egg",
+      "2 tbsp melted butter",
+      "1 apple, peeled & diced",
+      "Butter & maple syrup for serving"
+    ],
+    "instructions": [
+      "Whisk dry ingredients in bowl.",
+      "Mix milk, egg, and butter; add to dry; fold gently.",
+      "Stir in apple pieces.",
+      "Cook ¼‑cup batter on greased griddle until bubbles form; flip; cook until golden.",
+      "Serve with butter and syrup."
+    ],
+    "nutritionFacts": {
+      "calories": 270,
+      "protein": "6g",
+      "carbs": "40g",
+      "fat": "10g",
+      "fiber": "2g"
+    },
+    "ratings": {
+      "average": 4.7,
+      "count": 58
+    },
+    "comments": [
+      {
+        "id": "c34-1",
+        "user": {
+          "name": "Chloe Martin",
+          "avatar": "https://randomuser.me/api/portraits/women/66.jpg"
+        },
+        "date": "2023-10-03",
+        "rating": 5,
+        "text": "House smelled amazing—kids devoured them."
+      },
+      {
+        "id": "c34-2",
+        "user": {
+          "name": "Ethan Brown",
+          "avatar": "https://randomuser.me/api/portraits/men/74.jpg"
+        },
+        "date": "2023-09-20",
+        "rating": 4,
+        "text": "Added walnuts for crunch—yum!"
+      }
+    ]
+  },
+  {
+    "id": "35",
+    "title": "Grilled Salmon with Lemon Butter",
+    "description": "Juicy salmon fillets kissed by the grill and finished with a zesty lemon‑parsley butter sauce.",
+    "thumbnail": "/assets/recipes/grilled-salmon.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID35qrs345",
+    "authorName": "Brian Foster",
+    "authorAvatar": "/assets/avatars/avatar-35.jpg",
+    "authorId": "brianfoster",
+    "datePosted": "2024-04-01",
+    "duration": "20 min",
+    "difficulty": "Easy",
+    "servings": 4,
+    "cuisineType": "American",
+    "mealType": "Dinner",
+    "tags": ["Seafood", "Healthy", "Quick"],
+    "dietary": ["Gluten-Free"],
+    "prepTime": "5 min",
+    "cookTime": "15 min",
+    "ingredients": [
+      "4 salmon fillets (180 g each)",
+      "2 tbsp olive oil",
+      "Salt & pepper",
+      "2 tbsp butter",
+      "Juice & zest of 1 lemon",
+      "1 tbsp fresh parsley, chopped"
+    ],
+    "instructions": [
+      "Preheat grill to medium‑high; oil grates.",
+      "Brush salmon with olive oil; season.",
+      "Grill skin‑side down 6 min; flip; cook 3 min more.",
+      "Melt butter with lemon juice/zest; stir in parsley.",
+      "Plate salmon; spoon lemon butter over top."
+    ],
+    "nutritionFacts": {
+      "calories": 420,
+      "protein": "34g",
+      "carbs": "2g",
+      "fat": "30g",
+      "fiber": "0g"
+    },
+    "ratings": {
+      "average": 4.9,
+      "count": 72
+    },
+    "comments": [
+      {
+        "id": "c35-1",
+        "user": {
+          "name": "Isabella Gomez",
+          "avatar": "https://randomuser.me/api/portraits/women/23.jpg"
+        },
+        "date": "2024-04-10",
+        "rating": 5,
+        "text": "Restaurant quality—so simple!"
+      },
+      {
+        "id": "c35-2",
+        "user": {
+          "name": "Paul Adams",
+          "avatar": "https://randomuser.me/api/portraits/men/63.jpg"
+        },
+        "date": "2024-04-06",
+        "rating": 4,
+        "text": "Added a pinch of dill—fantastic."
+      }
+    ]
+  },
+  {
+    "id": "36",
+    "title": "Homemade Hummus",
+    "description": "Ultra‑creamy chickpea dip with tahini, lemon, and garlic—ready in 10 minutes.",
+    "thumbnail": "/assets/recipes/hummus.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID36stu901",
+    "authorName": "Layla Ibrahim",
+    "authorAvatar": "/assets/avatars/avatar-36.jpg",
+    "authorId": "laylaibrahim",
+    "datePosted": "2023-08-18",
+    "duration": "15 min",
+    "difficulty": "Easy",
+    "servings": 8,
+    "cuisineType": "Mediterranean",
+    "mealType": "Appetizer",
+    "tags": ["Middle Eastern", "Dip", "Healthy"],
+    "dietary": ["Vegetarian", "Vegan", "Gluten-Free"],
+    "prepTime": "10 min",
+    "cookTime": "0 min",
+    "ingredients": [
+      "2 cans (400 g each) chickpeas, drained & rinsed",
+      "60 ml fresh lemon juice",
+      "60 ml tahini",
+      "2 cloves garlic",
+      "2 tbsp olive oil, plus more to serve",
+      "½ tsp ground cumin",
+      "Salt to taste",
+      "2‑4 tbsp cold water",
+      "Paprika & parsley for garnish"
+    ],
+    "instructions": [
+      "Blend lemon juice and tahini 1 min until creamy.",
+      "Add garlic, oil, cumin, and salt; blend.",
+      "Add chickpeas; process, adding cold water until smooth.",
+      "Taste, adjust seasoning; plate, drizzle olive oil, sprinkle paprika and parsley."
+    ],
+    "nutritionFacts": {
+      "calories": 180,
+      "protein": "6g",
+      "carbs": "16g",
+      "fat": "10g",
+      "fiber": "4g"
+    },
+    "ratings": {
+      "average": 4.8,
+      "count": 81
+    },
+    "comments": [
+      {
+        "id": "c36-1",
+        "user": {
+          "name": "Noah Bennett",
+          "avatar": "https://randomuser.me/api/portraits/men/45.jpg"
+        },
+        "date": "2023-09-02",
+        "rating": 5,
+        "text": "So smooth—never buying store‑bought again."
+      },
+      {
+        "id": "c36-2",
+        "user": {
+          "name": "Sophia Patel",
+          "avatar": "https://randomuser.me/api/portraits/women/19.jpg"
+        },
+        "date": "2023-08-25",
+        "rating": 4,
+        "text": "Added roasted red peppers—amazing twist."
+      }
+    ]
+  },
+  {
+    "id": "37",
+    "title": "Homemade Mac and Cheese",
+    "description": "Elbow pasta enveloped in a rich cheddar sauce, baked with a buttery breadcrumb crust.",
+    "thumbnail": "/assets/recipes/mac-cheese.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID37vwx234",
+    "authorName": "Kevin Morris",
+    "authorAvatar": "/assets/avatars/avatar-37.jpg",
+    "authorId": "kevinmorris",
+    "datePosted": "2024-01-08",
+    "duration": "40 min",
+    "difficulty": "Medium",
+    "servings": 6,
+    "cuisineType": "American",
+    "mealType": "Dinner",
+    "tags": ["Pasta", "Cheese", "Comfort Food"],
+    "dietary": ["Vegetarian"],
+    "prepTime": "15 min",
+    "cookTime": "25 min",
+    "ingredients": [
+      "450 g elbow macaroni",
+      "4 tbsp butter",
+      "4 tbsp flour",
+      "3 cups milk",
+      "450 g sharp cheddar, shredded",
+      "1 tsp mustard powder",
+      "Salt & pepper",
+      "1 cup breadcrumbs",
+      "2 tbsp melted butter"
+    ],
+    "instructions": [
+      "Cook pasta al dente; drain.",
+      "Make roux with butter and flour; whisk in milk until thick.",
+      "Stir in cheese and mustard powder; season.",
+      "Combine pasta and sauce; pour into baking dish.",
+      "Mix breadcrumbs with melted butter; sprinkle on top.",
+      "Bake at 375 °F (190 °C) 20 min until golden."
+    ],
+    "nutritionFacts": {
+      "calories": 620,
+      "protein": "25g",
+      "carbs": "68g",
+      "fat": "28g",
+      "fiber": "3g"
+    },
+    "ratings": {
+      "average": 4.6,
+      "count": 110
+    },
+    "comments": [
+      {
+        "id": "c37-1",
+        "user": {
+          "name": "Zoe Harris",
+          "avatar": "https://randomuser.me/api/portraits/women/42.jpg"
+        },
+        "date": "2024-01-22",
+        "rating": 5,
+        "text": "Creamy perfection—crowd pleaser!"
+      },
+      {
+        "id": "c37-2",
+        "user": {
+          "name": "Michael Scott",
+          "avatar": "https://randomuser.me/api/portraits/men/90.jpg"
+        },
+        "date": "2024-01-15",
+        "rating": 4,
+        "text": "Used panko for extra crunch—great idea."
+      }
+    ]
+  },
+  {
+    "id": "38",
+    "title": "Homemade Sushi Rolls",
+    "description": "Step‑by‑step guide to rolling fresh sushi with seasoned rice, nori, and your choice of fillings.",
+    "thumbnail": "/assets/recipes/sushi-rolls.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID38yzA567",
+    "authorName": "Keiko Yamamoto",
+    "authorAvatar": "/assets/avatars/avatar-38.jpg",
+    "authorId": "keikoyamamoto",
+    "datePosted": "2023-10-30",
+    "duration": "1 hr",
+    "difficulty": "Hard",
+    "servings": 4,
+    "cuisineType": "Asian",
+    "mealType": "Dinner",
+    "tags": ["Japanese", "Seafood", "Healthy"],
+    "dietary": ["Dairy-Free"],
+    "prepTime": "30 min",
+    "cookTime": "30 min",
+    "ingredients": [
+      "2 cups sushi rice",
+      "¼ cup rice vinegar",
+      "2 tbsp sugar",
+      "1 tsp salt",
+      "4 sheets nori",
+      "Fillings: cucumber strips, avocado, raw salmon, crab sticks, etc.",
+      "Soy sauce, pickled ginger, wasabi"
+    ],
+    "instructions": [
+      "Cook rice; mix vinegar, sugar, salt; fold into warm rice; cool.",
+      "Place nori on bamboo mat; spread rice thinly, leaving 1‑inch top border.",
+      "Arrange fillings in line; roll tightly.",
+      "Seal with water; slice with wet knife.",
+      "Serve with soy, ginger, and wasabi."
+    ],
+    "nutritionFacts": {
+      "calories": 350,
+      "protein": "12g",
+      "carbs": "60g",
+      "fat": "6g",
+      "fiber": "4g"
+    },
+    "ratings": {
+      "average": 4.5,
+      "count": 59
+    },
+    "comments": [
+      {
+        "id": "c38-1",
+        "user": {
+          "name": "Haruto Saito",
+          "avatar": "https://randomuser.me/api/portraits/men/27.jpg"
+        },
+        "date": "2023-11-12",
+        "rating": 5,
+        "text": "Great tutorial—rice seasoning ratio perfect."
+      },
+      {
+        "id": "c38-2",
+        "user": {
+          "name": "Anna Smith",
+          "avatar": "https://randomuser.me/api/portraits/women/71.jpg"
+        },
+        "date": "2023-11-05",
+        "rating": 4,
+        "text": "Rolling takes practice, but worth it!"
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "title": "Vegetable Lasagna",
+    "description": "Layers of pasta, hearty vegetable ragu, and creamy béchamel baked to bubbly perfection.",
+    "thumbnail": "/assets/recipes/vegetable-lasagna.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID39bcd890",
+    "authorName": "Olivia Turner",
+    "authorAvatar": "/assets/avatars/avatar-39.jpg",
+    "authorId": "oliviaturner",
+    "datePosted": "2024-03-05",
+    "duration": "1.5 hrs",
+    "difficulty": "Medium",
+    "servings": 8,
+    "cuisineType": "Italian",
+    "mealType": "Dinner",
+    "tags": ["Italian", "Pasta", "Vegetarian"],
+    "dietary": ["Vegetarian"],
+    "prepTime": "30 min",
+    "cookTime": "1 hr",
+    "ingredients": [
+      "12 lasagna noodles",
+      "2 tbsp olive oil",
+      "1 onion, diced",
+      "2 cloves garlic, minced",
+      "2 cups diced zucchini and eggplant",
+      "1 cup sliced mushrooms",
+      "1 can (400 g) crushed tomatoes",
+      "2 cups tomato sauce",
+      "1 tsp dried basil",
+      "1 tsp dried oregano",
+      "2 cups béchamel sauce",
+      "300 g mozzarella, shredded",
+      "100 g Parmesan, grated",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Cook noodles; set aside.",
+      "Sauté onion and garlic in oil; add veggies; cook 8 min.",
+      "Stir in tomatoes, sauce, herbs; simmer 15 min; season.",
+      "Layer: sauce, noodles, veggie ragu, béchamel, mozzarella; repeat.",
+      "Top with Parmesan; bake 375 °F (190 °C) 40 min; rest 10 min."
+    ],
+    "nutritionFacts": {
+      "calories": 520,
+      "protein": "24g",
+      "carbs": "58g",
+      "fat": "22g",
+      "fiber": "6g"
+    },
+    "ratings": {
+      "average": 4.6,
+      "count": 70
+    },
+    "comments": [
+      {
+        "id": "c39-1",
+        "user": {
+          "name": "Lucy Evans",
+          "avatar": "https://randomuser.me/api/portraits/women/60.jpg"
+        },
+        "date": "2024-03-20",
+        "rating": 5,
+        "text": "Even meat‑lovers went back for seconds!"
+      },
+      {
+        "id": "c39-2",
+        "user": {
+          "name": "Tom Baker",
+          "avatar": "https://randomuser.me/api/portraits/men/35.jpg"
+        },
+        "date": "2024-03-10",
+        "rating": 4,
+        "text": "Added spinach layers—delicious."
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "title": "French Onion Soup",
+    "description": "Deeply caramelized onions in a rich beef broth, topped with crusty bread and gooey Gruyère.",
+    "thumbnail": "/assets/recipes/onion-soup.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID40efg123",
+    "authorName": "Sophie Laurent",
+    "authorAvatar": "/assets/avatars/avatar-40.jpg",
+    "authorId": "sophielaurent",
+    "datePosted": "2023-11-22",
+    "duration": "1 hr",
+    "difficulty": "Medium",
+    "servings": 4,
+    "cuisineType": "Mediterranean",
+    "mealType": "Lunch",
+    "tags": ["French", "Soup", "Winter"],
+    "dietary": [],
+    "prepTime": "15 min",
+    "cookTime": "45 min",
+    "ingredients": [
+      "3 tbsp butter",
+      "1 tbsp olive oil",
+      "4 large onions, thinly sliced",
+      "1 tsp sugar",
+      "2 cloves garlic, minced",
+      "½ cup dry white wine",
+      "4 cups beef broth",
+      "2 sprigs thyme",
+      "Salt & pepper",
+      "4 baguette slices, toasted",
+      "1 cup grated Gruyère"
+    ],
+    "instructions": [
+      "Melt butter with oil; add onions and sugar; cook 25 min until deeply golden.",
+      "Add garlic; cook 1 min.",
+      "Deglaze with wine; reduce by half.",
+      "Add broth and thyme; simmer 15 min; season.",
+      "Ladle soup into bowls; top with toast and cheese.",
+      "Broil 2 min until cheese melts and bubbles."
+    ],
+    "nutritionFacts": {
+      "calories": 360,
+      "protein": "14g",
+      "carbs": "28g",
+      "fat": "20g",
+      "fiber": "3g"
+    },
+    "ratings": {
+      "average": 4.8,
+      "count": 82
+    },
+    "comments": [
+      {
+        "id": "c40-1",
+        "user": {
+          "name": "Jean Dupont",
+          "avatar": "https://randomuser.me/api/portraits/men/12.jpg"
+        },
+        "date": "2023-12-05",
+        "rating": 5,
+        "text": "Authentic bistro taste—onion sweetness is perfect."
+      },
+      {
+        "id": "c40-2",
+        "user": {
+          "name": "Hannah Wright",
+          "avatar": "https://randomuser.me/api/portraits/women/48.jpg"
+        },
+        "date": "2023-11-30",
+        "rating": 4,
+        "text": "Takes patience to caramelize but worth it."
+      }
+    ]
+  },
+
+  {
+    "id": "41",
+    "title": "Crispy Baked Chicken Wings",
+    "description": "Oven‑baked wings tossed in a secret baking‑powder rub for shatteringly crisp skin—perfect for game day without the fryer mess.",
+    "thumbnail": "/assets/recipes/chicken-wings.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID41abc123",
+    "authorName": "Tyler Brooks",
+    "authorAvatar": "/assets/avatars/avatar-41.jpg",
+    "authorId": "tylerbrooks",
+    "datePosted": "2024-09-07",
+    "duration": "50 min",
+    "difficulty": "Easy",
+    "servings": 4,
+    "cuisineType": "American",
+    "mealType": "Appetizer",
+    "tags": ["Chicken", "Appetizer", "Game Day"],
+    "dietary": ["Gluten-Free"],
+    "prepTime": "10 min",
+    "cookTime": "40 min",
+    "ingredients": [
+      "1 kg chicken wings, separated into flats and drumettes",
+      "1 tbsp baking powder (aluminum‑free)",
+      "1 tsp salt",
+      "1 tsp garlic powder",
+      "½ tsp paprika",
+      "¼ tsp black pepper",
+      "Sauce of choice: buffalo, BBQ, or honey‑garlic"
+    ],
+    "instructions": [
+      "Pat wings very dry with paper towels.",
+      "Toss with baking powder, salt, garlic powder, paprika, and pepper until evenly coated.",
+      "Arrange on wire rack over baking sheet; refrigerate 30 min for extra crispness (optional).",
+      "Bake at 250 °F (120 °C) 30 min, then increase to 425 °F (220 °C) and bake 20 min more until golden and crispy.",
+      "Toss hot wings in desired sauce and serve immediately."
+    ],
+    "nutritionFacts": {
+      "calories": 390,
+      "protein": "27g",
+      "carbs": "2g",
+      "fat": "30g",
+      "fiber": "0g"
+    },
+    "ratings": {
+      "average": 4.8,
+      "count": 65
+    },
+    "comments": [
+      {
+        "id": "c41-1",
+        "user": {
+          "name": "Jordan Lee",
+          "avatar": "https://randomuser.me/api/portraits/men/19.jpg"
+        },
+        "date": "2024-09-20",
+        "rating": 5,
+        "text": "Best baked wings—so crunchy!"
+      },
+      {
+        "id": "c41-2",
+        "user": {
+          "name": "Rachel Adams",
+          "avatar": "https://randomuser.me/api/portraits/women/28.jpg"
+        },
+        "date": "2024-09-15",
+        "rating": 4,
+        "text": "Added lemon pepper seasoning—yum."
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "title": "Banana Bread",
+    "description": "Super‑moist loaf packed with ripe bananas, warm cinnamon, and melty chocolate chips—your kitchen will smell heavenly.",
+    "thumbnail": "/assets/recipes/banana-bread.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID42def456",
+    "authorName": "Jennifer Adams",
+    "authorAvatar": "/assets/avatars/avatar-42.jpg",
+    "authorId": "jenniferadams",
+    "datePosted": "2024-04-22",
+    "duration": "1 hr",
+    "difficulty": "Easy",
+    "servings": 10,
+    "cuisineType": "American",
+    "mealType": "Breakfast",
+    "tags": ["Baking", "Bread", "Breakfast"],
+    "dietary": ["Vegetarian"],
+    "prepTime": "15 min",
+    "cookTime": "45 min",
+    "ingredients": [
+      "3 ripe bananas, mashed",
+      "1/3 cup melted butter",
+      "3/4 cup sugar",
+      "1 egg, beaten",
+      "1 tsp vanilla extract",
+      "1 tsp baking soda",
+      "Pinch of salt",
+      "1 1/2 cups all‑purpose flour",
+      "1/2 cup chocolate chips (optional)"
+    ],
+    "instructions": [
+      "Preheat oven to 350 °F (175 °C). Grease a 9×5‑inch loaf pan.",
+      "Mix bananas and melted butter. Stir in sugar, egg, and vanilla.",
+      "Sprinkle baking soda and salt; mix. Add flour; fold just until combined. Stir in chocolate chips if using.",
+      "Pour batter into pan; bake 45‑50 min until toothpick comes out clean.",
+      "Cool 10 min in pan, then transfer to rack to cool completely."
+    ],
+    "nutritionFacts": {
+      "calories": 230,
+      "protein": "3g",
+      "carbs": "36g",
+      "fat": "9g",
+      "fiber": "1g"
+    },
+    "ratings": {
+      "average": 4.9,
+      "count": 120
+    },
+    "comments": [
+      {
+        "id": "c42-1",
+        "user": {
+          "name": "Lucy Brown",
+          "avatar": "https://randomuser.me/api/portraits/women/12.jpg"
+        },
+        "date": "2024-05-02",
+        "rating": 5,
+        "text": "Perfect texture—kids loved the choc chips!"
+      },
+      {
+        "id": "c42-2",
+        "user": {
+          "name": "Mike Chen",
+          "avatar": "https://randomuser.me/api/portraits/men/55.jpg"
+        },
+        "date": "2024-04-28",
+        "rating": 4,
+        "text": "Reduced sugar to 1/2 cup—still great."
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "title": "Beef and Vegetable Stir-Fry",
+    "description": "Lean beef strips flash‑fried with crunchy veggies in a light soy‑sesame sauce—dinner on the table in 20 minutes.",
+    "thumbnail": "/assets/recipes/beef-stir-fry.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID43ghi789",
+    "authorName": "Melissa Chang",
+    "authorAvatar": "/assets/avatars/avatar-43.jpg",
+    "authorId": "melissachang",
+    "datePosted": "2024-06-11",
+    "duration": "20 min",
+    "difficulty": "Easy",
+    "servings": 3,
+    "cuisineType": "Asian",
+    "mealType": "Dinner",
+    "tags": ["Beef", "Quick", "Healthy"],
+    "dietary": ["Dairy-Free"],
+    "prepTime": "10 min",
+    "cookTime": "10 min",
+    "ingredients": [
+      "300 g sirloin steak, thinly sliced",
+      "2 tbsp soy sauce",
+      "1 tbsp cornstarch",
+      "1 tbsp sesame oil",
+      "1 tbsp vegetable oil",
+      "1 cup broccoli florets",
+      "1 red bell pepper, sliced",
+      "1 carrot, julienned",
+      "2 cloves garlic, minced",
+      "1 tsp grated ginger",
+      "2 tbsp oyster sauce",
+      "1 tbsp water",
+      "Sesame seeds for garnish"
+    ],
+    "instructions": [
+      "Toss beef with soy sauce and cornstarch.",
+      "Heat oils in wok; sear beef 2 min; set aside.",
+      "Stir‑fry veggies 3 min; add garlic and ginger 30 sec.",
+      "Return beef; add oyster sauce and water; toss to coat.",
+      "Garnish with sesame seeds; serve over rice."
+    ],
+    "nutritionFacts": {
+      "calories": 350,
+      "protein": "28g",
+      "carbs": "18g",
+      "fat": "18g",
+      "fiber": "4g"
+    },
+    "ratings": {
+      "average": 4.7,
+      "count": 74
+    },
+    "comments": [
+      {
+        "id": "c43-1",
+        "user": {
+          "name": "Ian Park",
+          "avatar": "https://randomuser.me/api/portraits/men/21.jpg"
+        },
+        "date": "2024-06-20",
+        "rating": 5,
+        "text": "So fast and tasty—added snow peas."
+      },
+      {
+        "id": "c43-2",
+        "user": {
+          "name": "Grace Lee",
+          "avatar": "https://randomuser.me/api/portraits/women/40.jpg"
+        },
+        "date": "2024-06-15",
+        "rating": 4,
+        "text": "Used tamari for gluten‑free—worked great."
+      }
+    ]
+  },
+  {
+    "id": "44",
+    "title": "Homemade Garlic Bread",
+    "description": "Crusty baguette slathered with garlic‑parsley butter and baked until golden—side dish hero in 20 minutes.",
+    "thumbnail": "/assets/recipes/garlic-bread.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID44jkl012",
+    "authorName": "Ricardo Fernandez",
+    "authorAvatar": "/assets/avatars/avatar-44.jpg",
+    "authorId": "ricardofernandez",
+    "datePosted": "2023-12-30",
+    "duration": "20 min",
+    "difficulty": "Easy",
+    "servings": 6,
+    "cuisineType": "Italian",
+    "mealType": "Appetizer",
+    "tags": ["Bread", "Garlic", "Side Dish"],
+    "dietary": ["Vegetarian"],
+    "prepTime": "5 min",
+    "cookTime": "15 min",
+    "ingredients": [
+      "1 baguette, halved lengthwise",
+      "4 tbsp unsalted butter, softened",
+      "3 cloves garlic, minced",
+      "2 tbsp fresh parsley, chopped",
+      "1/4 tsp salt",
+      "2 tbsp grated Parmesan (optional)"
+    ],
+    "instructions": [
+      "Preheat oven to 400 °F (200 °C).",
+      "Mix butter, garlic, parsley, and salt.",
+      "Spread on baguette halves; sprinkle Parmesan if using.",
+      "Bake 10‑12 min until edges crisp; broil 1 min for extra color.",
+      "Slice and serve hot."
+    ],
+    "nutritionFacts": {
+      "calories": 220,
+      "protein": "5g",
+      "carbs": "28g",
+      "fat": "10g",
+      "fiber": "1g"
+    },
+    "ratings": {
+      "average": 4.9,
+      "count": 89
+    },
+    "comments": [
+      {
+        "id": "c44-1",
+        "user": {
+          "name": "Elena Rossi",
+          "avatar": "https://randomuser.me/api/portraits/women/34.jpg"
+        },
+        "date": "2024-01-08",
+        "rating": 5,
+        "text": "Garlic level perfect—family favorite."
+      },
+      {
+        "id": "c44-2",
+        "user": {
+          "name": "Carlos Diaz",
+          "avatar": "https://randomuser.me/api/portraits/men/47.jpg"
+        },
+        "date": "2024-01-02",
+        "rating": 4,
+        "text": "Added mozzarella—so cheesy."
+      }
+    ]
+  },
+  {
+    "id": "45",
+    "title": "Chocolate Chip Cookies",
+    "description": "Classic bakery‑style cookies with crisp edges, gooey centers, and pools of melted chocolate.",
+    "thumbnail": "/assets/recipes/chocolate-chip-cookies.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID45mno345",
+    "authorName": "Hannah Miller",
+    "authorAvatar": "/assets/avatars/avatar-45.jpg",
+    "authorId": "hannahmiller",
+    "datePosted": "2024-02-14",
+    "duration": "30 min",
+    "difficulty": "Easy",
+    "servings": 24,
+    "cuisineType": "American",
+    "mealType": "Dessert",
+    "tags": ["Baking", "Cookies", "Chocolate"],
+    "dietary": ["Vegetarian"],
+    "prepTime": "15 min",
+    "cookTime": "15 min",
+    "ingredients": [
+      "1 cup unsalted butter, softened",
+      "3/4 cup brown sugar",
+      "3/4 cup white sugar",
+      "2 eggs",
+      "2 tsp vanilla extract",
+      "2 1/4 cups all‑purpose flour",
+      "1 tsp baking soda",
+      "1/2 tsp salt",
+      "2 cups semi‑sweet chocolate chips"
+    ],
+    "instructions": [
+      "Preheat oven to 350 °F (175 °C).",
+      "Cream butter and sugars; beat in eggs and vanilla.",
+      "Whisk flour, baking soda, and salt; add to wet mixture.",
+      "Fold in chocolate chips.",
+      "Scoop 2‑tbsp mounds onto lined trays; bake 12‑14 min until edges golden.",
+      "Cool on sheet 5 min; transfer to rack."
+    ],
+    "nutritionFacts": {
+      "calories": 160,
+      "protein": "2g",
+      "carbs": "22g",
+      "fat": "7g",
+      "fiber": "1g"
+    },
+    "ratings": {
+      "average": 4.9,
+      "count": 150
+    },
+    "comments": [
+      {
+        "id": "c45-1",
+        "user": {
+          "name": "Ben Carter",
+          "avatar": "https://randomuser.me/api/portraits/men/18.jpg"
+        },
+        "date": "2024-02-20",
+        "rating": 5,
+        "text": "Chewy centers every time—amazing!"
+      },
+      {
+        "id": "c45-2",
+        "user": {
+          "name": "Olivia Nguyen",
+          "avatar": "https://randomuser.me/api/portraits/women/52.jpg"
+        },
+        "date": "2024-02-16",
+        "rating": 4,
+        "text": "Added sea‑salt sprinkle—perfection."
+      }
+    ]
+  },
+  {
+    "id": "46",
+    "title": "Spinach and Feta Stuffed Chicken",
+    "description": "Tender chicken breasts filled with garlicky spinach and tangy feta, then baked to juicy perfection.",
+    "thumbnail": "/assets/recipes/stuffed-chicken.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID46pqr678",
+    "authorName": "Nathan Baker",
+    "authorAvatar": "/assets/avatars/avatar-46.jpg",
+    "authorId": "nathanbaker",
+    "datePosted": "2024-05-03",
+    "duration": "40 min",
+    "difficulty": "Medium",
+    "servings": 4,
+    "cuisineType": "Mediterranean",
+    "mealType": "Dinner",
+    "tags": ["Chicken", "Healthy", "Dinner"],
+    "dietary": ["Gluten-Free"],
+    "prepTime": "15 min",
+    "cookTime": "25 min",
+    "ingredients": [
+      "4 boneless chicken breasts",
+      "2 cups fresh spinach, chopped",
+      "1/2 cup feta cheese, crumbled",
+      "1 clove garlic, minced",
+      "1 tbsp olive oil",
+      "Salt & pepper",
+      "1 tsp dried oregano"
+    ],
+    "instructions": [
+      "Sauté spinach with garlic in oil until wilted; cool; mix with feta.",
+      "Cut pocket in chicken; stuff with spinach mixture; secure with toothpicks.",
+      "Season chicken with salt, pepper, and oregano.",
+      "Bake at 400 °F (200 °C) 25 min until internal temp 165 °F (74 °C).",
+      "Rest 5 min before serving."
+    ],
+    "nutritionFacts": {
+      "calories": 330,
+      "protein": "38g",
+      "carbs": "2g",
+      "fat": "18g",
+      "fiber": "1g"
+    },
+    "ratings": {
+      "average": 4.8,
+      "count": 68
+    },
+    "comments": [
+      {
+        "id": "c46-1",
+        "user": {
+          "name": "Sara Wilson",
+          "avatar": "https://randomuser.me/api/portraits/women/75.jpg"
+        },
+        "date": "2024-05-15",
+        "rating": 5,
+        "text": "So juicy—love the feta combo."
+      },
+      {
+        "id": "c46-2",
+        "user": {
+          "name": "Tom Lee",
+          "avatar": "https://randomuser.me/api/portraits/men/66.jpg"
+        },
+        "date": "2024-05-08",
+        "rating": 4,
+        "text": "Added sun‑dried tomatoes—delicious twist."
+      }
+    ]
+  },
+  {
+    "id": "47",
+    "title": "Fresh Spring Rolls",
+    "description": "Light Vietnamese rolls packed with crunchy veggies, herbs, and tofu—served with creamy peanut dipping sauce.",
+    "thumbnail": "/assets/recipes/spring-rolls.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID47stu901",
+    "authorName": "Lily Tran",
+    "authorAvatar": "/assets/avatars/avatar-47.jpg",
+    "authorId": "lilytran",
+    "datePosted": "2023-08-29",
+    "duration": "30 min",
+    "difficulty": "Medium",
+    "servings": 4,
+    "cuisineType": "Asian",
+    "mealType": "Appetizer",
+    "tags": ["Vietnamese", "Healthy", "Fresh"],
+    "dietary": ["Vegetarian", "Gluten-Free"],
+    "prepTime": "25 min",
+    "cookTime": "5 min",
+    "ingredients": [
+      "8 rice paper wrappers",
+      "100 g rice vermicelli, cooked & cooled",
+      "1 cup shredded lettuce",
+      "1/2 cup julienned carrot",
+      "1/2 cup cucumber strips",
+      "1/2 cup fresh herbs (mint, basil, cilantro)",
+      "150 g firm tofu, pan‑seared and sliced",
+      "For sauce: 3 tbsp peanut butter, 1 tbsp hoisin, 1 tbsp soy, 1 tsp sriracha, water to thin"
+    ],
+    "instructions": [
+      "Whisk sauce ingredients with water until pourable.",
+      "Dip rice paper in warm water 5 sec; lay on board.",
+      "Layer lettuce, noodles, veggies, herbs, and tofu.",
+      "Fold sides and roll tightly.",
+      "Serve with peanut sauce."
+    ],
+    "nutritionFacts": {
+      "calories": 260,
+      "protein": "9g",
+      "carbs": "38g",
+      "fat": "8g",
+      "fiber": "4g"
+    },
+    "ratings": {
+      "average": 4.7,
+      "count": 53
+    },
+    "comments": [
+      {
+        "id": "c47-1",
+        "user": {
+          "name": "Anna Kim",
+          "avatar": "https://randomuser.me/api/portraits/women/27.jpg"
+        },
+        "date": "2023-09-10",
+        "rating": 5,
+        "text": "So fresh—peanut sauce is addictive."
+      },
+      {
+        "id": "c47-2",
+        "user": {
+          "name": "David Parker",
+          "avatar": "https://randomuser.me/api/portraits/men/44.jpg"
+        },
+        "date": "2023-09-02",
+        "rating": 4,
+        "text": "Added shrimp—fantastic."
+      }
+    ]
+  },
+  {
+    "id": "48",
+    "title": "Beef Wellington",
+    "description": "Show‑stopping beef tenderloin wrapped in mushroom duxelles and flaky puff pastry—perfect for special occasions.",
+    "thumbnail": "/assets/recipes/beef-wellington.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID48vwx234",
+    "authorName": "Gordon Mitchell",
+    "authorAvatar": "/assets/avatars/avatar-48.jpg",
+    "authorId": "gordonmitchell",
+    "datePosted": "2023-12-18",
+    "duration": "2.5 hrs",
+    "difficulty": "Hard",
+    "servings": 6,
+    "cuisineType": "Mediterranean",
+    "mealType": "Dinner",
+    "tags": ["Beef", "Special Occasion", "British"],
+    "dietary": [],
+    "prepTime": "45 min",
+    "cookTime": "1 hr 45 min",
+    "ingredients": [
+      "1 kg beef tenderloin",
+      "2 tbsp Dijon mustard",
+      "400 g mushrooms, finely chopped",
+      "2 tbsp butter",
+      "2 tbsp thyme leaves",
+      "6 slices prosciutto",
+      "500 g puff pastry sheet",
+      "1 egg, beaten",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Sear beef all sides; cool; brush with mustard.",
+      "Cook mushrooms with butter and thyme until dry (duxelles).",
+      "Lay prosciutto on cling film; spread duxelles; place beef; roll tight; chill 30 min.",
+      "Wrap beef in puff pastry; seal; brush with egg; score top.",
+      "Bake at 425 °F (220 °C) 40 min to 125 °F (52 °C) internal; rest 10 min before slicing."
+    ],
+    "nutritionFacts": {
+      "calories": 680,
+      "protein": "42g",
+      "carbs": "38g",
+      "fat": "40g",
+      "fiber": "2g"
+    },
+    "ratings": {
+      "average": 4.6,
+      "count": 48
+    },
+    "comments": [
+      {
+        "id": "c48-1",
+        "user": {
+          "name": "Maria Lopez",
+          "avatar": "https://randomuser.me/api/portraits/women/61.jpg"
+        },
+        "date": "2023-12-30",
+        "rating": 5,
+        "text": "Nailed Christmas dinner—everyone impressed!"
+      },
+      {
+        "id": "c48-2",
+        "user": {
+          "name": "James Hall",
+          "avatar": "https://randomuser.me/api/portraits/men/53.jpg"
+        },
+        "date": "2023-12-24",
+        "rating": 4,
+        "text": "Takes time but worth it."
+      }
+    ]
+  },
+  {
+    "id": "49",
+    "title": "Classic Ratatouille",
+    "description": "Slow‑simmered Provençal medley of eggplant, zucchini, peppers, and tomatoes—healthy, vibrant, and vegan.",
+    "thumbnail": "/assets/recipes/ratatouille.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID49yzA567",
+    "authorName": "Claire Dubois",
+    "authorAvatar": "/assets/avatars/avatar-49.jpg",
+    "authorId": "clairedubois",
+    "datePosted": "2024-07-12",
+    "duration": "1 hr",
+    "difficulty": "Medium",
+    "servings": 4,
+    "cuisineType": "Mediterranean",
+    "mealType": "Dinner",
+    "tags": ["French", "Vegetarian", "Healthy"],
+    "dietary": ["Vegetarian", "Vegan", "Gluten-Free"],
+    "prepTime": "20 min",
+    "cookTime": "40 min",
+    "ingredients": [
+      "1 eggplant, diced",
+      "2 zucchini, sliced",
+      "1 red bell pepper, chopped",
+      "1 onion, diced",
+      "3 cloves garlic, minced",
+      "2 tbsp olive oil",
+      "4 tomatoes, chopped",
+      "1 tsp herbes de Provence",
+      "Salt & pepper",
+      "Fresh basil for garnish"
+    ],
+    "instructions": [
+      "Salt eggplant 15 min; rinse and pat dry.",
+      "Sauté onion and pepper in oil 5 min; add garlic 30 sec.",
+      "Add eggplant and zucchini; cook 10 min.",
+      "Stir in tomatoes, herbs, salt, and pepper; simmer 20 min until tender.",
+      "Garnish with basil; serve warm or room temp."
+    ],
+    "nutritionFacts": {
+      "calories": 180,
+      "protein": "4g",
+      "carbs": "22g",
+      "fat": "9g",
+      "fiber": "7g"
+    },
+    "ratings": {
+      "average": 4.8,
+      "count": 57
+    },
+    "comments": [
+      {
+        "id": "c49-1",
+        "user": {
+          "name": "Jean Martin",
+          "avatar": "https://randomuser.me/api/portraits/men/11.jpg"
+        },
+        "date": "2024-07-25",
+        "rating": 5,
+        "text": "Tastes like summer in Provence!"
+      },
+      {
+        "id": "c49-2",
+        "user": {
+          "name": "Emma Stone",
+          "avatar": "https://randomuser.me/api/portraits/women/44.jpg"
+        },
+        "date": "2024-07-18",
+        "rating": 4,
+        "text": "Great with crusty bread."
+      }
+    ]
+  },
+  {
+    "id": "50",
+    "title": "Homemade Ice Cream",
+    "description": "Rich custard‑based vanilla ice cream—use as a blank canvas for endless flavor mix‑ins.",
+    "thumbnail": "/assets/recipes/ice-cream.jpg",
+    "videoUrl": "https://www.youtube.com/embed/VID50bcd890",
+    "authorName": "Alex Rodriguez",
+    "authorAvatar": "/assets/avatars/avatar-50.jpg",
+    "authorId": "alexrodriguez",
+    "datePosted": "2024-06-05",
+    "duration": "4 hrs (incl. chill)",
+    "difficulty": "Medium",
+    "servings": 8,
+    "cuisineType": "American",
+    "mealType": "Dessert",
+    "tags": ["Dessert", "Summer", "Ice Cream"],
+    "dietary": ["Vegetarian", "Gluten-Free"],
+    "prepTime": "30 min",
+    "cookTime": "3 hrs 30 min (chill & churn)",
+    "ingredients": [
+      "2 cups heavy cream",
+      "1 cup whole milk",
+      "3/4 cup sugar",
+      "5 egg yolks",
+      "1 tbsp vanilla extract"
+    ],
+    "instructions": [
+      "Heat cream, milk, and half sugar until steaming.",
+      "Whisk yolks with remaining sugar; temper with hot cream; return to pot; cook to 170 °F (77 °C).",
+      "Strain custard; stir in vanilla; chill 2 hrs.",
+      "Churn in ice‑cream maker per manufacturer; freeze 2 hrs to firm.",
+      "Fold in mix‑ins before final freeze if desired."
+    ],
+    "nutritionFacts": {
+      "calories": 290,
+      "protein": "4g",
+      "carbs": "24g",
+      "fat": "20g",
+      "fiber": "0g"
+    },
+    "ratings": {
+      "average": 4.7,
+      "count": 61
+    },
+    "comments": [
+      {
+        "id": "c50-1",
+        "user": {
+          "name": "Linda Perez",
+          "avatar": "https://randomuser.me/api/portraits/women/59.jpg"
+        },
+        "date": "2024-06-20",
+        "rating": 5,
+        "text": "So creamy—added cookie dough bits!"
+      },
+      {
+        "id": "c50-2",
+        "user": {
+          "name": "George Smith",
+          "avatar": "https://randomuser.me/api/portraits/men/30.jpg"
+        },
+        "date": "2024-06-12",
+        "rating": 4,
+        "text": "Used vanilla bean—excellent flavor."
+      }
+    ]
+  }
+]

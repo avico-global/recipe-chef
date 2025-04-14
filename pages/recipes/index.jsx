@@ -5,6 +5,7 @@ import RecipeCard from "../../components/RecipeCard";
 import FilterSidebar from "../../components/FilterSidebar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import recipesData from "../../data/recipes.json";
 
 /**
  * RecipesList component - displays a list of recipes with filtering options
@@ -12,7 +13,7 @@ import Footer from "@/components/Footer";
  */
 export default function RecipesList({ cuisineTypeFromPath }) {
   const router = useRouter();
-  const { search, tag } = router.query;
+  const { search, tag, filter } = router.query;
 
   const [recipes, setRecipes] = useState([]);
   const [filteredRecipes, setFilteredRecipes] = useState([]);
@@ -20,230 +21,212 @@ export default function RecipesList({ cuisineTypeFromPath }) {
   const [isLoading, setIsLoading] = useState(true);
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [currentFilters, setCurrentFilters] = useState({
-    cuisineType: cuisineTypeFromPath ? [cuisineTypeFromPath] : tag ? [tag] : [],
+    cuisineType: cuisineTypeFromPath
+      ? [cuisineTypeFromPath.toLowerCase()]
+      : tag
+      ? [tag.toLowerCase()]
+      : [],
     dietary: [],
     mealType: [],
     difficulty: "",
     cookingTime: "",
   });
 
-  // Mock data for recipes
-  const mockRecipes = [
-    {
-      id: "1",
-      title: "Classic Margherita Pizza",
-      thumbnail: "https://images.unsplash.com/photo-1513104890138-7c749659a591",
-      authorName: "John Smith",
-      authorAvatar: "https://randomuser.me/api/portraits/men/32.jpg",
-      duration: "45 min",
-      difficulty: "Medium",
-      cuisineType: "Italian",
-      mealType: "Dinner",
-      tags: ["Italian", "Pizza", "Dinner"],
-      dietary: [],
-      cookingTime: "30to60",
-      videoPreview: "https://example.com/video1.mp4",
-    },
-    {
-      id: "2",
-      title: "Spicy Thai Basil Chicken",
-      thumbnail: "https://images.unsplash.com/photo-1562967916-eb82221dfb92",
-      authorName: "Emily Chen",
-      authorAvatar: "https://randomuser.me/api/portraits/women/44.jpg",
-      duration: "30 min",
-      difficulty: "Easy",
-      cuisineType: "Asian",
-      mealType: "Dinner",
-      tags: ["Asian", "Chicken", "Spicy"],
-      dietary: ["Gluten-Free"],
-      cookingTime: "15to30",
-      videoPreview: "https://example.com/video2.mp4",
-    },
-    {
-      id: "3",
-      title: "Chocolate Lava Cake",
-      thumbnail: "https://images.unsplash.com/photo-1563805042-7684c019e1cb",
-      authorName: "Michael Brown",
-      authorAvatar: "https://randomuser.me/api/portraits/men/22.jpg",
-      duration: "40 min",
-      difficulty: "Medium",
-      cuisineType: "American",
-      mealType: "Dessert",
-      tags: ["Dessert", "Chocolate", "Cake"],
-      dietary: ["Vegetarian"],
-      cookingTime: "30to60",
-      videoPreview: "https://example.com/video3.mp4",
-    },
-    {
-      id: "4",
-      title: "Mediterranean Grilled Vegetable Salad",
-      thumbnail: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
-      authorName: "Sarah Johnson",
-      authorAvatar: "https://randomuser.me/api/portraits/women/66.jpg",
-      duration: "25 min",
-      difficulty: "Easy",
-      cuisineType: "Mediterranean",
-      mealType: "Lunch",
-      tags: ["Vegetarian", "Salad", "Healthy"],
-      dietary: ["Vegetarian", "Vegan", "Gluten-Free"],
-      cookingTime: "15to30",
-      videoPreview: "https://example.com/video4.mp4",
-    },
-    {
-      id: "5",
-      title: "Creamy Mushroom Risotto",
-      thumbnail: "https://images.unsplash.com/photo-1476124369491-e7addf5db371",
-      authorName: "David Wilson",
-      authorAvatar: "https://randomuser.me/api/portraits/men/42.jpg",
-      duration: "50 min",
-      difficulty: "Hard",
-      cuisineType: "Italian",
-      mealType: "Dinner",
-      tags: ["Italian", "Rice", "Vegetarian"],
-      dietary: ["Vegetarian"],
-      cookingTime: "30to60",
-      videoPreview: "https://example.com/video5.mp4",
-    },
-    {
-      id: "6",
-      title: "Homemade Beef Tacos",
-      thumbnail: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b",
-      authorName: "Maria Rodriguez",
-      authorAvatar: "https://randomuser.me/api/portraits/women/28.jpg",
-      duration: "35 min",
-      difficulty: "Medium",
-      cuisineType: "Mexican",
-      mealType: "Dinner",
-      tags: ["Mexican", "Beef", "Dinner"],
-      dietary: [],
-      cookingTime: "30to60",
-      videoPreview: "https://example.com/video6.mp4",
-    },
-    {
-      id: "7",
-      title: "Fresh Berry Smoothie Bowl",
-      thumbnail: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
-      authorName: "Jessica Lee",
-      authorAvatar: "https://randomuser.me/api/portraits/women/12.jpg",
-      duration: "15 min",
-      difficulty: "Easy",
-      cuisineType: "American",
-      mealType: "Breakfast",
-      tags: ["Breakfast", "Smoothie", "Healthy"],
-      dietary: ["Vegetarian", "Vegan", "Gluten-Free"],
-      cookingTime: "under15",
-      videoPreview: "https://example.com/video7.mp4",
-    },
-    {
-      id: "8",
-      title: "Garlic Butter Shrimp Pasta",
-      thumbnail: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8",
-      authorName: "Robert Taylor",
-      authorAvatar: "https://randomuser.me/api/portraits/men/65.jpg",
-      duration: "30 min",
-      difficulty: "Medium",
-      cuisineType: "Italian",
-      mealType: "Dinner",
-      tags: ["Pasta", "Seafood", "Quick"],
-      dietary: [],
-      cookingTime: "15to30",
-      videoPreview: "https://example.com/video8.mp4",
-    },
-    {
-      id: "9",
-      title: "Vegetarian Buddha Bowl",
-      thumbnail: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
-      authorName: "Rachel Green",
-      authorAvatar: "https://randomuser.me/api/portraits/women/32.jpg",
-      duration: "20 min",
-      difficulty: "Easy",
-      cuisineType: "Asian",
-      mealType: "Lunch",
-      tags: ["Vegetarian", "Bowl", "Healthy"],
-      dietary: ["Vegetarian", "Vegan", "Gluten-Free"],
-      cookingTime: "15to30",
-      videoPreview: "https://example.com/video9.mp4",
-    },
-    {
-      id: "10",
-      title: "Slow Cooker Beef Stew",
-      thumbnail: "https://images.unsplash.com/photo-1608835291093-394b4a3a1a22",
-      authorName: "James Wilson",
-      authorAvatar: "https://randomuser.me/api/portraits/men/54.jpg",
-      duration: "6 hrs",
-      difficulty: "Easy",
-      cuisineType: "American",
-      mealType: "Dinner",
-      tags: ["Beef", "Slow Cooker", "Winter"],
-      dietary: ["Dairy-Free"],
-      cookingTime: "over60",
-      videoPreview: "https://example.com/video10.mp4",
-    },
-    {
-      id: "11",
-      title: "Homemade Sourdough Bread",
-      thumbnail: "https://images.unsplash.com/photo-1585478259715-4aa351907a0e",
-      authorName: "Alice Thompson",
-      authorAvatar: "https://randomuser.me/api/portraits/women/76.jpg",
-      duration: "3 hrs",
-      difficulty: "Hard",
-      cuisineType: "American",
-      mealType: "Breakfast",
-      tags: ["Bread", "Baking", "Sourdough"],
-      dietary: ["Vegetarian"],
-      cookingTime: "over60",
-      videoPreview: "https://example.com/video11.mp4",
-    },
-    {
-      id: "12",
-      title: "Classic French Omelette",
-      thumbnail: "https://images.unsplash.com/photo-1612240498936-65f5101365d2",
-      authorName: "Pierre Martin",
-      authorAvatar: "https://randomuser.me/api/portraits/men/82.jpg",
-      duration: "10 min",
-      difficulty: "Medium",
-      cuisineType: "Mediterranean",
-      mealType: "Breakfast",
-      tags: ["Eggs", "French", "Quick"],
-      dietary: ["Vegetarian", "Gluten-Free"],
-      cookingTime: "under15",
-      videoPreview: "https://example.com/video12.mp4",
-    },
-  ];
-
   // Load recipes on initial render
   useEffect(() => {
     // In a real app, you would fetch from an API here
     setTimeout(() => {
-      setRecipes(mockRecipes);
-      setFilteredRecipes(mockRecipes);
+      setRecipes(recipesData);
+      setFilteredRecipes(recipesData);
       setIsLoading(false);
     }, 500); // Simulate API delay
   }, []);
 
-  // Handle URL query parameters
+  // Process URL parameters to update filters
   useEffect(() => {
-    if (search) {
+    if (!router.isReady) return;
+
+    // Only run this if we actually have URL parameters
+    if (Object.keys(router.query).length === 0 && !cuisineTypeFromPath) return;
+
+    const newFilters = {
+      cuisineType: cuisineTypeFromPath
+        ? [cuisineTypeFromPath.toLowerCase()]
+        : [],
+      dietary: [],
+      mealType: [],
+      difficulty: "",
+      cookingTime: "",
+    };
+
+    let filtersChanged = false;
+
+    // Handle search parameter
+    if (search && search !== searchTerm) {
       setSearchTerm(search);
+      filtersChanged = true;
     }
 
-    if (tag && !currentFilters.cuisineType.includes(tag)) {
-      setCurrentFilters((prev) => ({
-        ...prev,
-        cuisineType: [...prev.cuisineType, tag],
-      }));
-    }
-
+    // Handle tag parameter
     if (
-      cuisineTypeFromPath &&
-      !currentFilters.cuisineType.includes(cuisineTypeFromPath)
+      tag &&
+      !newFilters.cuisineType.some((c) => c.toLowerCase() === tag.toLowerCase())
     ) {
-      setCurrentFilters((prev) => ({
-        ...prev,
-        cuisineType: [...prev.cuisineType, cuisineTypeFromPath],
-      }));
+      newFilters.cuisineType.push(tag.toLowerCase());
+      filtersChanged = true;
     }
-  }, [search, tag, cuisineTypeFromPath]);
+
+    // Handle filter parameter (generic)
+    if (filter) {
+      if (typeof filter === "string") {
+        filtersChanged =
+          processFilterParameter(filter, newFilters) || filtersChanged;
+      } else if (Array.isArray(filter)) {
+        filter.forEach((f) => {
+          filtersChanged =
+            processFilterParameter(f, newFilters) || filtersChanged;
+        });
+      }
+    }
+
+    // Handle specific filter parameters
+    const { cuisineType, mealType, dietary, difficulty, cookingTime } =
+      router.query;
+
+    // Process cuisineType parameter
+    if (cuisineType && cuisineType !== cuisineTypeFromPath) {
+      if (typeof cuisineType === "string") {
+        if (
+          !newFilters.cuisineType.some(
+            (c) => c.toLowerCase() === cuisineType.toLowerCase()
+          )
+        ) {
+          newFilters.cuisineType.push(cuisineType.toLowerCase());
+          filtersChanged = true;
+        }
+      } else if (Array.isArray(cuisineType)) {
+        cuisineType.forEach((c) => {
+          if (
+            !newFilters.cuisineType.some(
+              (existing) => existing.toLowerCase() === c.toLowerCase()
+            )
+          ) {
+            newFilters.cuisineType.push(c.toLowerCase());
+            filtersChanged = true;
+          }
+        });
+      }
+    }
+
+    // Process mealType parameter
+    if (mealType) {
+      if (typeof mealType === "string") {
+        newFilters.mealType.push(mealType.toLowerCase());
+        filtersChanged = true;
+      } else if (Array.isArray(mealType)) {
+        mealType.forEach((m) => {
+          newFilters.mealType.push(m.toLowerCase());
+          filtersChanged = true;
+        });
+      }
+    }
+
+    // Process dietary parameter
+    if (dietary) {
+      if (typeof dietary === "string") {
+        newFilters.dietary.push(dietary.toLowerCase());
+        filtersChanged = true;
+      } else if (Array.isArray(dietary)) {
+        dietary.forEach((d) => {
+          newFilters.dietary.push(d.toLowerCase());
+          filtersChanged = true;
+        });
+      }
+    }
+
+    // Process difficulty parameter
+    if (difficulty) {
+      newFilters.difficulty = difficulty.toLowerCase();
+      filtersChanged = true;
+    }
+
+    // Process cookingTime parameter
+    if (cookingTime) {
+      newFilters.cookingTime = cookingTime;
+      filtersChanged = true;
+    }
+
+    // Update current filters if changes were made
+    if (filtersChanged) {
+      setCurrentFilters(newFilters);
+    }
+  }, [
+    router.isReady,
+    router.query,
+    cuisineTypeFromPath,
+    search,
+    tag,
+    searchTerm,
+  ]);
+
+  // Helper function to process filter parameter values
+  const processFilterParameter = (filterValue, filters) => {
+    let changed = false;
+    const filterValueLower = filterValue.toLowerCase();
+
+    // Check if it's a cuisine type
+    const cuisineTypes = [
+      "italian",
+      "asian",
+      "american",
+      "mediterranean",
+      "mexican",
+    ];
+    if (cuisineTypes.includes(filterValueLower)) {
+      if (
+        !filters.cuisineType.some((c) => c.toLowerCase() === filterValueLower)
+      ) {
+        filters.cuisineType.push(filterValueLower);
+        changed = true;
+      }
+    }
+    // Check if it's a meal type
+    else if (
+      ["breakfast", "lunch", "dinner", "dessert"].includes(filterValueLower)
+    ) {
+      if (!filters.mealType.some((m) => m.toLowerCase() === filterValueLower)) {
+        filters.mealType.push(filterValueLower);
+        changed = true;
+      }
+    }
+    // Check if it's a dietary restriction
+    else if (
+      ["vegetarian", "vegan", "gluten-free", "dairy-free"].includes(
+        filterValueLower
+      )
+    ) {
+      if (!filters.dietary.some((d) => d.toLowerCase() === filterValueLower)) {
+        filters.dietary.push(filterValueLower);
+        changed = true;
+      }
+    }
+    // Check if it's a difficulty level
+    else if (["easy", "medium", "hard"].includes(filterValueLower)) {
+      if (filters.difficulty !== filterValueLower) {
+        filters.difficulty = filterValueLower;
+        changed = true;
+      }
+    }
+    // Check if it's a cooking time
+    else if (["under15", "15to30", "30to60", "over60"].includes(filterValue)) {
+      if (filters.cookingTime !== filterValue) {
+        filters.cookingTime = filterValue;
+        changed = true;
+      }
+    }
+
+    return changed;
+  };
 
   // Apply filters and search
   useEffect(() => {
@@ -265,28 +248,38 @@ export default function RecipesList({ cuisineTypeFromPath }) {
     // Apply cuisine filter
     if (currentFilters.cuisineType.length > 0) {
       filtered = filtered.filter((recipe) =>
-        currentFilters.cuisineType.includes(recipe.cuisineType)
+        currentFilters.cuisineType.some(
+          (type) => type.toLowerCase() === recipe.cuisineType.toLowerCase()
+        )
       );
     }
 
     // Apply dietary restrictions filter
     if (currentFilters.dietary.length > 0) {
       filtered = filtered.filter((recipe) =>
-        currentFilters.dietary.every((diet) => recipe.dietary.includes(diet))
+        currentFilters.dietary.every((diet) =>
+          recipe.dietary.some(
+            (recipeDiet) => recipeDiet.toLowerCase() === diet.toLowerCase()
+          )
+        )
       );
     }
 
     // Apply meal type filter
     if (currentFilters.mealType.length > 0) {
       filtered = filtered.filter((recipe) =>
-        currentFilters.mealType.includes(recipe.mealType)
+        currentFilters.mealType.some(
+          (type) => type.toLowerCase() === recipe.mealType.toLowerCase()
+        )
       );
     }
 
     // Apply difficulty filter
     if (currentFilters.difficulty) {
       filtered = filtered.filter(
-        (recipe) => recipe.difficulty === currentFilters.difficulty
+        (recipe) =>
+          recipe.difficulty.toLowerCase() ===
+          currentFilters.difficulty.toLowerCase()
       );
     }
 
@@ -305,37 +298,52 @@ export default function RecipesList({ cuisineTypeFromPath }) {
     // If we have a cuisine type from path, make sure it stays in the filters
     if (
       cuisineTypeFromPath &&
-      !filters.cuisineType.includes(cuisineTypeFromPath)
+      !filters.cuisineType.some(
+        (c) => c.toLowerCase() === cuisineTypeFromPath.toLowerCase()
+      )
     ) {
-      filters.cuisineType = [...filters.cuisineType, cuisineTypeFromPath];
+      filters.cuisineType = [
+        ...filters.cuisineType,
+        cuisineTypeFromPath.toLowerCase(),
+      ];
     }
 
     setCurrentFilters(filters);
     setIsMobileFilterOpen(false);
   };
 
-  // Handle search input changes
-  const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
+  // Toggle mobile filters visibility
+  const toggleMobileFilter = () => {
+    setIsMobileFilterOpen(!isMobileFilterOpen);
   };
 
-  // Handle search form submission
-  const handleSearchSubmit = (e) => {
-    e.preventDefault();
-    // Update URL query parameter (in a real app)
+  // Reset all filters
+  const handleClearFilters = () => {
+    const clearedFilters = {
+      cuisineType: cuisineTypeFromPath
+        ? [cuisineTypeFromPath.toLowerCase()]
+        : [],
+      dietary: [],
+      mealType: [],
+      difficulty: "",
+      cookingTime: "",
+    };
+
+    setSearchTerm("");
+    setCurrentFilters(clearedFilters);
+
+    // Also clear URL parameters while preserving path cuisine type
+    const query = cuisineTypeFromPath
+      ? { cuisineType: cuisineTypeFromPath }
+      : {};
     router.push(
       {
-        pathname: "/recipes",
-        query: { ...router.query, search: searchTerm },
+        pathname: router.pathname,
+        query,
       },
       undefined,
       { shallow: true }
     );
-  };
-
-  // Toggle mobile filters visibility
-  const toggleMobileFilter = () => {
-    setIsMobileFilterOpen(!isMobileFilterOpen);
   };
 
   return (
@@ -359,33 +367,6 @@ export default function RecipesList({ cuisineTypeFromPath }) {
 
       <div className="w-full bg-gray-50">
         <div className="container mx-auto py-8 bg-gray-50">
-          {cuisineTypeFromPath && (
-            <div className="mb-6 flex items-center">
-              <div className="bg-primary/10 text-primary px-4 py-2 rounded-lg flex items-center">
-                <span className="font-medium">
-                  Filtered by cuisine: {cuisineTypeFromPath}
-                </span>
-                <button
-                  onClick={() => router.push("/recipes")}
-                  className="ml-2 text-primary hover:text-primary-hover focus:outline-none"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          )}
-
           <div className="flex flex-col md:flex-row gap-8 mb-12">
             {/* Mobile Filter Sidebar */}
             {isMobileFilterOpen && (
@@ -475,18 +456,7 @@ export default function RecipesList({ cuisineTypeFromPath }) {
                     your filters or search for something different.
                   </p>
                   <button
-                    onClick={() => {
-                      setSearchTerm("");
-                      setCurrentFilters({
-                        cuisineType: cuisineTypeFromPath
-                          ? [cuisineTypeFromPath]
-                          : [],
-                        dietary: [],
-                        mealType: [],
-                        difficulty: "",
-                        cookingTime: "",
-                      });
-                    }}
+                    onClick={handleClearFilters}
                     className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                   >
                     Clear Filters
@@ -513,9 +483,79 @@ export default function RecipesList({ cuisineTypeFromPath }) {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="flex flex-col space-y-6">
                     {filteredRecipes.map((recipe) => (
-                      <RecipeCard key={recipe.id} recipe={recipe} />
+                      <div key={recipe.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <div className="md:flex h-full">
+                          <div className="md:w-2/5 flex-shrink-0 relative">
+                            <img 
+                              src={recipe.thumbnail} 
+                              alt={recipe.title} 
+                              className="w-full h-full object-cover md:absolute md:inset-0"
+                              style={{ minHeight: '200px' }}
+                            />
+                            <div className="absolute top-4 left-4 flex flex-wrap gap-2">
+                              {recipe.dietary && recipe.dietary.slice(0, 2).map((diet, idx) => (
+                                <span key={idx} className="px-2 py-1 text-xs font-semibold bg-black/70 text-white rounded-lg backdrop-blur-sm">
+                                  {diet}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                          <div className="p-6 md:w-3/5 flex flex-col justify-between">
+                            <div>
+                              <div className="flex flex-wrap gap-2 mb-3">
+                                <span className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">
+                                  {recipe.cuisineType}
+                                </span>
+                                <span className="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-800 rounded-full">
+                                  {recipe.mealType}
+                                </span>
+                              </div>
+                              <h3 className="text-xl font-bold text-gray-900 mb-2 hover:text-primary transition-colors">
+                                {recipe.title}
+                              </h3>
+                              <p className="text-gray-600 mb-4 line-clamp-2">
+                                {recipe.description}
+                              </p>
+                            </div>
+                            
+                            <div>
+                              <div className="flex flex-wrap items-center text-sm text-gray-500 mb-4 gap-x-4 gap-y-2">
+                                <span className="flex items-center">
+                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                  {recipe.duration || (recipe.prepTime && recipe.cookTime ? `${recipe.prepTime + recipe.cookTime} mins` : 'N/A')}
+                                </span>
+                                <span className="flex items-center">
+                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                  </svg>
+                                  <span className={`capitalize ${recipe.difficulty === 'easy' ? 'text-green-600' : recipe.difficulty === 'hard' ? 'text-red-600' : 'text-yellow-600'}`}>
+                                    {recipe.difficulty}
+                                  </span>
+                                </span>
+                                <span className="flex items-center">
+                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                  </svg>
+                                  {recipe.servings} servings
+                                </span>
+                              </div>
+                              <a 
+                                href={`/recipes/${recipe.id}`} 
+                                className="inline-flex items-center px-4 py-2 font-medium text-white bg-primary hover:bg-primary-hover rounded-lg transition-colors"
+                              >
+                                View Recipe
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     ))}
                   </div>
 

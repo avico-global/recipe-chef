@@ -7,6 +7,7 @@ import {
   Book,
   Menu as MenuIcon,
   X,
+  Radio,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -72,7 +73,6 @@ const Navbar = () => {
     "Breakfast",
     "Lunch",
     "Dinner",
-    "Desserts",
     "Beverages",
     "Baking",
     "Grilling",
@@ -200,11 +200,11 @@ const Navbar = () => {
               <span className="text-[10px] sm:text-xs mt-1">Favorites</span>
             </Link>
             <Link
-              href="/favorites"
+              href="/live-cooking"
               className="text-gray-700 hover:text-blue-600 flex flex-col items-center"
             >
-              <Book className="h-4 w-4 sm:h-5 sm:w-5" />
-              <span className="text-[10px] sm:text-xs mt-1">Saved Recipes</span>
+              <Radio className="h-4 w-4 sm:h-5 sm:w-5" />
+              <span className="text-[10px] sm:text-xs mt-1">Live Cooking</span>
             </Link>
           </div>
 
@@ -281,60 +281,54 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Category navigation - improved responsive spacing */}
+      {/* Category navigation */}
       <div className="hidden md:block bg-white border-t border-gray-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-start lg:justify-center space-x-4 sm:space-x-6 py-2 text-xs sm:text-sm overflow-x-auto">
             <Link
-              href="/live-cooking"
-              className="text-gray-700 hover:text-primary whitespace-nowrap"
-            >
-              Live Cooking
-            </Link>
-            <Link
-              href="/favorites"
-              className="text-gray-700 hover:text-primary whitespace-nowrap"
-            >
-              Favorites
-            </Link>
-            <Link
-              href="/quick-meals"
+              href="/recipes?filter=quick-meals"
               className="text-gray-700 hover:text-primary whitespace-nowrap"
             >
               Quick Meals
             </Link>
             <Link
-              href="/breakfast"
+              href="/recipes?filter=breakfast"
               className="text-gray-700 hover:text-primary whitespace-nowrap"
             >
               Breakfast
             </Link>
             <Link
-              href="/lunch"
+              href="/recipes?filter=lunch"
               className="text-gray-700 hover:text-primary whitespace-nowrap"
             >
-              Lunch & Dinner
+              Lunch
             </Link>
             <Link
-              href="/desserts"
+              href="/recipes?filter=dinner"
+              className="text-gray-700 hover:text-primary whitespace-nowrap"
+            >
+              Dinner
+            </Link>
+            <Link
+              href="/recipes?filter=desserts"
               className="text-gray-700 hover:text-primary whitespace-nowrap"
             >
               Desserts
             </Link>
             <Link
-              href="/vegetarian"
+              href="/recipes?filter=vegetarian"
               className="text-gray-700 hover:text-primary whitespace-nowrap"
             >
               Vegetarian
             </Link>
             <Link
-              href="/international"
+              href="/recipes?filter=international"
               className="text-gray-700 hover:text-primary whitespace-nowrap"
             >
               International
             </Link>
             <Link
-              href="/seasonal"
+              href="/recipes?filter=seasonal"
               className="text-gray-700 hover:text-primary whitespace-nowrap"
             >
               Seasonal
@@ -346,7 +340,7 @@ const Navbar = () => {
               Kitchen Tips
             </Link>
             <Link
-              href="/deals"
+              href="/ingredient-deals"
               className="text-gray-700 hover:text-primary whitespace-nowrap"
             >
               Ingredient Deals
@@ -381,18 +375,25 @@ const Navbar = () => {
               Saved Recipes
             </Link>
             <Link
-              href="/breakfast"
+              href="/recipes?filter=breakfast"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
               Breakfast
             </Link>
             <Link
-              href="/lunch-dinner"
+              href="/recipes?filter=lunch"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
-              Lunch & Dinner
+              Lunch
+            </Link>
+            <Link
+              href="/recipes?filter=dinner"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Dinner
             </Link>
             <Link
               href="/desserts"
@@ -402,25 +403,18 @@ const Navbar = () => {
               Desserts
             </Link>
             <Link
-              href="/vegetarian"
+              href="/recipes?filter=vegetarian"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
               Vegetarian
             </Link>
             <Link
-              href="/international"
+              href="/recipes?filter=international"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
               International Cuisine
-            </Link>
-            <Link
-              href="/favorites"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              My Cookbook
             </Link>
             <Link
               href="/contact"

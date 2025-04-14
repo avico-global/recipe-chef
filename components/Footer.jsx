@@ -7,7 +7,7 @@ import Link from "next/link";
  */
 const Footer = () => {
   return (
-    <footer className="border-t border-gray-200 w-full bg-white container mx-auto">
+    <footer className="border-t border-gray-200 w-full container mx-auto">
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand column */}
@@ -92,15 +92,15 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/categories"
+                  href="/recipes?filter=international"
                   className="text-gray-500 hover:text-primary transition-colors"
                 >
-                  Categories
+                  International
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/popular"
+                  href="/recipes?filter=popular"
                   className="text-gray-500 hover:text-primary transition-colors"
                 >
                   Popular
@@ -108,10 +108,26 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/competitions"
+                  href="/recipes?filter=quick-meals"
                   className="text-gray-500 hover:text-primary transition-colors"
                 >
-                  Competitions
+                  Quick Meals
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/recipes?filter=vegetarian"
+                  className="text-gray-500 hover:text-primary transition-colors"
+                >
+                  Vegetarian
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/recipes?filter=desserts"
+                  className="text-gray-500 hover:text-primary transition-colors"
+                >
+                  Desserts
                 </Link>
               </li>
             </ul>
