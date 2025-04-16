@@ -127,7 +127,7 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
                 </p>
                 <Link
                   href={slide.link}
-                  className="inline-block bg-white text-black px-10 py-4 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg text-lg"
+                  className="inline-block bg-white text-black px-10 py-4 rounded-lg font-semibold hover:bg-primary-500 hover:text-primary transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg text-lg"
                 >
                   {slide.ctaText}
                 </Link>

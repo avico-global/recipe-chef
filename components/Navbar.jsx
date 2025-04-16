@@ -286,6 +286,18 @@ const Navbar = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-start lg:justify-center space-x-4 sm:space-x-6 py-2 text-xs sm:text-sm overflow-x-auto">
             <Link
+              href="/shorts"
+              className="text-gray-700 hover:text-primary whitespace-nowrap"
+            >
+              Shorts
+            </Link>
+            <Link
+              href="/recipes"
+              className="text-gray-700 hover:text-primary whitespace-nowrap"
+            >
+              All Recipes
+            </Link>
+            <Link
               href="/recipes?filter=quick-meals"
               className="text-gray-700 hover:text-primary whitespace-nowrap"
             >

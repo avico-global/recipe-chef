@@ -1,4 +1,4 @@
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Clock, Star, Users, Eye } from "lucide-react";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,6 +7,10 @@ export default function Top10List() {
   const [openSections, setOpenSections] = useState([
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
   ]);
+  const [viewCounts] = useState(() => {
+    // Use fixed numbers instead of random ones
+    return [512, 647, 389, 723, 456, 891, 234, 567, 789, 345];
+  });
 
   const handleSectionToggle = (index) => {
     setOpenSections((prev) => {
@@ -24,10 +28,43 @@ export default function Top10List() {
 
   const list = [
     {
+      title: "Nutritious Bites",
+      items: [
+        {
+          comparison_title: "Top 10 High-Protein Recipes for Muscle Gain 2025",
+          date: "Oct 2024",
+          image:
+            "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=500&h=500&fit=crop",
+          subItems: [
+            {
+              title: "Protein-Rich Post-Workout Energy Balls (30g Protein)",
+              image:
+                "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=500&h=500",
+              date: "Dec 2024",
+              id: "51",
+            },
+            {
+              title: "Muscle Building Protein Smoothie Bowl Recipes",
+              image:
+                "https://images.unsplash.com/photo-1488477304112-4944851de03d?auto=format&fit=crop&w=500&h=500",
+              date: "Dec 2024",
+            },
+            {
+              title: "Pre-Workout Power Bars: Natural Energy Boost",
+              image:
+                "https://images.unsplash.com/photo-1622484212850-eb596d769edc?auto=format&fit=crop&w=500&h=500",
+              date: "Jan 2025",
+            },
+          ],
+        },
+      ],
+    },
+    {
       title: "Breakfast",
       items: [
         {
-          title: "Top 10 Best Breakfast Recipes for Busy Mornings 2025",
+          comparison_title:
+            "Top 10 Best Breakfast Recipes for Busy Mornings 2025",
           date: "Oct 2024",
           image:
             "https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=500&h=500",
@@ -58,7 +95,7 @@ export default function Top10List() {
       title: "Italian",
       items: [
         {
-          title: "Top 10 Best Italian Pasta Recipes of 2025",
+          comparison_title: "Top 10 Best Italian Pasta Recipes of 2025",
           date: "Oct 2024",
           image:
             "https://images.unsplash.com/photo-1498579150354-977475b7ea0b?auto=format&fit=crop&w=500&h=500",
@@ -89,7 +126,7 @@ export default function Top10List() {
       title: "Desserts",
       items: [
         {
-          title: "Top 10 Mouthwatering Dessert Recipes of 2025",
+          comparison_title: "Top 10 Mouthwatering Dessert Recipes of 2025",
           date: "Oct 2024",
           image:
             "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=500&h=500",
@@ -120,7 +157,7 @@ export default function Top10List() {
       title: "Mexican",
       items: [
         {
-          title: "Top 10 Authentic Mexican Recipes for 2025",
+          comparison_title: "Top 10 Authentic Mexican Recipes for 2025",
           date: "Oct 2024",
           image:
             "https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?auto=format&fit=crop&w=500&h=500",
@@ -151,7 +188,7 @@ export default function Top10List() {
       title: "Vegetarian",
       items: [
         {
-          title: "Top 10 Satisfying Vegetarian Dinner Recipes 2025",
+          comparison_title: "Top 10 Satisfying Vegetarian Dinner Recipes 2025",
           date: "Oct 2024",
           image:
             "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=500&h=500",
@@ -182,7 +219,8 @@ export default function Top10List() {
       title: "Baking",
       items: [
         {
-          title: "Top 10 Foolproof Baking Recipes for Beginners 2025",
+          comparison_title:
+            "Top 10 Foolproof Baking Recipes for Beginners 2025",
           date: "Oct 2024",
           image:
             "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=500&h=500",
@@ -213,7 +251,7 @@ export default function Top10List() {
       title: "Asian",
       items: [
         {
-          title: "Top 10 Asian Recipes You Can Make at Home 2025",
+          comparison_title: "Top 10 Asian Recipes You Can Make at Home 2025",
           date: "Oct 2024",
           image:
             "https://images.unsplash.com/photo-1552611052-33e04de081de?w=500&h=500&fit=crop",
@@ -241,41 +279,10 @@ export default function Top10List() {
       ],
     },
     {
-      title: "Healthy Snacks",
-      items: [
-        {
-          title: "Top 10 Healthy Snack Ideas for Weight Loss 2025",
-          date: "Oct 2024",
-          image:
-            "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=500&h=500&fit=crop",
-          subItems: [
-            {
-              title: "Protein-Packed Energy Balls Recipe",
-              image:
-                "https://images.unsplash.com/photo-1604497181015-76590d828449?w=500&h=500&fit=crop",
-              date: "Dec 2024",
-            },
-            {
-              title: "Greek Yogurt Parfait: 5 Delicious Ways",
-              image:
-                "https://images.unsplash.com/photo-1488477304112-4944851de03d?auto=format&fit=crop&w=500&h=500",
-              date: "Dec 2024",
-            },
-            {
-              title: "Kale Chips: Crispy & Healthy Alternative",
-              image:
-                "https://images.unsplash.com/photo-1573123073646-c914ac456ab4?w=500&h=500&fit=crop",
-              date: "Jan 2025",
-            },
-          ],
-        },
-      ],
-    },
-    {
       title: "Dinner",
       items: [
         {
-          title: "Top 10 Family-Friendly Dinner Recipes 2025",
+          comparison_title: "Top 10 Family-Friendly Dinner Recipes 2025",
           date: "Oct 2024",
           image:
             "https://images.unsplash.com/photo-1576402187878-974f70c890a5?auto=format&fit=crop&w=500&h=500",
@@ -306,7 +313,8 @@ export default function Top10List() {
       title: "Grilling",
       items: [
         {
-          title: "Top 10 Mouthwatering Grilling Recipes for Summer 2025",
+          comparison_title:
+            "Top 10 Mouthwatering Grilling Recipes for Summer 2025",
           date: "Oct 2024",
           image:
             "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=500&h=500",
@@ -350,14 +358,18 @@ export default function Top10List() {
         </button>
       </div>
 
-      <div className="space-y-6 w-full">
+      <div className="w-full">
         {list.map((item, index) => (
           <div
             key={index}
-            className="group rounded-2xl bg-white border border-gray-100 hover:border-primary/20 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
+            className="group rounded-2xl bg-white border border-gray-100 hover:border-primary/20 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] mb-4"
           >
             <button
-              className="w-full p-6 flex items-center justify-between bg-white rounded-2xl transition-colors group-hover:bg-gray-50/50"
+              className={`w-full flex items-center justify-between rounded-2xl transition-colors ${
+                openSections.includes(index)
+                  ? "bg-white p-8"
+                  : "bg-gray-50 shadow-sm shadow-gray-200 p-4"
+              }`}
               onClick={() => handleSectionToggle(index)}
             >
               <div className="flex items-center gap-5">
@@ -410,7 +422,7 @@ export default function Top10List() {
                             </span>
                           </div>
                           <h3 className="text-2xl font-bold text-gray-900">
-                            {mainItem.title}
+                            {mainItem.comparison_title}
                           </h3>
                           <p className="text-gray-600 leading-relaxed">
                             Comprehensive guide with all the information you
@@ -419,72 +431,37 @@ export default function Top10List() {
 
                           <div className="flex items-center gap-6 text-sm text-gray-500">
                             <div className="flex items-center gap-1">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-4 w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                />
-                              </svg>
+                              <Clock className="w-4 h-4" />
                               <span>35 min read</span>
                             </div>
                             <div className="flex items-center gap-1">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-4 w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                                />
-                              </svg>
+                              <Star className="w-4 h-4" />
                               <span>Medium</span>
                             </div>
                             <div className="flex items-center gap-1">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-4 w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-                                />
-                              </svg>
+                              <Users className="w-4 h-4" />
                               <span>10 providers</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Eye className="w-4 h-4" />
+                              <span>{viewCounts[index]}K views</span>
                             </div>
                           </div>
 
-                          <div className="flex items-center justify-between">
-                            <p className="text-gray-500 text-sm">
-                              Last updated: {mainItem.date}
-                            </p>
-                            <Link
-                              href="/hosting"
-                              className="group/button bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full flex items-center gap-3 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
-                            >
-                              View Recipe
-                              <span className="transform transition-transform duration-300 group-hover/button:translate-x-1">
-                                →
-                              </span>
-                            </Link>
-                          </div>
+                          <p className="text-gray-500 text-sm">
+                            Last updated: {mainItem.date}
+                          </p>
+                          <Link
+                            href={`/comparisons/${mainItem.comparison_title
+                              ?.replaceAll(" ", "-")
+                              ?.toLowerCase()}`}
+                            className="group/button w-fit font-medium bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full flex items-center gap-3 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+                          >
+                            View {item.title} Recipes
+                            <span className="transform transition-transform duration-300 group-hover/button:translate-x-1">
+                              →
+                            </span>
+                          </Link>
                         </div>
                       </div>
 
@@ -503,21 +480,30 @@ export default function Top10List() {
                                 className="w-full h-full object-cover transform transition-transform duration-500 group-hover/card:scale-110"
                               />
                             </div>
-                            <div className="flex-1 space-y-2">
+                            <div className="flex-1 space-y-1">
                               <p className="font-medium text-gray-900 group-hover/card:text-primary transition-colors line-clamp-2">
                                 {subItem.title}
                               </p>
-                              <p className="text-sm text-gray-500">
+                              <p className="text-xs text-gray-500">
                                 {subItem.date}
                               </p>
-                              <div className="flex items-center gap-2">
+                              <div className="flex items-center gap-2 py-1">
                                 <span className="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full font-medium">
                                   15 min
                                 </span>
                                 <span className="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full font-medium">
                                   Easy
                                 </span>
+                                <span className="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full font-medium">
+                                  {viewCounts[(index * 3 + subIdx) % 10]}K views
+                                </span>
                               </div>
+                              <Link
+                                href={`/recipes/${subItem?.id}`}
+                                className="text-primary font-medium underline transition-colors text-sm"
+                              >
+                                View Recipe
+                              </Link>
                             </div>
                           </div>
                         ))}

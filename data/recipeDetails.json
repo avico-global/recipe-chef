@@ -3589,5 +3589,77 @@
         "text": "Used vanilla bean—excellent flavor."
       }
     ]
+  },
+  {
+    "id": "51",
+    "title": "Protein-Rich Post-Workout Energy Balls (30g Protein)",
+    "description": "These no-bake energy balls are packed with protein, healthy fats, and natural sweetness—perfect for recovery and muscle repair after your workout.",
+    "thumbnail": "/assets/recipes/energy-balls.jpg",
+    "videoId": "-MbX_yeJ3Ts",
+    "authorName": "Maya Patel",
+    "authorAvatar": "/assets/avatars/avatar-11.jpg",
+    "authorId": "mayapatel",
+    "datePosted": "2024-03-22",
+    "duration": "15 min",
+    "difficulty": "Easy",
+    "servings": 6,
+    "cuisineType": "Healthy",
+    "mealType": "Snack",
+    "tags": ["High Protein", "No-Bake", "Post-Workout", "Energy"],
+    "dietary": ["Gluten-Free", "Vegetarian"],
+    "prepTime": "15 min",
+    "cookTime": "None",
+    "ingredients": [
+      "1 cup rolled oats",
+      "1/2 cup natural peanut butter",
+      "1/4 cup honey or maple syrup",
+      "1/2 cup vanilla protein powder",
+      "2 tbsp chia seeds",
+      "2 tbsp flaxseed meal",
+      "1/3 cup dark chocolate chips (optional)",
+      "1/4 cup unsweetened shredded coconut",
+      "1–2 tbsp almond milk (if needed for consistency)"
+    ],
+    "instructions": [
+      "In a large mixing bowl, combine oats, protein powder, chia seeds, flaxseed, and coconut.",
+      "Add in peanut butter and honey (or maple syrup). Mix until well combined.",
+      "If the mixture feels too dry, add almond milk one tablespoon at a time.",
+      "Fold in chocolate chips if using.",
+      "Roll into 1-inch balls using your hands.",
+      "Chill in the fridge for 15–20 minutes before serving. Store in an airtight container."
+    ],
+    "nutritionFacts": {
+      "calories": 210,
+      "protein": "30g",
+      "carbs": "15g",
+      "fat": "9g",
+      "fiber": "4g"
+    },
+    "ratings": {
+      "average": 4.9,
+      "count": 142
+    },
+    "comments": [
+      {
+        "id": "c11-1",
+        "user": {
+          "name": "Aaron Blake",
+          "avatar": "https://randomuser.me/api/portraits/men/41.jpg"
+        },
+        "date": "2024-04-02",
+        "rating": 5,
+        "text": "These kept me full after my workout and taste amazing—like dessert!"
+      },
+      {
+        "id": "c11-2",
+        "user": {
+          "name": "Jenna Rose",
+          "avatar": "https://randomuser.me/api/portraits/women/25.jpg"
+        },
+        "date": "2024-03-29",
+        "rating": 5,
+        "text": "Super quick and easy to make. I swapped peanut butter for almond butter—still great!"
+      }
+    ]
   }
 ]
