@@ -1,33 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import trendingRecipes from "../data/recipes.json";
+import { ChevronRight } from "lucide-react";
 
 export default function TrendingRecipes() {
   return (
     <section className="py-12 w-full">
       <div className="container mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-4xl font-bold text-gray-900">
             <span className="text-primary">Trending</span> Recipes
           </h2>
           <Link
             href="/recipes"
-            className="text-primary hover:text-primary-dark font-medium flex items-center gap-2 transition-colors"
+            className="text-primary font-medium hover:bg-primary/10 px-6 py-2.5 rounded-full transition-all text-sm flex items-center gap-2 border border-primary/20"
           >
             View All
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
+            <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
 

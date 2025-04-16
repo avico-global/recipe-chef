@@ -108,16 +108,19 @@ export default function Shorts() {
   const maxIndex = shortsData.length - visibleItems;
 
   return (
-    <section className="py-8 overflow-hidden w-full">
+    <section className="py-8 overflow-hidden w-full mt-10">
       <div className="container-custom">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center">
-            <PlayCircle className="w-6 h-6 text-primary" />
-            <h2 className="text-2xl font-bold ml-2">Shorts</h2>
+            <PlayCircle className="w-9 h-9 text-primary mr-2" />
+            <h2 className="text-4xl font-bold text-gray-900">
+              Quick <span className="text-primary">Recipes</span>
+            </h2>
           </div>
+
           <Link
             href="/shorts"
-            className="text-primary font-medium hover:underline text-sm flex items-center gap-1"
+            className="text-primary font-medium hover:bg-primary/10 px-6 py-2.5 rounded-full transition-all text-sm flex items-center gap-2 border border-primary/20"
           >
             View All
             <ChevronRight className="w-4 h-4" />

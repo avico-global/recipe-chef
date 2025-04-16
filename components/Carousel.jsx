@@ -14,30 +14,31 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
   const defaultSlides = [
     {
       id: 1,
-      type: "recipe",
-      title: "Summer BBQ Special",
-      subtitle: "Master the grill with our top tips",
+      title:
+        "The Number One Destination for Food Lovers – 200,000+ Recipes & Counting.",
+      subtitle:
+        "Join millions of passionate cooks discovering new favorites every day. Dive into the ultimate recipe collection now.",
       image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1",
       link: "/recipes/bbq-special",
-      ctaText: "View Recipes",
+      ctaText: "Browse Recipes",
     },
     {
       id: 2,
-      type: "sweepstakes",
-      title: "Win a Professional Chef Set",
-      subtitle: "Enter our monthly giveaway",
+      title: "Explore the World's Favorite Recipes – All in One Place.",
+      subtitle:
+        "Enter our monthly giveaway for a chance to win exclusive cooking gear and foodie prizes!",
       image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f",
       link: "/sweepstakes",
-      ctaText: "Enter Now",
+      ctaText: "Enter to Win",
     },
     {
       id: 3,
-      type: "recipe",
-      title: "Quick & Healthy Breakfasts",
-      subtitle: "Start your day right",
+      title: "From Quick Bites to Feast-Worthy Dishes – Find It All Here.",
+      subtitle:
+        "Whether it's a 10-minute snack or a weekend feast, we've got the perfect recipe for every craving.",
       image: "https://images.unsplash.com/photo-1494597564530-871f2b93ac55",
       link: "/recipes/quick-breakfasts",
-      ctaText: "Explore Collection",
+      ctaText: "Find Your Flavor",
     },
   ];
 
@@ -86,73 +87,72 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
   }, [isPlaying, nextSlide, autoPlayInterval]);
 
   return (
-    <div className="relative w-full overflow-hidden shadow-lg xl:rounded-2xl">
-      {/* Carousel slides */}
+    <div className="relative w-full overflow-hidden shadow-2xl xl:rounded-2xl bg-gradient-to-b from-gray-900 to-gray-800">
+      {/* Carousel wrapper */}
       <div
-        className="relative h-[300px] md:h-[350px] w-full transition-transform duration-500 ease-out"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        className="relative flex transition-transform duration-700 ease-out"
+        style={{
+          width: `${carouselSlides.length * 100}%`,
+          transform: `translateX(-${
+            currentIndex * (100 / carouselSlides.length)
+          }%)`,
+        }}
       >
         {carouselSlides.map((slide, index) => (
           <div
             key={slide.id}
-            className="absolute top-0 left-0 w-full h-full"
-            style={{ transform: `translateX(${index * 100}%)` }}
+            className="relative w-full flex-shrink-0 aspect-[16/9] md:aspect-[21/9] overflow-hidden"
+            style={{ width: `${100 / carouselSlides.length}%` }}
           >
-            {/* Slide background image */}
-            <div className="relative w-full h-full">
-              <Image
-                src={slide.image}
-                alt={slide.title}
-                fill
-                className="object-cover"
-                priority={index === currentIndex}
-              />
+            {/* Background image */}
+            <Image
+              src={slide.image}
+              alt={slide.title}
+              fill
+              className="object-cover transition-all duration-700"
+              priority={index === currentIndex}
+            />
 
-              {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />
+            {/* Gradient overlay - adjusted opacity */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-10" />
 
-              {/* Slide content */}
-              <div className="absolute inset-0 flex flex-col justify-center p-6 md:px-16">
-                <div className="max-w-md">
-                  {slide.type === "sweepstakes" && (
-                    <span className="inline-block bg-secondary text-white text-xs px-2 py-1 rounded-sm mb-4">
-                      SWEEPSTAKES
-                    </span>
-                  )}
-                  <h2 className="text-2xl md:text-4xl font-bold text-white mb-2">
-                    {slide.title}
-                  </h2>
-                  <p className="text-white/80 mb-6">{slide.subtitle}</p>
-                  <Link
-                    href={slide.link}
-                    className="inline-block bg-white text-gray-900 px-6 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors"
-                  >
-                    {slide.ctaText}
-                  </Link>
-                </div>
+            {/* Content with improved typography */}
+            <div className="absolute inset-0 flex items-center z-20 px-8 md:px-20">
+              <div className="max-w-2xl text-white transform transition-all duration-500">
+                <h2 className="text-3xl md:text-5xl font-bold drop-shadow-lg mb-6 leading-tight">
+                  {slide.title}
+                </h2>
+                <p className="text-base md:text-xl text-white/90 mb-10 leading-relaxed max-w-xl">
+                  {slide.subtitle}
+                </p>
+                <Link
+                  href={slide.link}
+                  className="inline-block bg-white text-black px-10 py-4 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg text-lg"
+                >
+                  {slide.ctaText}
+                </Link>
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Navigation arrows */}
+      {/* Navigation arrows - removed blur effect */}
       <button
         onClick={prevSlide}
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/50 rounded-full p-2 backdrop-blur-sm text-white transition-colors z-10"
-        aria-label="Previous slide"
+        className="absolute top-1/2 left-4 -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 transition-all duration-300 hover:scale-110"
+        aria-label="Previous Slide"
       >
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
+          className="w-6 h-6"
           fill="none"
-          viewBox="0 0 24 24"
           stroke="currentColor"
+          strokeWidth="2.5"
+          viewBox="0 0 24 24"
         >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth={2}
             d="M15 19l-7-7 7-7"
           />
         </svg>
@@ -160,78 +160,72 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
 
       <button
         onClick={nextSlide}
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/50 rounded-full p-2 backdrop-blur-sm text-white transition-colors z-10"
-        aria-label="Next slide"
+        className="absolute top-1/2 right-4 -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 transition-all duration-300 hover:scale-110"
+        aria-label="Next Slide"
       >
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
+          className="w-6 h-6"
           fill="none"
-          viewBox="0 0 24 24"
           stroke="currentColor"
+          strokeWidth="2.5"
+          viewBox="0 0 24 24"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 5l7 7-7 7"
-          />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
         </svg>
       </button>
 
-      {/* Dots pagination */}
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+      {/* Pagination dots - adjusted position */}
+      <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2 z-30">
         {carouselSlides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`h-2 w-2 rounded-full transition-colors ${
-              index === currentIndex ? "bg-white" : "bg-white/50"
+            className={`h-3 transition-all duration-300 rounded-full ${
+              index === currentIndex
+                ? "w-10 bg-white"
+                : "w-3 bg-white/40 hover:bg-white/60"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
 
-      {/* Autoplay control */}
+      {/* Autoplay control - removed blur effect */}
       <button
         onClick={toggleAutoplay}
-        className="absolute bottom-4 right-4 bg-white/30 hover:bg-white/50 rounded-full p-2 backdrop-blur-sm text-white transition-colors z-10"
+        className="absolute bottom-8 right-8 z-30 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 transition-all duration-300 hover:scale-110"
         aria-label={isPlaying ? "Pause autoplay" : "Start autoplay"}
       >
         {isPlaying ? (
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4"
+            className="w-4 h-4"
             fill="none"
-            viewBox="0 0 24 24"
             stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              d="M10 9v6m4-6v6M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
         ) : (
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4"
+            className="w-4 h-4"
             fill="none"
-            viewBox="0 0 24 24"
             stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
               d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
             />
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
               d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
