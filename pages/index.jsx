@@ -6,6 +6,7 @@ import Categories from "@/components/Categories";
 import Head from "next/head";
 import Footer from "@/components/Footer";
 import TrendingRecipes from "@/components/TrendingRecipes";
+import Top10List from "@/components/Top10List";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <main className="container flex flex-col items-center w-full mx-auto p-5">
         <Carousel />
         <Shorts />
+        <Top10List/>
         <Categories />
         <TrendingRecipes />
         <Footer />
