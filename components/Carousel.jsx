@@ -18,7 +18,8 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
         "The Number One Destination for Food Lovers – 200,000+ Recipes & Counting.",
       subtitle:
         "Join millions of passionate cooks discovering new favorites every day. Dive into the ultimate recipe collection now.",
-      image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1",
+      image:
+        "https://images.unsplash.com/photo-1566843971842-237cdbeaa75f?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/recipes/bbq-special",
       ctaText: "Browse Recipes",
     },
@@ -87,7 +88,7 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
   }, [isPlaying, nextSlide, autoPlayInterval]);
 
   return (
-    <div className="relative w-full overflow-hidden shadow-2xl xl:rounded-2xl bg-gradient-to-b from-gray-900 to-gray-800">
+    <div className="relative w-full overflow-hidden shadow-2xl bg-gradient-to-b from-gray-900 to-gray-800">
       {/* Carousel wrapper */}
       <div
         className="relative flex transition-transform duration-700 ease-out"
@@ -101,7 +102,7 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
         {carouselSlides.map((slide, index) => (
           <div
             key={slide.id}
-            className="relative w-full flex-shrink-0 aspect-[16/9] md:aspect-[21/9] overflow-hidden"
+            className="relative w-full flex-shrink-0 aspect-[16/9] md:aspect-[21/7] overflow-hidden"
             style={{ width: `${100 / carouselSlides.length}%` }}
           >
             {/* Background image */}
@@ -109,7 +110,7 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
               src={slide.image}
               alt={slide.title}
               fill
-              className="object-cover transition-all duration-700"
+              className="object-cover transition-all duration-700 right-0"
               priority={index === currentIndex}
             />
 
@@ -117,8 +118,8 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-10" />
 
             {/* Content with improved typography */}
-            <div className="absolute inset-0 flex items-center z-20 px-8 md:px-20">
-              <div className="max-w-2xl text-white transform transition-all duration-500">
+            <div className="absolute inset-0 flex items-center z-20 px-4 container mx-auto">
+              <div className="max-w-3xl text-white transform transition-all duration-500">
                 <h2 className="text-3xl md:text-5xl font-bold drop-shadow-lg mb-6 leading-tight">
                   {slide.title}
                 </h2>
