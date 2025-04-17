@@ -19,7 +19,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isCategoryDropdownOpen, setIsCategoryDropdownOpen] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
+  const [selectedCategory, setSelectedCategory] = useState("All Cuisines");
 
   const desktopDropdownRef = useRef(null);
   const mobileDropdownRef = useRef(null);
@@ -67,25 +67,25 @@ const Navbar = () => {
     setIsCategoryDropdownOpen(false);
   };
 
-  const recipeCategories = [
-    "All Categories",
-    "Appetizers",
-    "Breakfast",
-    "Lunch",
-    "Dinner",
-    "Beverages",
-    "Baking",
-    "Grilling",
-    "Soups & Stews",
-    "Salads",
-    "Vegetarian",
-    "Vegan",
-    "Gluten-Free",
-    "International",
-    "Quick & Easy",
-    "Seasonal",
-    "Holiday",
-    "Ingredients",
+  const cuisines = [
+    "All Cuisines",
+    "Italian",
+    "Chinese",
+    "Japanese",
+    "Indian",
+    "Mexican",
+    "Thai",
+    "French",
+    "Mediterranean",
+    "Greek",
+    "Spanish",
+    "Korean",
+    "Vietnamese",
+    "Middle Eastern",
+    "American",
+    "Brazilian",
+    "Caribbean",
+    "African"
   ];
 
   return (
@@ -104,9 +104,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="flex items-center space-x-5">
-            <Link href="/premium" className="text-gray-700 hover:text-blue-600">
-              Premium Content
-            </Link>
+        
             <Link
               href="/meal-planner"
               className="text-gray-700 hover:text-blue-600"
@@ -155,18 +153,18 @@ const Navbar = () => {
                   {/* Desktop category dropdown */}
                   {isCategoryDropdownOpen && (
                     <div className="absolute top-full left-0 mt-1 bg-white border border-gray-300 rounded-md shadow-md z-50 max-h-96 overflow-y-auto w-48">
-                      {recipeCategories.map((category) => (
+                      {cuisines.map((cuisine) => (
                         <div
-                          key={category}
-                          className={`px-4 py-2 text-sm cursor-pointer hover:bg-blue-50 ${
-                            selectedCategory === category ? "bg-blue-100" : ""
+                          key={cuisine}
+                          className={`px-4 py-1 text-sm cursor-pointer hover:bg-primary/10 ${
+                            selectedCategory === cuisine ? "bg-primary/10" : ""
                           }`}
                           onClick={(e) => {
                             e.stopPropagation();
-                            handleCategorySelect(category);
+                            handleCategorySelect(cuisine);
                           }}
                         >
-                          {category}
+                          {cuisine}
                         </div>
                       ))}
                     </div>
@@ -245,18 +243,18 @@ const Navbar = () => {
 
             {isCategoryDropdownOpen && (
               <div className="bg-white border border-gray-300 rounded-md shadow-md mt-1 mb-2 max-h-60 overflow-y-auto">
-                {recipeCategories.map((category) => (
+                {cuisines.map((cuisine) => (
                   <div
-                    key={category}
+                    key={cuisine}
                     className={`px-4 py-2.5 text-sm cursor-pointer border-b border-gray-100 ${
-                      selectedCategory === category ? "bg-blue-100" : ""
+                      selectedCategory === cuisine ? "bg-blue-100" : ""
                     }`}
                     onClick={(e) => {
                       e.stopPropagation();
-                      handleCategorySelect(category);
+                      handleCategorySelect(cuisine);
                     }}
                   >
-                    {category}
+                    {cuisine}
                   </div>
                 ))}
               </div>
@@ -285,24 +283,7 @@ const Navbar = () => {
       <div className="hidden md:block bg-white border-t border-gray-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-start lg:justify-center space-x-4 sm:space-x-6 py-2 text-xs sm:text-sm overflow-x-auto">
-            <Link
-              href="/shorts"
-              className="text-gray-700 hover:text-primary whitespace-nowrap"
-            >
-              Shorts
-            </Link>
-            <Link
-              href="/recipes"
-              className="text-gray-700 hover:text-primary whitespace-nowrap"
-            >
-              All Recipes
-            </Link>
-            <Link
-              href="/recipes?filter=quick-meals"
-              className="text-gray-700 hover:text-primary whitespace-nowrap"
-            >
-              Quick Meals
-            </Link>
+         
             <Link
               href="/recipes?filter=breakfast"
               className="text-gray-700 hover:text-primary whitespace-nowrap"
