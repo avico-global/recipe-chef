@@ -136,105 +136,105 @@ export default function RecipeDetail() {
       <Navbar />
 
       <main className="min-h-screen bg-gray-50">
-        {/* Hero Section - Enhanced with better visual hierarchy and animation */}
-        <div className="relative bg-gradient-to-b from-white to-gray-50 w-full py-16">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Left Column - Image and Video with enhanced animation */}
-
-              <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 transform hover:scale-[1.01] transition-transform duration-300 min-h-96">
+        {/* Hero Banner Section - Redesigned */}
+        <div className="relative bg-white border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 min-h-[50vh] max-h-[50vh]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 h-full">
+              {/* Left Column - Video */}
+              <div className="relative h-full rounded-2xl overflow-hidden shadow-xl">
                 <iframe
                   className="absolute inset-0 w-full h-full"
                   src={`https://www.youtube.com/embed/${recipe.videoId}`}
                   title={recipe.title}
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
               </div>
 
-              {/* Right Column - Enhanced typography and spacing */}
-              <div className="flex flex-col justify-center space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="relative h-10 w-10 rounded-full overflow-hidden mr-4 bg-primary/10 flex items-center justify-center text-primary shadow-lg ring-4 ring-primary/20">
-                    <span className="text-xl font-bold capitalize">
-                      {recipe?.authorName?.slice(0, 1)}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-gray-500">
-                      Created by
-                    </p>
-                    <span
-                      // href={`/profile/${recipe.authorId}`}
-                      className="text-lg text-gray-900 font-semibold hover:text-primary transition-colors"
-                    >
-                      {recipe.authorName}
-                    </span>
-                  </div>
-                </div>
-
-                <h1 className="text-4xl font-bold text-gray-900 leading-tight">
-                  {recipe.title}
-                </h1>
-
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  {recipe.description}
-                </p>
-
-                {/* Enhanced Ratings Display */}
-                <div className="flex items-center gap-6">
-                  <div className="flex items-center gap-2">
-                    <div className="flex">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <svg
-                          key={star}
-                          className={`w-6 h-6 ${
-                            star <= Math.floor(recipe.ratings?.average || 0)
-                              ? "text-yellow-400"
-                              : "text-gray-200"
-                          } transition-colors duration-200`}
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
+              {/* Right Column - Content */}
+              <div className="flex flex-col justify-between h-full">
+                {/* Header Content */}
+                <div>
+                  {/* Author and Date */}
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="flex items-center">
+                      <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                        <span className="text-lg font-bold text-primary">
+                          {recipe?.authorName?.slice(0, 1)}
+                        </span>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm text-gray-500">Recipe by</p>
+                        <p className="font-medium text-gray-900">{recipe.authorName}</p>
+                      </div>
                     </div>
-                    <span className="text-lg font-medium text-gray-700">
-                      ({recipe.ratings?.count || 0})
-                    </span>
+                    <div className="h-8 w-px bg-gray-200"></div>
+                    <div>
+                      <p className="text-sm text-gray-500">Published</p>
+                      <p className="font-medium text-gray-900">{recipe.publishDate || 'Recently'}</p>
+                    </div>
                   </div>
-                  <div className="h-10 w-px bg-gray-200"></div>
-                  <div className="flex items-center gap-2">
-                    <svg
-                      className="w-6 h-6 text-primary"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                    <span className="text-lg font-medium text-gray-700">
-                      {recipe.cookTime}
-                    </span>
+
+                  {/* Title and Description */}
+                  <h1 className="text-3xl font-bold text-gray-900 mb-3">{recipe.title}</h1>
+                  <p className="text-gray-600 line-clamp-2">{recipe.description}</p>
+                </div>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-4 gap-4 my-6">
+                  <div className="text-center p-3 rounded-lg bg-gray-50">
+                    <div className="text-2xl font-bold text-gray-900 mb-1">{recipe.views || 0}</div>
+                    <div className="text-sm text-gray-500">Views</div>
+                  </div>
+                  <div className="text-center p-3 rounded-lg bg-gray-50">
+                    <div className="text-2xl font-bold text-gray-900 mb-1">{recipe.likes || 0}</div>
+                    <div className="text-sm text-gray-500">Likes</div>
+                  </div>
+                  <div className="text-center p-3 rounded-lg bg-gray-50">
+                    <div className="text-2xl font-bold text-gray-900 mb-1">{recipe.ratings?.average || 0}</div>
+                    <div className="text-sm text-gray-500">Rating</div>
+                  </div>
+                  <div className="text-center p-3 rounded-lg bg-gray-50">
+                    <div className="text-2xl font-bold text-gray-900 mb-1">{recipe.cookTime}</div>
+                    <div className="text-sm text-gray-500">Minutes</div>
                   </div>
                 </div>
 
-                {/* Enhanced Action Buttons */}
-                <div className="flex flex-wrap gap-4 pt-4">
+                {/* Quick Info */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-center space-x-3 p-3 rounded-lg bg-gray-50">
+                    <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
+                      <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-500">Difficulty</p>
+                      <p className="font-medium text-gray-900">{recipe.difficulty || 'Intermediate'}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3 p-3 rounded-lg bg-gray-50">
+                    <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
+                      <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.318l-1.318 3.8A1 1 0 0 1 9.74 9H5.82a1 1 0 0 0-.64 1.77l3.133 2.28a1 1 0 0 1 .364 1.118L7.36 17.473a1 1 0 0 0 1.538 1.118l3.133-2.28a1 1 0 0 1 1.176 0l3.133 2.28a1 1 0 0 0 1.538-1.118l-1.318-3.8a1 1 0 0 1 .364-1.118l3.133-2.28A1 1 0 0 0 19.18 9h-3.92a1 1 0 0 1-.951-.682L13.318 4.318a1 1 0 0 0-1.896 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-500">Servings</p>
+                      <p className="font-medium text-gray-900">{servingsCount} people</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex gap-4">
                   <button
                     onClick={handleSave}
                     className={`flex-1 flex items-center justify-center py-3 px-6 rounded-xl text-base font-semibold transition-all duration-300 ${
                       saved
-                        ? "bg-primary text-white shadow-lg shadow-primary/30 transform -translate-y-1"
-                        : "bg-white text-gray-800 border-2 border-gray-200 hover:border-primary hover:text-primary"
+                        ? "bg-primary text-white shadow-lg shadow-primary/30"
+                        : "bg-gray-100 text-gray-900 hover:bg-gray-200"
                     }`}
                   >
                     <svg
@@ -254,7 +254,7 @@ export default function RecipeDetail() {
                   </button>
                   <button
                     onClick={handlePrint}
-                    className="flex-1 flex items-center justify-center py-3 px-6 rounded-xl text-base font-semibold bg-primary text-white hover:bg-primary-hover transition-all duration-300 shadow-lg hover:shadow-xl shadow-primary/30 transform hover:-translate-y-1"
+                    className="flex-1 flex items-center justify-center py-3 px-6 rounded-xl text-base font-semibold bg-primary text-white hover:bg-primary-hover transition-all duration-300"
                   >
                     <svg
                       className="w-5 h-5 mr-2"
