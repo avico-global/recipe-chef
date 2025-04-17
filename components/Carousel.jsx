@@ -14,8 +14,21 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
   const defaultSlides = [
     {
       id: 1,
-      title:
-        "The Number One Destination for Food Lovers – 200,000+ Recipes & Counting.",
+      title: (
+        <>
+          The Number One Destination for Food Lovers –{" "}
+          <span className="relative inline-block group">
+            <span className="relative z-10 font-extrabold bg-gradient-to-r from-yellow-200 via-orange-300 to-yellow-200 bg-clip-text text-transparent animate-gradient-x">
+              200,000+ Recipes
+            </span>
+            <span
+              className="absolute -bottom-1 left-0 w-full h-[4px] bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 rounded-full transform transition-all duration-500 
+            animate-shimmer bg-[length:200%_100%] group-hover:bg-[length:100%_100%]"
+            ></span>
+          </span>{" "}
+          & Counting.
+        </>
+      ),
       subtitle:
         "Join millions of passionate cooks discovering new favorites every day. Dive into the ultimate recipe collection now.",
       image:
@@ -25,7 +38,18 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
     },
     {
       id: 2,
-      title: "Explore the World's Favorite Recipes – All in One Place.",
+      title: (
+        <>
+          Explore the{" "}
+          <span className="relative inline-block group">
+            <span className="relative z-10 font-extrabold bg-gradient-to-r from-yellow-200 via-orange-300 to-yellow-200 bg-clip-text text-transparent animate-gradient-x">
+              World's Favorite
+            </span>
+            <span className="absolute -bottom-1 left-0 w-full h-[4px] bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 rounded-full transform transition-all duration-500 animate-shimmer bg-[length:200%_100%] group-hover:bg-[length:100%_100%]"></span>
+          </span>{" "}
+          Recipes – All in One Place.
+        </>
+      ),
       subtitle:
         "Enter our monthly giveaway for a chance to win exclusive cooking gear and foodie prizes!",
       image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f",
@@ -34,7 +58,18 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
     },
     {
       id: 3,
-      title: "From Quick Bites to Feast-Worthy Dishes – Find It All Here.",
+      title: (
+        <>
+          From Quick Bites to{" "}
+          <span className="relative inline-block group">
+            <span className="relative z-10 font-extrabold bg-gradient-to-r from-yellow-200 via-orange-300 to-yellow-200 bg-clip-text text-transparent animate-gradient-x">
+              Feast-Worthy
+            </span>
+            <span className="absolute -bottom-1 left-0 w-full h-[4px] bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 rounded-full transform transition-all duration-500 animate-shimmer bg-[length:200%_100%] group-hover:bg-[length:100%_100%]"></span>
+          </span>{" "}
+          Dishes – Find It All Here.
+        </>
+      ),
       subtitle:
         "Whether it's a 10-minute snack or a weekend feast, we've got the perfect recipe for every craving.",
       image: "https://images.unsplash.com/photo-1494597564530-871f2b93ac55",
