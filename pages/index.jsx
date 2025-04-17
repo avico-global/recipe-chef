@@ -12,8 +12,8 @@ export default function Home() {
     <div>
       {/* Header */}
       <Navbar />
-      <Carousel />
       <main className="container flex flex-col items-center w-full mx-auto p-5">
+        <Carousel />
         <Top10List />
         <Shorts />
         <Categories />

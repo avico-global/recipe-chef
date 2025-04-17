@@ -123,7 +123,7 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
   }, [isPlaying, nextSlide, autoPlayInterval]);
 
   return (
-    <div className="relative w-full overflow-hidden shadow-2xl bg-gradient-to-b from-gray-900 to-gray-800">
+    <div className="relative w-full overflow-hidden shadow-2xl rounded-xl bg-gradient-to-b from-gray-900 to-gray-800">
       {/* Carousel wrapper */}
       <div
         className="relative flex transition-transform duration-700 ease-out"
@@ -137,7 +137,7 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
         {carouselSlides.map((slide, index) => (
           <div
             key={slide.id}
-            className="relative w-full flex-shrink-0 aspect-[16/9] md:aspect-[21/7] overflow-hidden"
+            className="relative w-full flex-shrink-0 aspect-[16/9] md:aspect-[21/8] overflow-hidden"
             style={{ width: `${100 / carouselSlides.length}%` }}
           >
             {/* Background image */}
@@ -153,9 +153,9 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-10" />
 
             {/* Content with improved typography */}
-            <div className="absolute inset-0 flex items-center z-20 px-4 container mx-auto">
+            <div className="absolute inset-0 flex items-center z-20 px-20 container mx-auto">
               <div className="max-w-3xl text-white transform transition-all duration-500">
-                <h2 className="text-3xl md:text-5xl font-bold drop-shadow-lg mb-6 leading-tight">
+                <h2 className="text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold drop-shadow-lg mb-6 leading-tight">
                   {slide.title}
                 </h2>
                 <p className="text-base md:text-xl text-white/90 mb-10 leading-relaxed max-w-xl">
