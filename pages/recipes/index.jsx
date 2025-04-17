@@ -6,6 +6,7 @@ import FilterSidebar from "../../components/FilterSidebar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import recipesData from "../../data/recipes.json";
+import { X } from "lucide-react";
 
 /**
  * RecipesList component - displays a list of recipes with filtering options
@@ -382,20 +383,7 @@ export default function RecipesList({ cuisineTypeFromPath }) {
                       className="text-gray-500 hover:text-gray-700 focus:outline-none"
                       onClick={toggleMobileFilter}
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>
+                      <X className="h-6 w-6" />
                     </button>
                   </div>
                   <FilterSidebar
@@ -408,7 +396,7 @@ export default function RecipesList({ cuisineTypeFromPath }) {
             )}
 
             {/* Desktop Filter Sidebar */}
-            <div className="hidden md:block md:w-1/4 lg:w-1/5 flex-shrink-0">
+            <div className="hidden md:block md:w-1/4 flex-shrink-0">
               <div className="sticky top-5">
                 <FilterSidebar
                   onFilterChange={handleFilterChange}
@@ -485,21 +473,28 @@ export default function RecipesList({ cuisineTypeFromPath }) {
 
                   <div className="flex flex-col space-y-6">
                     {filteredRecipes.map((recipe) => (
-                      <div key={recipe.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                      <div
+                        key={recipe.id}
+                        className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                      >
                         <div className="md:flex h-full">
                           <div className="md:w-2/5 flex-shrink-0 relative">
-                            <img 
-                              src={recipe.thumbnail} 
-                              alt={recipe.title} 
+                            <img
+                              src={recipe.thumbnail}
+                              alt={recipe.title}
                               className="w-full h-full object-cover md:absolute md:inset-0"
-                              style={{ minHeight: '200px' }}
+                              style={{ minHeight: "200px" }}
                             />
                             <div className="absolute top-4 left-4 flex flex-wrap gap-2">
-                              {recipe.dietary && recipe.dietary.slice(0, 2).map((diet, idx) => (
-                                <span key={idx} className="px-2 py-1 text-xs font-semibold bg-black/70 text-white rounded-lg backdrop-blur-sm">
-                                  {diet}
-                                </span>
-                              ))}
+                              {recipe.dietary &&
+                                recipe.dietary.slice(0, 2).map((diet, idx) => (
+                                  <span
+                                    key={idx}
+                                    className="px-2 py-1 text-xs font-semibold bg-black/70 text-white rounded-lg backdrop-blur-sm"
+                                  >
+                                    {diet}
+                                  </span>
+                                ))}
                             </div>
                           </div>
                           <div className="p-6 md:w-3/5 flex flex-col justify-between">
@@ -519,37 +514,92 @@ export default function RecipesList({ cuisineTypeFromPath }) {
                                 {recipe.description}
                               </p>
                             </div>
-                            
+
                             <div>
                               <div className="flex flex-wrap items-center text-sm text-gray-500 mb-4 gap-x-4 gap-y-2">
                                 <span className="flex items-center">
-                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-4 w-4 mr-1 text-gray-400"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={2}
+                                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    />
                                   </svg>
-                                  {recipe.duration || (recipe.prepTime && recipe.cookTime ? `${recipe.prepTime + recipe.cookTime} mins` : 'N/A')}
+                                  {recipe.duration ||
+                                    (recipe.prepTime && recipe.cookTime
+                                      ? `${
+                                          recipe.prepTime + recipe.cookTime
+                                        } mins`
+                                      : "N/A")}
                                 </span>
                                 <span className="flex items-center">
-                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-4 w-4 mr-1 text-gray-400"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={2}
+                                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                                    />
                                   </svg>
-                                  <span className={`capitalize ${recipe.difficulty === 'easy' ? 'text-green-600' : recipe.difficulty === 'hard' ? 'text-red-600' : 'text-yellow-600'}`}>
+                                  <span
+                                    className={`capitalize ${
+                                      recipe.difficulty === "easy"
+                                        ? "text-green-600"
+                                        : recipe.difficulty === "hard"
+                                        ? "text-red-600"
+                                        : "text-yellow-600"
+                                    }`}
+                                  >
                                     {recipe.difficulty}
                                   </span>
                                 </span>
                                 <span className="flex items-center">
-                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-4 w-4 mr-1 text-gray-400"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={2}
+                                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                                    />
                                   </svg>
                                   {recipe.servings} servings
                                 </span>
                               </div>
-                              <a 
-                                href={`/recipes/${recipe.id}`} 
+                              <a
+                                href={`/recipes/${recipe.id}`}
                                 className="inline-flex items-center px-4 py-2 font-medium text-white bg-primary hover:bg-primary-hover rounded-lg transition-colors"
                               >
                                 View Recipe
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                  <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="h-4 w-4 ml-1"
+                                  viewBox="0 0 20 20"
+                                  fill="currentColor"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clipRule="evenodd"
+                                  />
                                 </svg>
                               </a>
                             </div>

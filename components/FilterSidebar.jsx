@@ -374,7 +374,7 @@ const FilterSidebar = ({
       <h2 className="text-xl font-bold mb-6 text-gray-800">Filters</h2>
 
       {/* Cuisine Type Section */}
-      <div className="mb-6">
+      <div className="mb-3">
         <button
           onClick={() => toggleSection("cuisineType")}
           className="w-full flex justify-between items-center font-medium py-3 px-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-200 group"
@@ -395,6 +395,7 @@ const FilterSidebar = ({
             <ChevronDown className="h-5 w-5 text-gray-500 group-hover:text-gray-700" />
           )}
         </button>
+
         {expandedSections.cuisineType && (
           <div className="mt-3 px-1 grid grid-cols-2 gap-2">
             {[
@@ -457,7 +458,7 @@ const FilterSidebar = ({
       </div>
 
       {/* Meal Type Section */}
-      <div className="mb-6">
+      <div className="mb-3">
         <button
           onClick={() => toggleSection("mealType")}
           className="w-full flex justify-between items-center font-medium py-3 px-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-200 group"
@@ -524,13 +525,13 @@ const FilterSidebar = ({
       </div>
 
       {/* Dietary Restrictions Section */}
-      <div className="mb-6">
+      <div className="mb-3">
         <button
           onClick={() => toggleSection("dietary")}
           className="w-full flex justify-between items-center font-medium py-3 px-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-200 group"
         >
-          <div className="flex items-center gap-2">
-            <h3 className="text-gray-700 group-hover:text-gray-900">
+          <div className="flex items-center gap-2 flex-1">
+            <h3 className="text-gray-700 group-hover:text-gray-900 whitespace-nowrap">
               Dietary Restrictions
             </h3>
             {filters.dietary.length > 0 && (
@@ -595,7 +596,7 @@ const FilterSidebar = ({
       </div>
 
       {/* Difficulty Section - Special styling for radio buttons */}
-      <div className="mb-6">
+      <div className="mb-3">
         <button
           onClick={() => toggleSection("difficulty")}
           className="w-full flex justify-between items-center font-medium py-3 px-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-200 group"
