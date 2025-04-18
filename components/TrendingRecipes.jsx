@@ -8,7 +8,7 @@ export default function TrendingRecipes() {
     <section className="py-12 w-full">
       <div className="container mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-4xl font-bold text-gray-900">
+          <h2 className="text-2xl font-bold text-gray-900">
             <span className="text-primary">Trending</span> Recipes
           </h2>
           <Link

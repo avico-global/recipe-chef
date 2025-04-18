@@ -375,8 +375,8 @@ export default function Comparison({ params }) {
 
       <main>
         {/* Hero Section - Full Width */}
-        <div className="bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white overflow-hidden mb-5 w-full">
-          <div className="container mx-auto pt-8 pb-14 px-4">
+        <div className="bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white overflow-hidden mb-5 w-full container mx-auto rounded-xl">
+          <div className="container mx-auto pt-8 pb-14 px-12">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-2/3 relative z-10">
                 {/* Decorative elements */}
@@ -441,28 +441,12 @@ export default function Comparison({ params }) {
               </div>
             </div>
           </div>
-
-          {/* Wave divider */}
-          <div className="relative h-16 overflow-hidden">
-            <svg
-              className="absolute bottom-0 w-full h-full"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1440 320"
-              preserveAspectRatio="none"
-            >
-              <path
-                fill="#f9fafb"
-                fillOpacity="1"
-                d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-              ></path>
-            </svg>
-          </div>
         </div>
 
         {/* Container for the rest of the content */}
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-12">
           {/* Main Content */}
-          <div className="-mt-28 grid grid-cols-12 gap-8">
+          <div className="-mt-16 grid grid-cols-12 gap-8">
             {/* Recipes List */}
             <div className="col-span-12 md:col-span-8">
               {comparisonData.recipes.map((service, index) => (
@@ -770,7 +754,7 @@ export default function Comparison({ params }) {
             {/* Sidebar */}
             <div className="col-span-12 md:col-span-4">
               {/* Must Reads Section */}
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+              <div className="bg-white rounded-md shadow-sm border border-gray-100 p-6 mb-6">
                 <h2 className="text-xl font-bold mb-4">Must Reads</h2>
                 <div className="space-y-4">
                   {[
@@ -821,7 +805,7 @@ export default function Comparison({ params }) {
               </div>
 
               {/* Our Reviews Section */}
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+              <div className="bg-white rounded-md shadow-sm border border-gray-100 p-6 mb-6">
                 <h2 className="text-xl font-bold mb-4">Our Reviews</h2>
                 <div className="space-y-4">
                   {comparisonData.reviews.map((review) => (
@@ -845,10 +829,15 @@ export default function Comparison({ params }) {
                         <div className="flex items-center mt-1">
                           <div className="flex">
                             {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="w-3 h-3 text-amber-400 fill-amber-400" />
+                              <Star
+                                key={i}
+                                className="w-3 h-3 text-amber-400 fill-amber-400"
+                              />
                             ))}
                           </div>
-                          <span className="text-xs text-gray-500 ml-2">5.0</span>
+                          <span className="text-xs text-gray-500 ml-2">
+                            5.0
+                          </span>
                         </div>
                       </div>
                       <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-primary transition-colors" />
@@ -865,7 +854,7 @@ export default function Comparison({ params }) {
               </div>
 
               {/* Quick Facts Section */}
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+              <div className="bg-white rounded-md shadow-sm border border-gray-100 p-6 mb-6">
                 <h2 className="text-xl font-bold mb-4">Quick Facts</h2>
                 <ul className="space-y-3">
                   <li className="flex items-start">
@@ -960,7 +949,7 @@ export default function Comparison({ params }) {
               </div>
 
               {/* New to Protein Snacks Section */}
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+              <div className="bg-white rounded-md shadow-sm border border-gray-100 p-6 mb-6">
                 <h2 className="text-xl font-bold mb-4">
                   New to Protein Snacks?
                 </h2>
@@ -997,38 +986,6 @@ export default function Comparison({ params }) {
               </div>
             </div>
           </div>
-
-          {/* Related Comparisons */}
-          <section className="mt-16">
-            <h2 className="text-2xl font-bold mb-6">You Might Also Like</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {comparisonData.relatedComparisons.slice(0, 3).map((item) => (
-                <Link key={item.id} href={item.url} className="group">
-                  <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <div className="relative h-44">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-4">
-                      <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm line-clamp-2">
-                        {item.description}
-                      </p>
-                      <p className="text-xs text-gray-400 mt-2">
-                        RecipePicks.com
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </section>
         </div>
       </main>
 

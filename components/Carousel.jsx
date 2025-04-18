@@ -26,7 +26,6 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
             animate-shimmer bg-[length:200%_100%] group-hover:bg-[length:100%_100%]"
             ></span>
           </span>{" "}
-          & Counting.
         </>
       ),
       subtitle:
@@ -154,16 +153,16 @@ const Carousel = ({ slides = [], autoPlayInterval = 5000 }) => {
 
             {/* Content with improved typography */}
             <div className="absolute inset-0 flex items-center z-20 px-20 container mx-auto">
-              <div className="max-w-3xl text-white transform transition-all duration-500">
-                <h2 className="text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold drop-shadow-lg mb-6 leading-tight">
+              <div className="max-w-2xl text-white transform transition-all duration-500">
+                <h2 className="text-3xl md:text-3xl xl:text-4xl 2xl:text-5xl font-bold drop-shadow-lg mb-6 leading-tight">
                   {slide.title}
                 </h2>
                 <p className="text-base md:text-xl text-white/90 mb-10 leading-relaxed max-w-xl">
                   {slide.subtitle}
                 </p>
                 <Link
-                  href={slide.link}
-                  className="inline-block bg-white text-black px-10 py-4 rounded-lg font-semibold hover:bg-primary-500 hover:text-primary transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg text-lg"
+                  href="/recipes"
+                  className="inline-block bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-primary-500 hover:text-primary transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg text-lg"
                 >
                   {slide.ctaText}
                 </Link>

@@ -234,134 +234,56 @@ const FilterSidebar = ({
     return changed;
   };
 
-  const handleFilterChange = (type, value) => {
-    const newFilters = { ...filters };
+  // Handle checkbox changes for array-based filters (cuisineType, mealType, dietary)
+  const handleCheckboxChange = (type, value) => {
     const valueLower = value.toLowerCase();
-
-    if (type === "difficulty" || type === "cookingTime") {
-      // If clicking the already selected value, deselect it
-      if (newFilters[type] === valueLower) {
-        newFilters[type] = "";
-        updateURLParams(type, value, true);
-      } else {
-        newFilters[type] = valueLower;
-        updateURLParams(type, value, false);
-      }
-    } else {
-      // For array-based filters (cuisineType, mealType, dietary)
-      if (newFilters[type].some((v) => v.toLowerCase() === valueLower)) {
-        newFilters[type] = newFilters[type].filter(
-          (item) => item.toLowerCase() !== valueLower
-        );
-        updateURLParams(type, value, true);
-      } else {
-        newFilters[type].push(valueLower);
-        updateURLParams(type, value, false);
-      }
+    const newFilters = { ...filters };
+    
+    // Don't allow changes to locked cuisine type
+    if (type === 'cuisineType' && lockedCuisineType?.toLowerCase() === valueLower) {
+      return;
     }
-
+    
+    // Check if value already exists in the filter
+    if (newFilters[type].includes(valueLower)) {
+      // Remove the value
+      newFilters[type] = newFilters[type].filter(v => v !== valueLower);
+    } else {
+      // Add the value
+      newFilters[type] = [...newFilters[type], valueLower];
+    }
+    
+    // Update local state
     setFilters(newFilters);
+    
+    // Notify parent component
+    if (onFilterChange) {
+      onFilterChange(newFilters);
+    }
+  };
+  
+  // Handle radio button changes for single-value filters (difficulty, cookingTime)
+  const handleRadioChange = (type, value) => {
+    const valueLower = type === 'cookingTime' ? value : value.toLowerCase();
+    const newFilters = { ...filters };
+    
+    // If the same value is clicked again, clear it
+    if (newFilters[type] === valueLower) {
+      newFilters[type] = '';
+    } else {
+      newFilters[type] = valueLower;
+    }
+    
+    // Update local state
+    setFilters(newFilters);
+    
+    // Notify parent component
     if (onFilterChange) {
       onFilterChange(newFilters);
     }
   };
 
-  const updateURLParams = (type, value, isRemove) => {
-    const currentQuery = { ...router.query };
-    const valueLower = value.toLowerCase();
-
-    // Handle removal
-    if (isRemove) {
-      if (type === "difficulty" || type === "cookingTime") {
-        // For single value parameters, just delete them
-        delete currentQuery[type];
-      } else {
-        // For array-based parameters
-        if (currentQuery[type]) {
-          if (typeof currentQuery[type] === "string") {
-            if (currentQuery[type].toLowerCase() === valueLower) {
-              delete currentQuery[type];
-            }
-          } else if (Array.isArray(currentQuery[type])) {
-            currentQuery[type] = currentQuery[type].filter(
-              (val) => val.toLowerCase() !== valueLower
-            );
-            if (currentQuery[type].length === 0) {
-              delete currentQuery[type];
-            } else if (currentQuery[type].length === 1) {
-              currentQuery[type] = currentQuery[type][0];
-            }
-          }
-        }
-
-        // Also handle the generic 'filter' parameter
-        if (currentQuery.filter) {
-          if (typeof currentQuery.filter === "string") {
-            if (currentQuery.filter.toLowerCase() === valueLower) {
-              delete currentQuery.filter;
-            }
-          } else if (Array.isArray(currentQuery.filter)) {
-            currentQuery.filter = currentQuery.filter.filter(
-              (val) => val.toLowerCase() !== valueLower
-            );
-            if (currentQuery.filter.length === 0) {
-              delete currentQuery.filter;
-            } else if (currentQuery.filter.length === 1) {
-              currentQuery.filter = currentQuery.filter[0];
-            }
-          }
-        }
-      }
-    }
-    // Handle addition
-    else {
-      // Add to specific type parameter
-      if (currentQuery[type]) {
-        if (typeof currentQuery[type] === "string") {
-          if (currentQuery[type].toLowerCase() !== valueLower) {
-            currentQuery[type] = [currentQuery[type], valueLower];
-          }
-        } else if (Array.isArray(currentQuery[type])) {
-          if (
-            !currentQuery[type].some((val) => val.toLowerCase() === valueLower)
-          ) {
-            currentQuery[type].push(valueLower);
-          }
-        }
-      } else {
-        currentQuery[type] = valueLower;
-      }
-
-      // Also add to the generic 'filter' parameter
-      if (currentQuery.filter) {
-        if (typeof currentQuery.filter === "string") {
-          if (currentQuery.filter.toLowerCase() !== valueLower) {
-            currentQuery.filter = [currentQuery.filter, valueLower];
-          }
-        } else if (Array.isArray(currentQuery.filter)) {
-          if (
-            !currentQuery.filter.some((val) => val.toLowerCase() === valueLower)
-          ) {
-            currentQuery.filter.push(valueLower);
-          }
-        }
-      } else {
-        currentQuery.filter = valueLower;
-      }
-    }
-
-    // Update URL without full page reload
-    router.push(
-      {
-        pathname: router.pathname,
-        query: currentQuery,
-      },
-      undefined,
-      { shallow: true }
-    );
-  };
-
-  // Add toggle function
+  // Toggle section visibility
   const toggleSection = (section) => {
     setExpandedSections((prev) => ({
       ...prev,
@@ -369,15 +291,19 @@ const FilterSidebar = ({
     }));
   };
 
+  // Move buttonClasses definition here, before the return statement
+  const buttonClasses =
+    "w-full flex justify-between items-center font-medium py-2 px-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-200 group";
+
   return (
-    <div className="p-4 bg-white shadow-md rounded-lg">
-      <h2 className="text-xl font-bold mb-6 text-gray-800">Filters</h2>
+    <div className="p-2 bg-white shadow-md rounded-lg">
+      <h2 className="text-lg font-bold mb-2 text-gray-800">Filters</h2>
 
       {/* Cuisine Type Section */}
-      <div className="mb-3">
+      <div className="mb-2">
         <button
           onClick={() => toggleSection("cuisineType")}
-          className="w-full flex justify-between items-center font-medium py-3 px-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-200 group"
+          className={buttonClasses}
         >
           <div className="flex items-center gap-2">
             <h3 className="text-gray-700 group-hover:text-gray-900">
@@ -397,7 +323,7 @@ const FilterSidebar = ({
         </button>
 
         {expandedSections.cuisineType && (
-          <div className="mt-3 px-1 grid grid-cols-2 gap-2">
+          <div className="mt-1 px-1 grid grid-cols-1 gap-1">
             {[
               "Italian",
               "Asian",
@@ -417,38 +343,39 @@ const FilterSidebar = ({
             ].map((type) => (
               <label
                 key={type}
-                className={`flex items-center gap-2 p-2 rounded-md cursor-pointer hover:bg-gray-50 transition-colors
+                className={`flex items-center gap-2 py-1 px-2 rounded-md cursor-pointer hover:bg-gray-50 transition-colors
                   ${
-                    filters.cuisineType.some(
-                      (v) => v.toLowerCase() === type.toLowerCase()
-                    )
+                    filters.cuisineType.includes(type.toLowerCase())
                       ? "bg-primary/5"
                       : ""
                   }
                   ${
-                    lockedCuisineType === type.toLowerCase()
+                    lockedCuisineType?.toLowerCase() === type.toLowerCase()
                       ? "opacity-50 cursor-not-allowed"
                       : ""
                   }`}
+                onClick={(e) => {
+                  if (lockedCuisineType?.toLowerCase() !== type.toLowerCase()) {
+                    // Only handle click if not on locked cuisine
+                    e.preventDefault();
+                    handleCheckboxChange("cuisineType", type);
+                  }
+                }}
               >
                 <div
                   className={`w-5 h-5 rounded border flex items-center justify-center
                   ${
-                    filters.cuisineType.some(
-                      (v) => v.toLowerCase() === type.toLowerCase()
-                    )
+                    filters.cuisineType.includes(type.toLowerCase())
                       ? "border-primary bg-primary text-white"
                       : "border-gray-300 bg-white"
                   }
                   ${
-                    lockedCuisineType === type.toLowerCase()
+                    lockedCuisineType?.toLowerCase() === type.toLowerCase()
                       ? "bg-gray-100"
                       : ""
                   }`}
                 >
-                  {filters.cuisineType.some(
-                    (v) => v.toLowerCase() === type.toLowerCase()
-                  ) && <Check className="h-3 w-3" />}
+                  {filters.cuisineType.includes(type.toLowerCase()) && <Check className="h-3 w-3" />}
                 </div>
                 <span className="text-sm text-gray-700">{type}</span>
               </label>
@@ -456,12 +383,11 @@ const FilterSidebar = ({
           </div>
         )}
       </div>
-
       {/* Meal Type Section */}
-      <div className="mb-3">
+      <div className="mb-2">
         <button
           onClick={() => toggleSection("mealType")}
-          className="w-full flex justify-between items-center font-medium py-3 px-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-200 group"
+          className={buttonClasses}
         >
           <div className="flex items-center gap-2">
             <h3 className="text-gray-700 group-hover:text-gray-900">
@@ -480,7 +406,7 @@ const FilterSidebar = ({
           )}
         </button>
         {expandedSections.mealType && (
-          <div className="mt-3 px-1 grid grid-cols-2 gap-2">
+          <div className="mt-1 px-1 grid grid-cols-1 gap-1">
             {[
               "Breakfast",
               "Lunch",
@@ -494,28 +420,26 @@ const FilterSidebar = ({
             ].map((type) => (
               <label
                 key={type}
-                className={`flex items-center gap-2 p-2 rounded-md cursor-pointer hover:bg-gray-50 transition-colors
+                className={`flex items-center gap-2 py-1 px-2 rounded-md cursor-pointer hover:bg-gray-50 transition-colors
                   ${
-                    filters.mealType.some(
-                      (v) => v.toLowerCase() === type.toLowerCase()
-                    )
+                    filters.mealType.includes(type.toLowerCase())
                       ? "bg-primary/5"
                       : ""
                   }`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleCheckboxChange("mealType", type);
+                }}
               >
                 <div
                   className={`w-5 h-5 rounded border flex items-center justify-center
                   ${
-                    filters.mealType.some(
-                      (v) => v.toLowerCase() === type.toLowerCase()
-                    )
+                    filters.mealType.includes(type.toLowerCase())
                       ? "border-primary bg-primary text-white"
                       : "border-gray-300 bg-white"
                   }`}
                 >
-                  {filters.mealType.some(
-                    (v) => v.toLowerCase() === type.toLowerCase()
-                  ) && <Check className="h-3 w-3" />}
+                  {filters.mealType.includes(type.toLowerCase()) && <Check className="h-3 w-3" />}
                 </div>
                 <span className="text-sm text-gray-700">{type}</span>
               </label>
@@ -523,12 +447,11 @@ const FilterSidebar = ({
           </div>
         )}
       </div>
-
       {/* Dietary Restrictions Section */}
-      <div className="mb-3">
+      <div className="mb-2">
         <button
           onClick={() => toggleSection("dietary")}
-          className="w-full flex justify-between items-center font-medium py-3 px-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-200 group"
+          className={buttonClasses}
         >
           <div className="flex items-center gap-2 flex-1">
             <h3 className="text-gray-700 group-hover:text-gray-900 whitespace-nowrap">
@@ -547,7 +470,7 @@ const FilterSidebar = ({
           )}
         </button>
         {expandedSections.dietary && (
-          <div className="mt-3 px-1 grid grid-cols-2 gap-2">
+          <div className="mt-1 px-1 grid grid-cols-1 gap-1">
             {[
               "Vegetarian",
               "Vegan",
@@ -565,28 +488,26 @@ const FilterSidebar = ({
             ].map((type) => (
               <label
                 key={type}
-                className={`flex items-center gap-2 p-2 rounded-md cursor-pointer hover:bg-gray-50 transition-colors
+                className={`flex items-center gap-2 py-1 px-2 rounded-md cursor-pointer hover:bg-gray-50 transition-colors
                   ${
-                    filters.dietary.some(
-                      (v) => v.toLowerCase() === type.toLowerCase()
-                    )
+                    filters.dietary.includes(type.toLowerCase())
                       ? "bg-primary/5"
                       : ""
                   }`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleCheckboxChange("dietary", type);
+                }}
               >
                 <div
                   className={`w-5 h-5 rounded border flex items-center justify-center
                   ${
-                    filters.dietary.some(
-                      (v) => v.toLowerCase() === type.toLowerCase()
-                    )
+                    filters.dietary.includes(type.toLowerCase())
                       ? "border-primary bg-primary text-white"
                       : "border-gray-300 bg-white"
                   }`}
                 >
-                  {filters.dietary.some(
-                    (v) => v.toLowerCase() === type.toLowerCase()
-                  ) && <Check className="h-3 w-3" />}
+                  {filters.dietary.includes(type.toLowerCase()) && <Check className="h-3 w-3" />}
                 </div>
                 <span className="text-sm text-gray-700">{type}</span>
               </label>
@@ -594,12 +515,11 @@ const FilterSidebar = ({
           </div>
         )}
       </div>
-
       {/* Difficulty Section - Special styling for radio buttons */}
-      <div className="mb-3">
+      <div className="mb-2">
         <button
           onClick={() => toggleSection("difficulty")}
-          className="w-full flex justify-between items-center font-medium py-3 px-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-200 group"
+          className={buttonClasses}
         >
           <div className="flex items-center gap-2">
             <h3 className="text-gray-700 group-hover:text-gray-900">
@@ -618,16 +538,20 @@ const FilterSidebar = ({
           )}
         </button>
         {expandedSections.difficulty && (
-          <div className="mt-3 px-1 flex gap-2">
+          <div className="mt-1 px-1 flex gap-1">
             {["Easy", "Medium", "Hard"].map((level) => (
               <label
                 key={level}
-                className={`flex-1 p-3 rounded-lg cursor-pointer border transition-all duration-200
+                className={`flex-1 py-2 px-2 rounded-lg cursor-pointer border transition-all duration-200
                   ${
                     filters.difficulty === level.toLowerCase()
                       ? "bg-primary/10 border-primary text-primary font-medium"
                       : "border-gray-200 hover:border-gray-300 text-gray-600 hover:bg-gray-50"
                   }`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleRadioChange("difficulty", level);
+                }}
               >
                 <div className="flex flex-col items-center gap-1">
                   <input
@@ -635,9 +559,7 @@ const FilterSidebar = ({
                     className="sr-only"
                     name="difficulty"
                     checked={filters.difficulty === level.toLowerCase()}
-                    onChange={() =>
-                      handleFilterChange("difficulty", level.toLowerCase())
-                    }
+                    readOnly
                   />
                   <span className="text-sm">{level}</span>
                 </div>
@@ -646,12 +568,11 @@ const FilterSidebar = ({
           </div>
         )}
       </div>
-
       {/* Cooking Time Section */}
-      <div className="mb-6">
+      <div className="mb-3">
         <button
           onClick={() => toggleSection("cookingTime")}
-          className="w-full flex justify-between items-center font-medium py-3 px-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-200 group"
+          className={buttonClasses}
         >
           <div className="flex items-center gap-2">
             <h3 className="text-gray-700 group-hover:text-gray-900">
@@ -670,7 +591,7 @@ const FilterSidebar = ({
           )}
         </button>
         {expandedSections.cookingTime && (
-          <div className="mt-3 px-1 grid grid-cols-2 text-center gap-2">
+          <div className="mt-1 px-1 grid grid-cols-1 gap-1">
             {[
               { label: "Under 15 minutes", value: "under15" },
               { label: "15 to 30 minutes", value: "15to30" },
@@ -679,12 +600,16 @@ const FilterSidebar = ({
             ].map((time) => (
               <label
                 key={time.value}
-                className={`flex-1 p-3 rounded-lg cursor-pointer border transition-all duration-200
+                className={`flex-1 py-2 px-2 rounded-lg cursor-pointer border transition-all duration-200
                   ${
                     filters.cookingTime === time.value
                       ? "bg-primary/10 border-primary text-primary font-medium"
                       : "border-gray-200 hover:border-gray-300 text-gray-600 hover:bg-gray-50"
                   }`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleRadioChange("cookingTime", time.value);
+                }}
               >
                 <div className="flex flex-col items-center gap-1">
                   <input
@@ -692,9 +617,7 @@ const FilterSidebar = ({
                     className="sr-only"
                     name="cookingTime"
                     checked={filters.cookingTime === time.value}
-                    onChange={() =>
-                      handleFilterChange("cookingTime", time.value)
-                    }
+                    readOnly
                   />
                   <span className="text-sm">{time.label}</span>
                 </div>
@@ -703,7 +626,6 @@ const FilterSidebar = ({
           </div>
         )}
       </div>
-
       {/* Clear Filters Button */}
       {(filters.cuisineType.length > 0 ||
         filters.mealType.length > 0 ||
@@ -713,31 +635,19 @@ const FilterSidebar = ({
         <button
           onClick={() => {
             const clearedFilters = {
-              cuisineType: lockedCuisineType ? [lockedCuisineType] : [],
+              cuisineType: lockedCuisineType ? [lockedCuisineType.toLowerCase()] : [],
               dietary: [],
               mealType: [],
               difficulty: "",
               cookingTime: "",
+              search: filters.search || "", // Preserve search term
             };
             setFilters(clearedFilters);
             if (onFilterChange) {
               onFilterChange(clearedFilters);
             }
-
-            // Reset URL params but keep any locked cuisine type
-            const query = lockedCuisineType
-              ? { cuisineType: lockedCuisineType }
-              : {};
-            router.push(
-              {
-                pathname: router.pathname,
-                query,
-              },
-              undefined,
-              { shallow: true }
-            );
           }}
-          className="w-full py-2.5 px-4 mt-6 bg-red-50 text-red-600 rounded-lg hover:bg-red-100 
+          className="w-full py-2 px-3 mt-2 bg-red-50 text-red-600 rounded-lg hover:bg-red-100 
             transition-colors text-sm font-medium flex items-center justify-center gap-2"
         >
           Clear All Filters

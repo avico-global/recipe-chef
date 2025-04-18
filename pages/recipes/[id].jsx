@@ -137,8 +137,8 @@ export default function RecipeDetail() {
 
       <main className="min-h-screen bg-gray-50">
         {/* Hero Banner Section - Redesigned */}
-        <div className="relative bg-white border-b border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 min-h-[50vh] max-h-[50vh]">
+        <div className="relative bg-white pb-8 border-b border-gray-100">
+          <div className="container mx-auto px-4 py-8 min-h-[50vh] max-h-[50vh]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 h-full">
               {/* Left Column - Video */}
               <div className="relative h-full rounded-2xl overflow-hidden shadow-xl">
@@ -166,37 +166,53 @@ export default function RecipeDetail() {
                       </div>
                       <div className="ml-3">
                         <p className="text-sm text-gray-500">Recipe by</p>
-                        <p className="font-medium text-gray-900">{recipe.authorName}</p>
+                        <p className="font-medium text-gray-900">
+                          {recipe.authorName}
+                        </p>
                       </div>
                     </div>
                     <div className="h-8 w-px bg-gray-200"></div>
                     <div>
                       <p className="text-sm text-gray-500">Published</p>
-                      <p className="font-medium text-gray-900">{recipe.publishDate || 'Recently'}</p>
+                      <p className="font-medium text-gray-900">
+                        {recipe.publishDate || "Recently"}
+                      </p>
                     </div>
                   </div>
 
                   {/* Title and Description */}
-                  <h1 className="text-3xl font-bold text-gray-900 mb-3">{recipe.title}</h1>
-                  <p className="text-gray-600 line-clamp-2">{recipe.description}</p>
+                  <h1 className="text-3xl font-bold text-gray-900 mb-3">
+                    {recipe.title}
+                  </h1>
+                  <p className="text-gray-600 line-clamp-2">
+                    {recipe.description}
+                  </p>
                 </div>
 
                 {/* Stats Grid */}
                 <div className="grid grid-cols-4 gap-4 my-6">
                   <div className="text-center p-3 rounded-lg bg-gray-50">
-                    <div className="text-2xl font-bold text-gray-900 mb-1">{recipe.views || "1.5M"}</div>
+                    <div className="text-2xl font-bold text-gray-900 mb-1">
+                      {recipe.views || "1.5M"}
+                    </div>
                     <div className="text-sm text-gray-500">Views</div>
                   </div>
                   <div className="text-center p-3 rounded-lg bg-gray-50">
-                    <div className="text-2xl font-bold text-gray-900 mb-1">{recipe.likes || "100K"}</div>
+                    <div className="text-2xl font-bold text-gray-900 mb-1">
+                      {recipe.likes || "100K"}
+                    </div>
                     <div className="text-sm text-gray-500">Likes</div>
                   </div>
                   <div className="text-center p-3 rounded-lg bg-gray-50">
-                    <div className="text-2xl font-bold text-gray-900 mb-1">{recipe.ratings?.average || 0}</div>
+                    <div className="text-2xl font-bold text-gray-900 mb-1">
+                      {recipe.ratings?.average || 0}
+                    </div>
                     <div className="text-sm text-gray-500">Rating</div>
                   </div>
                   <div className="text-center p-3 rounded-lg bg-gray-50">
-                    <div className="text-2xl font-bold text-gray-900 mb-1">{recipe.cookTime}</div>
+                    <div className="text-2xl font-bold text-gray-900 mb-1">
+                      {recipe.cookTime}
+                    </div>
                     <div className="text-sm text-gray-500">Minutes</div>
                   </div>
                 </div>
@@ -205,24 +221,48 @@ export default function RecipeDetail() {
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center space-x-3 p-3 rounded-lg bg-gray-50">
                     <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                      <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      <svg
+                        className="w-4 h-4 text-primary"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"
+                        />
                       </svg>
                     </div>
                     <div>
                       <p className="text-sm text-gray-500">Difficulty</p>
-                      <p className="font-medium text-gray-900">{recipe.difficulty || 'Intermediate'}</p>
+                      <p className="font-medium text-gray-900">
+                        {recipe.difficulty || "Intermediate"}
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3 p-3 rounded-lg bg-gray-50">
                     <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                      <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.318l-1.318 3.8A1 1 0 0 1 9.74 9H5.82a1 1 0 0 0-.64 1.77l3.133 2.28a1 1 0 0 1 .364 1.118L7.36 17.473a1 1 0 0 0 1.538 1.118l3.133-2.28a1 1 0 0 1 1.176 0l3.133 2.28a1 1 0 0 0 1.538-1.118l-1.318-3.8a1 1 0 0 1 .364-1.118l3.133-2.28A1 1 0 0 0 19.18 9h-3.92a1 1 0 0 1-.951-.682L13.318 4.318a1 1 0 0 0-1.896 0z" />
+                      <svg
+                        className="w-4 h-4 text-primary"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M12 4.318l-1.318 3.8A1 1 0 0 1 9.74 9H5.82a1 1 0 0 0-.64 1.77l3.133 2.28a1 1 0 0 1 .364 1.118L7.36 17.473a1 1 0 0 0 1.538 1.118l3.133-2.28a1 1 0 0 1 1.176 0l3.133 2.28a1 1 0 0 0 1.538-1.118l-1.318-3.8a1 1 0 0 1 .364-1.118l3.133-2.28A1 1 0 0 0 19.18 9h-3.92a1 1 0 0 1-.951-.682L13.318 4.318a1 1 0 0 0-1.896 0z"
+                        />
                       </svg>
                     </div>
                     <div>
                       <p className="text-sm text-gray-500">Servings</p>
-                      <p className="font-medium text-gray-900">{servingsCount} people</p>
+                      <p className="font-medium text-gray-900">
+                        {servingsCount} people
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -278,7 +318,7 @@ export default function RecipeDetail() {
         </div>
 
         {/* Main Content - Updated with modern card designs */}
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="container mx-auto px-4 pt-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {/* Left Column - Main Content */}
             <div className="lg:col-span-2">
@@ -533,206 +573,6 @@ export default function RecipeDetail() {
                   )}
                 </div>
               </div>
-
-              {/* Reviews Section */}
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="border-b border-gray-100 px-6 py-4">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold">Reviews</h3>
-                    <div className="flex items-center">
-                      <div className="flex">
-                        {recipe.ratings && recipe.ratings.average ? (
-                          [1, 2, 3, 4, 5].map((star) => (
-                            <svg
-                              key={star}
-                              className={`w-5 h-5 ${
-                                star <= Math.floor(recipe.ratings.average)
-                                  ? "text-yellow-400"
-                                  : "text-gray-300"
-                              }`}
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                            >
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                          ))
-                        ) : (
-                          <p>No ratings available</p>
-                        )}
-                      </div>
-                      <span className="ml-2 text-sm text-gray-500">
-                        (
-                        {recipe.ratings && recipe.ratings.count
-                          ? recipe.ratings.count
-                          : 0}{" "}
-                        reviews)
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  {/* Review Form */}
-                  <div className="mb-8">
-                    <div className="flex items-center mb-4">
-                      <div className="flex mr-4">
-                        {recipe.ratings && recipe.ratings.average ? (
-                          [1, 2, 3, 4, 5].map((star) => (
-                            <button
-                              key={star}
-                              type="button"
-                              className="text-gray-300 hover:text-yellow-400 focus:outline-none"
-                              onClick={() => handleRatingClick(star)}
-                              onMouseEnter={() => setHover(star)}
-                              onMouseLeave={() => setHover(0)}
-                            >
-                              <svg
-                                className={`h-8 w-8 ${
-                                  (hover || recipe.ratings.average) >= star
-                                    ? "text-yellow-400"
-                                    : "text-gray-300"
-                                } transition-colors duration-150`}
-                                fill="currentColor"
-                                viewBox="0 0 20 20"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </button>
-                          ))
-                        ) : (
-                          <p>No ratings available</p>
-                        )}
-                      </div>
-                      <div>
-                        <span className="text-sm text-gray-500">
-                          {recipe.ratings && recipe.ratings.average
-                            ? recipe.ratings.average === 0
-                              ? "Rate this recipe"
-                              : recipe.ratings.average === 5
-                              ? "Excellent!"
-                              : recipe.ratings.average === 4
-                              ? "Very Good"
-                              : recipe.ratings.average === 3
-                              ? "Good"
-                              : recipe.ratings.average === 2
-                              ? "Fair"
-                              : "Poor"
-                            : "No ratings available"}
-                        </span>
-                      </div>
-                    </div>
-
-                    <form onSubmit={handleCommentSubmit}>
-                      <textarea
-                        rows="3"
-                        className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
-                        placeholder="Share your experience with this recipe..."
-                        value={comment}
-                        onChange={(e) => setComment(e.target.value)}
-                      ></textarea>
-                      <button
-                        type="submit"
-                        className="mt-3 inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-white bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
-                      >
-                        Submit Review
-                      </button>
-                    </form>
-                  </div>
-
-                  {/* Reviews List */}
-                  <div className="space-y-6">
-                    {recipe.comments && Array.isArray(recipe.comments) ? (
-                      recipe.comments.map((comment) => (
-                        <div
-                          key={comment.id}
-                          className="border-b border-gray-100 pb-6 last:border-0"
-                        >
-                          <div className="flex justify-between items-start mb-2">
-                            <div className="flex items-center">
-                              <div className="relative h-10 w-10 rounded-full overflow-hidden mr-3 bg-primary flex items-center justify-center text-white">
-                                {comment.user.avatar ? (
-                                  <Image
-                                    src={comment.user.avatar}
-                                    alt={comment.user.name}
-                                    fill
-                                    className="object-cover"
-                                    onError={(e) => {
-                                      e.target.style.display = "none";
-                                      e.target.parentNode.classList.add(
-                                        "fallback-avatar"
-                                      );
-                                    }}
-                                  />
-                                ) : (
-                                  <span className="text-sm font-semibold">
-                                    {comment.user.name
-                                      ? comment.user.name
-                                          .charAt(0)
-                                          .toUpperCase()
-                                      : "?"}
-                                  </span>
-                                )}
-                              </div>
-                              <div>
-                                <h4 className="font-medium text-gray-900">
-                                  {comment.user.name}
-                                </h4>
-                                <p className="text-xs text-gray-500">
-                                  {comment.date}
-                                </p>
-                              </div>
-                            </div>
-
-                            <div className="flex">
-                              {comment.rating ? (
-                                [1, 2, 3, 4, 5].map((star) => (
-                                  <svg
-                                    key={star}
-                                    className={`h-4 w-4 ${
-                                      star <= comment.rating
-                                        ? "text-yellow-400"
-                                        : "text-gray-300"
-                                    }`}
-                                    fill="currentColor"
-                                    viewBox="0 0 20 20"
-                                  >
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                  </svg>
-                                ))
-                              ) : (
-                                <p>No rating available</p>
-                              )}
-                            </div>
-                          </div>
-
-                          <p className="text-gray-700">{comment.text}</p>
-
-                          <div className="mt-2 flex justify-end">
-                            <button className="text-gray-500 hover:text-primary text-xs flex items-center">
-                              <svg
-                                className="w-4 h-4 mr-1"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth="2"
-                                  d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
-                                />
-                              </svg>
-                              Helpful
-                            </button>
-                          </div>
-                        </div>
-                      ))
-                    ) : (
-                      <p>No comments available</p>
-                    )}
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Right Column - Sidebar */}
@@ -852,63 +692,90 @@ export default function RecipeDetail() {
                   </ul>
                 </div>
               </div>
-
-              {/* Similar Recipes */}
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold mb-4">
-                    Similar Recipes
-                  </h3>
-                  <div className="space-y-4">
-                    {recipesData &&
-                      recipesData
-                        .filter(
-                          (r) =>
-                            r.id !== recipe.id &&
-                            r.cuisineType === recipe.cuisineType
-                        )
-                        .slice(0, 3)
-                        .map((rec) => (
-                          <Link
-                            key={rec.id}
-                            href={`/recipes/${rec.id}`}
-                            className="block group"
-                          >
-                            <div className="flex items-center p-2 rounded-lg group-hover:bg-gray-50 transition-colors">
-                              <div className="relative h-16 w-16 rounded-md overflow-hidden mr-3 flex-shrink-0">
-                                <Image
-                                  src={rec.thumbnail}
-                                  alt={rec.title}
-                                  fill
-                                  className="object-cover"
-                                />
-                              </div>
-                              <div className="flex-1 min-w-0">
-                                <h4 className="font-medium text-gray-900 truncate group-hover:text-primary transition-colors">
-                                  {rec.title}
-                                </h4>
-                                <p className="text-xs text-gray-500">
-                                  {rec.difficulty} • {rec.duration}
-                                </p>
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-gray-100 text-center">
-                    <Link
-                      href="/recipes"
-                      className="text-primary hover:text-primary-hover text-sm font-medium"
-                    >
-                      View All Recipes
-                    </Link>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
+
+          {/* Similar Recipes - New Full Width Section */}
+          <div className="my-16">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8">
+              Similar Recipes You Might Like
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {recipesData &&
+                recipesData
+                  .filter(
+                    (r) =>
+                      r.id !== recipe.id &&
+                      (r.cuisineType === recipe.cuisineType ||
+                        r.mealType === recipe.mealType)
+                  )
+                  .slice(0, 8)
+                  .map((rec) => (
+                    <Link
+                      key={rec.id}
+                      href={`/recipes/${rec.id}`}
+                      className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+                    >
+                      <div className="relative h-48 w-full">
+                        <Image
+                          src={rec.thumbnail}
+                          alt={rec.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <h3 className="font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300 line-clamp-1">
+                          {rec.title}
+                        </h3>
+                        <div className="mt-2 flex items-center text-sm text-gray-500">
+                          <span className="flex items-center">
+                            <svg
+                              className="w-4 h-4 mr-1"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                              />
+                            </svg>
+                            {rec.duration}
+                          </span>
+                          <span className="mx-2">•</span>
+                          <span>{rec.difficulty}</span>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+            </div>
+            <div className="mt-14 text-center">
+              <Link
+                href="/recipes"
+                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-hover transition-colors duration-300"
+              >
+                Explore More Recipes
+                <svg
+                  className="ml-2 w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </Link>
+            </div>
+          </div>
+          <Footer />
         </div>
-        <Footer />
       </main>
     </>
   );

@@ -10,12 +10,14 @@ import {
   Radio,
 } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from 'next/router';
 
 /**
  * Navbar component - displays site navigation and search
  * Inspired by eBay's clean navigation with prominent search bar
  */
 const Navbar = () => {
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isCategoryDropdownOpen, setIsCategoryDropdownOpen] = useState(false);
@@ -56,15 +58,39 @@ const Navbar = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    // Navigation logic would go here
-    console.log(
-      `Searching for: ${searchQuery} in category: ${selectedCategory}`
-    );
+    
+    const searchParams = new URLSearchParams();
+    
+    // Add search query if it exists
+    if (searchQuery.trim()) {
+      searchParams.append('search', searchQuery.trim());
+    }
+    
+    // Add cuisine type if it's not "All Cuisines"
+    if (selectedCategory !== "All Cuisines") {
+      searchParams.append('cuisineType', selectedCategory.toLowerCase());
+    }
+    
+    // Build the URL
+    const queryString = searchParams.toString();
+    const url = `/recipes${queryString ? `?${queryString}` : ''}`;
+    
+    // Navigate to the recipes page with the filters
+    router.push(url);
   };
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
     setIsCategoryDropdownOpen(false);
+    
+    // Don't navigate if "All Cuisines" is selected
+    if (category !== "All Cuisines") {
+      // Convert the cuisine name to URL-friendly format
+      const cuisineParam = category.toLowerCase();
+      router.push(`/recipes?cuisineType=${cuisineParam}`);
+    } else {
+      router.push('/recipes');
+    }
   };
 
   const cuisines = [
@@ -102,24 +128,22 @@ const Navbar = () => {
             <Link href="/register" className="text-primary hover:text-blue-800">
               register
             </Link>
-            <div className="flex items-center  ml-10 ">
-              <Link href={"/"} className=" text-primary border-r border-primary px-2">
-                Trending Recipes
-              </Link>
-              <Link href={"/top-10-recipes"} className=" text-primary border-r border-primary px-2">
-                Top 10 Picks
-              </Link>
-              <Link href={"/"} className=" text-primary border-r border-primary px-2">
-                Most Watched
-              </Link>
-            </div>
           </div>
-          <div className="flex items-center space-x-5">
-            <Link
+          <div className="flex items-center space-x-5 justify-end">
+            {/* <Link
               href="/meal-planner"
               className="text-gray-700 hover:text-blue-600"
             >
               Meal Planner
+            </Link> */}
+            <Link href={"/"} className="  border-primary ">
+              Trending Recipes
+            </Link>
+            <Link href={"/top-10-recipes"} className="  border-primary ">
+              Top 10 Picks
+            </Link>
+            <Link href={"/"} className="  border-primary ">
+              Most Watched
             </Link>
             <Link href="/contact" className="text-gray-700 hover:text-blue-600">
               Help & Contact
@@ -207,13 +231,13 @@ const Navbar = () => {
               <Heart className="h-4 w-4 sm:h-5 sm:w-5" />
               <span className="text-[10px] sm:text-xs mt-1">Favorites</span>
             </Link>
-            <Link
+            {/* <Link
               href="/live-cooking"
               className="text-gray-700 hover:text-blue-600 flex flex-col items-center"
             >
               <Radio className="h-4 w-4 sm:h-5 sm:w-5" />
               <span className="text-[10px] sm:text-xs mt-1">Live Cooking</span>
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile menu button - adjusted positioning */}
@@ -341,12 +365,12 @@ const Navbar = () => {
             >
               Kitchen Tips
             </Link>
-            <Link
+            {/* <Link
               href="/ingredient-deals"
               className="text-gray-700 hover:text-primary whitespace-nowrap"
             >
               Ingredient Deals
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

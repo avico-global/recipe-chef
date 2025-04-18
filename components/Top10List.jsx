@@ -28,31 +28,30 @@ export default function Top10List() {
 
   const list = [
     {
-      title: "Nutritious Bites",
+      title: "American Cuisine",
       items: [
         {
-          comparison_title: "Top 10 High-Protein Recipes for Muscle Gain 2025",
+          comparison_title: "Top 10 Classic American Recipes 2025",
           date: "Oct 2024",
           image:
-            "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=500&h=500&fit=crop",
+            "https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=500&h=500",
           subItems: [
             {
-              title: "Protein-Rich Post-Workout Energy Balls (30g Protein)",
+              title: "Top 10 American BBQ & Grilling Recipes",
               image:
-                "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=500&h=500",
-              date: "Dec 2024",
-              id: "51",
-            },
-            {
-              title: "Muscle Building Protein Smoothie Bowl Recipes",
-              image:
-                "https://images.unsplash.com/photo-1488477304112-4944851de03d?auto=format&fit=crop&w=500&h=500",
+                "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=500&h=500",
               date: "Dec 2024",
             },
             {
-              title: "Pre-Workout Power Bars: Natural Energy Boost",
+              title: "Top 10 American Comfort Foods",
               image:
-                "https://images.unsplash.com/photo-1622484212850-eb596d769edc?auto=format&fit=crop&w=500&h=500",
+                "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&h=500",
+              date: "Dec 2024",
+            },
+            {
+              title: "Top 10 American Breakfast Classics",
+              image:
+                "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=500&h=500",
               date: "Jan 2025",
             },
           ],
@@ -60,93 +59,30 @@ export default function Top10List() {
       ],
     },
     {
-      title: "Breakfast",
+      title: "Italian Cuisine",
       items: [
         {
-          comparison_title:
-            "Top 10 Best Breakfast Recipes for Busy Mornings 2025",
-          date: "Oct 2024",
-          image:
-            "https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=500&h=500",
-          subItems: [
-            {
-              title: "How to Make Perfect Avocado Toast...",
-              image:
-                "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?auto=format&fit=crop&w=500&h=500",
-              date: "Dec 2024",
-            },
-            {
-              title: "Quick & Healthy Breakfast Smoothie Bowls...",
-              image:
-                "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&w=500&h=500",
-              date: "Dec 2024",
-            },
-            {
-              title: "Overnight Oats Recipe Guide",
-              image:
-                "https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?auto=format&fit=crop&w=500&h=500",
-              date: "Jan 2025",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      title: "Italian",
-      items: [
-        {
-          comparison_title: "Top 10 Best Italian Pasta Recipes of 2025",
+          comparison_title: "Top 10 Traditional Italian Recipes 2025",
           date: "Oct 2024",
           image:
             "https://images.unsplash.com/photo-1498579150354-977475b7ea0b?auto=format&fit=crop&w=500&h=500",
           subItems: [
             {
-              title: "Classic Spaghetti Carbonara Recipe",
+              title: "Top 10 Italian Pasta Dishes",
               image:
                 "https://images.unsplash.com/photo-1608756687911-aa1599ab3bd9?auto=format&fit=crop&w=500&h=500",
               date: "Dec 2024",
             },
             {
-              title: "Homemade Lasagna: Step by Step Guide",
+              title: "Top 10 Italian Pizza Recipes",
               image:
-                "https://images.unsplash.com/photo-1619895092538-128341789043?auto=format&fit=crop&w=500&h=500",
+                "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&h=500",
               date: "Dec 2024",
             },
             {
-              title: "Perfect Risotto Techniques",
-              image:
-                "https://images.unsplash.com/photo-1633436375153-d7045cb93e38?auto=format&fit=crop&w=500&h=500",
-              date: "Jan 2025",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      title: "Desserts",
-      items: [
-        {
-          comparison_title: "Top 10 Mouthwatering Dessert Recipes of 2025",
-          date: "Oct 2024",
-          image:
-            "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=500&h=500",
-          subItems: [
-            {
-              title: "Chocolate Lava Cake: Restaurant Quality at Home",
-              image:
-                "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500&h=500&fit=crop",
-              date: "Dec 2024",
-            },
-            {
-              title: "Easy Tiramisu Recipe Without Alcohol",
+              title: "Top 10 Italian Desserts",
               image:
                 "https://images.unsplash.com/photo-1517093157656-b9eccef91cb1?auto=format&fit=crop&w=500&h=500",
-              date: "Dec 2024",
-            },
-            {
-              title: "Homemade Ice Cream: No Machine Required",
-              image:
-                "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=500&h=500",
               date: "Jan 2025",
             },
           ],
@@ -154,28 +90,59 @@ export default function Top10List() {
       ],
     },
     {
-      title: "Mexican",
+      title: "Chinese Cuisine",
       items: [
         {
-          comparison_title: "Top 10 Authentic Mexican Recipes for 2025",
+          comparison_title: "Top 10 Traditional Chinese Recipes 2025",
+          date: "Oct 2024",
+          image:
+            "https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=500&h=500",
+          subItems: [
+            {
+              title: "Top 10 Chinese Stir-Fry Dishes",
+              image:
+                "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=500&h=500",
+              date: "Dec 2024",
+            },
+            {
+              title: "Top 10 Chinese Noodle Recipes",
+              image:
+                "https://images.unsplash.com/photo-1557872943-16a5ac26437e?auto=format&fit=crop&w=500&h=500",
+              date: "Dec 2024",
+            },
+            {
+              title: "Top 10 Dim Sum Recipes",
+              image:
+                "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=500&h=500",
+              date: "Jan 2025",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Mexican Cuisine",
+      items: [
+        {
+          comparison_title: "Top 10 Authentic Mexican Recipes 2025",
           date: "Oct 2024",
           image:
             "https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?auto=format&fit=crop&w=500&h=500",
           subItems: [
             {
-              title: "Homemade Beef Tacos with Fresh Salsa",
+              title: "Top 10 Mexican Street Food Recipes",
               image:
                 "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=500&h=500",
               date: "Dec 2024",
             },
             {
-              title: "Restaurant-Style Guacamole Recipe",
+              title: "Top 10 Mexican Salsas and Sauces",
               image:
                 "https://images.unsplash.com/photo-1544982503-9f984c14501a?auto=format&fit=crop&w=500&h=500",
               date: "Dec 2024",
             },
             {
-              title: "Chicken Enchiladas with Homemade Sauce",
+              title: "Top 10 Mexican Fiesta Dishes",
               image:
                 "https://images.unsplash.com/photo-1534352956036-cd81e27dd615?auto=format&fit=crop&w=500&h=500",
               date: "Jan 2025",
@@ -185,28 +152,28 @@ export default function Top10List() {
       ],
     },
     {
-      title: "Vegetarian",
+      title: "Japanese Cuisine",
       items: [
         {
-          comparison_title: "Top 10 Satisfying Vegetarian Dinner Recipes 2025",
+          comparison_title: "Top 10 Japanese Home Cooking Recipes 2025",
           date: "Oct 2024",
           image:
             "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=500&h=500",
           subItems: [
             {
-              title: "Protein-Packed Vegetarian Buddha Bowl",
+              title: "Top 10 Sushi Recipes for Beginners",
               image:
                 "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&h=500",
               date: "Dec 2024",
             },
             {
-              title: "Eggplant Parmesan: Better Than Restaurant",
+              title: "Top 10 Ramen and Noodle Dishes",
               image:
-                "https://images.unsplash.com/photo-1625937286074-9ca519d5d9df?auto=format&fit=crop&w=500&h=500",
+                "https://images.unsplash.com/photo-1557872943-16a5ac26437e?auto=format&fit=crop&w=500&h=500",
               date: "Dec 2024",
             },
             {
-              title: "Hearty Lentil Soup Recipe",
+              title: "Top 10 Japanese Curry Recipes",
               image:
                 "https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?auto=format&fit=crop&w=500&h=500",
               date: "Jan 2025",
@@ -216,29 +183,28 @@ export default function Top10List() {
       ],
     },
     {
-      title: "Baking",
+      title: "Indian Cuisine",
       items: [
         {
-          comparison_title:
-            "Top 10 Foolproof Baking Recipes for Beginners 2025",
+          comparison_title: "Top 10 Indian Curry Recipes 2025",
           date: "Oct 2024",
           image:
             "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=500&h=500",
           subItems: [
             {
-              title: "Perfect Chocolate Chip Cookies Every Time",
+              title: "Top 10 Indian Vegetarian Dishes",
               image:
-                "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=500&h=500",
+                "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&h=500",
               date: "Dec 2024",
             },
             {
-              title: "Easy Banana Bread Recipe",
+              title: "Top 10 Indian Bread Recipes",
               image:
                 "https://images.unsplash.com/photo-1585478259715-b89f9b896ce6?w=500&h=500&fit=crop",
               date: "Dec 2024",
             },
             {
-              title: "Sourdough Bread for Beginners",
+              title: "Top 10 Indian Street Food Recipes",
               image:
                 "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=500&h=500",
               date: "Jan 2025",
@@ -248,28 +214,28 @@ export default function Top10List() {
       ],
     },
     {
-      title: "Asian",
+      title: "Thai Cuisine",
       items: [
         {
-          comparison_title: "Top 10 Asian Recipes You Can Make at Home 2025",
+          comparison_title: "Top 10 Thai Street Food Recipes 2025",
           date: "Oct 2024",
           image:
-            "https://images.unsplash.com/photo-1552611052-33e04de081de?w=500&h=500&fit=crop",
+            "https://images.unsplash.com/photo-1559314809-0d155014e29e?w=500&h=500&fit=crop",
           subItems: [
             {
-              title: "Better-Than-Takeout Chicken Fried Rice",
+              title: "Top 10 Thai Curry Recipes",
               image:
                 "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=500&h=500",
               date: "Dec 2024",
             },
             {
-              title: "Easy Pad Thai with Authentic Flavors",
+              title: "Top 10 Thai Noodle Dishes",
               image:
                 "https://images.unsplash.com/photo-1559314809-0d155014e29e?w=500&h=500&fit=crop",
               date: "Dec 2024",
             },
             {
-              title: "Homemade Ramen Bowls from Scratch",
+              title: "Top 10 Thai Seafood Recipes",
               image:
                 "https://images.unsplash.com/photo-1557872943-16a5ac26437e?auto=format&fit=crop&w=500&h=500",
               date: "Jan 2025",
@@ -279,28 +245,28 @@ export default function Top10List() {
       ],
     },
     {
-      title: "Dinner",
+      title: "French Cuisine",
       items: [
         {
-          comparison_title: "Top 10 Family-Friendly Dinner Recipes 2025",
+          comparison_title: "Top 10 Classic French Recipes 2025",
           date: "Oct 2024",
           image:
             "https://images.unsplash.com/photo-1576402187878-974f70c890a5?auto=format&fit=crop&w=500&h=500",
           subItems: [
             {
-              title: "One-Pan Chicken and Vegetable Bake",
+              title: "Top 10 French Pastry Recipes",
               image:
                 "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=500&h=500",
               date: "Dec 2024",
             },
             {
-              title: "30-Minute Meal: Shrimp Scampi Pasta",
+              title: "Top 10 French Sauces",
               image:
                 "https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&w=500&h=500",
               date: "Dec 2024",
             },
             {
-              title: "Perfect Sunday Roast Chicken",
+              title: "Top 10 French Bistro Dishes",
               image:
                 "https://images.unsplash.com/photo-1518492104633-130d0cc84637?auto=format&fit=crop&w=500&h=500",
               date: "Jan 2025",
@@ -310,31 +276,61 @@ export default function Top10List() {
       ],
     },
     {
-      title: "Grilling",
+      title: "Mediterranean Cuisine",
       items: [
         {
-          comparison_title:
-            "Top 10 Mouthwatering Grilling Recipes for Summer 2025",
+          comparison_title: "Top 10 Mediterranean Diet Recipes 2025",
           date: "Oct 2024",
           image:
             "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=500&h=500",
           subItems: [
             {
-              title: "Juicy Grilled Burger Secrets",
+              title: "Top 10 Greek Recipes",
               image:
                 "https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=500&h=500",
               date: "Dec 2024",
             },
             {
-              title: "Perfect Grilled Steak: Temperature Guide",
+              title: "Top 10 Spanish Tapas Recipes",
               image:
                 "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=500&h=500",
               date: "Dec 2024",
             },
             {
-              title: "Grilled Vegetable Skewers with Marinade",
+              title: "Top 10 Middle Eastern Dishes",
               image:
                 "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&h=500",
+              date: "Jan 2025",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Korean Cuisine",
+      items: [
+        {
+          comparison_title: "Top 10 Korean BBQ Recipes 2025",
+          date: "Oct 2024",
+          image:
+            "https://images.unsplash.com/photo-1532347231146-80afc9e3df2b?auto=format&fit=crop&w=500&h=500",
+          subItems: [
+            {
+              title: "Top 10 Korean Street Food Recipes",
+              image:
+                "https://images.unsplash.com/photo-1580651315530-69c8e0026377?auto=format&fit=crop&w=500&h=500",
+              date: "Dec 2024",
+            },
+            {
+              title: "Top 10 Korean Noodle Dishes",
+              image:
+                "https://images.unsplash.com/photo-1498579150354-977475b7ea0b?auto=format&fit=crop&w=500&h=500",
+              date: "Dec 2024",
+            },
+            {
+              title: "Top 10 Korean Vegetable Dishes",
+              image:
+                "https://images.unsplash.com/photo-1583187855495-d1f6a5733f81?auto=format&fit=crop&w=500&h=500",
               date: "Jan 2025",
             },
           ],
@@ -346,8 +342,9 @@ export default function Top10List() {
   return (
     <div className="w-full mt-12 container mx-auto">
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-4xl font-bold text-gray-900">
-          Top 10 <span className="text-primary">Trending Recipes</span>
+        <h2 className="text-2xl font-bold text-gray-900">
+          Taste the <span className="text-primary">World's Best</span>
+          <span className="block text-lg mt-1 text-gray-600 font-medium">Our Handpicked Collections of 10 Iconic Recipes from Each Cuisine</span>
         </h2>
         <button
           className="text-primary font-medium hover:bg-primary/10 px-6 py-2.5 rounded-full transition-all text-sm flex items-center gap-2 border border-primary/20"
@@ -502,7 +499,7 @@ export default function Top10List() {
                                 href={`/recipes/${subItem?.id}`}
                                 className="text-primary font-medium underline transition-colors text-sm"
                               >
-                                View Recipe
+                                View Recipes
                               </Link>
                             </div>
                           </div>
