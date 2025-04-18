@@ -10,7 +10,7 @@ import {
   Radio,
 } from "lucide-react";
 import Image from "next/image";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 /**
  * Navbar component - displays site navigation and search
@@ -58,23 +58,23 @@ const Navbar = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    
+
     const searchParams = new URLSearchParams();
-    
+
     // Add search query if it exists
     if (searchQuery.trim()) {
-      searchParams.append('search', searchQuery.trim());
+      searchParams.append("search", searchQuery.trim());
     }
-    
+
     // Add cuisine type if it's not "All Cuisines"
     if (selectedCategory !== "All Cuisines") {
-      searchParams.append('cuisineType', selectedCategory.toLowerCase());
+      searchParams.append("cuisineType", selectedCategory.toLowerCase());
     }
-    
+
     // Build the URL
     const queryString = searchParams.toString();
-    const url = `/recipes${queryString ? `?${queryString}` : ''}`;
-    
+    const url = `/recipes${queryString ? `?${queryString}` : ""}`;
+
     // Navigate to the recipes page with the filters
     router.push(url);
   };
@@ -82,14 +82,14 @@ const Navbar = () => {
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
     setIsCategoryDropdownOpen(false);
-    
+
     // Don't navigate if "All Cuisines" is selected
     if (category !== "All Cuisines") {
       // Convert the cuisine name to URL-friendly format
       const cuisineParam = category.toLowerCase();
       router.push(`/recipes?cuisineType=${cuisineParam}`);
     } else {
-      router.push('/recipes');
+      router.push("/recipes");
     }
   };
 
@@ -136,14 +136,9 @@ const Navbar = () => {
             >
               Meal Planner
             </Link> */}
-            <Link href={"/"} className="  border-primary ">
-              Trending Recipes
-            </Link>
+
             <Link href={"/top-10-recipes"} className="  border-primary ">
               Top 10 Picks
-            </Link>
-            <Link href={"/"} className="  border-primary ">
-              Most Watched
             </Link>
             <Link href="/contact" className="text-gray-700 hover:text-blue-600">
               Help & Contact
