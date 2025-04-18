@@ -13,6 +13,7 @@
     "dietary": ["Vegetarian"],
     "cookingTime": "30to60",
     "videoPreview": "/assets/videos/video1.mp4",
+    "shortId": "5LIKZQ4X1UQ",
     "description": "A traditional Italian pizza with simple, fresh ingredients that showcase the flavors of Italy."
   },
   {
@@ -29,6 +30,7 @@
     "dietary": ["Gluten-Free"],
     "cookingTime": "15to30",
     "videoPreview": "/assets/videos/video2.mp4",
+    "shortId": "GZIzmkZTL-I",
     "description": "A flavorful stir-fry that brings the authentic taste of Thai street food to your kitchen."
   },
   {
@@ -45,6 +47,7 @@
     "dietary": ["Vegetarian"],
     "cookingTime": "30to60",
     "videoPreview": "/assets/videos/video3.mp4",
+    "shortId": "WL6U-QISBhw",
     "description": "Decadent chocolate cake with a gooey molten center that's sure to impress."
   },
   {
@@ -61,6 +64,7 @@
     "dietary": ["Vegetarian", "Vegan", "Gluten-Free"],
     "cookingTime": "15to30",
     "videoPreview": "/assets/videos/video4.mp4",
+    "shortId": "LHvNnABbNl4",
     "description": "A vibrant, healthy salad featuring grilled vegetables and Mediterranean flavors."
   },
   {
@@ -77,6 +81,7 @@
     "dietary": ["Vegetarian"],
     "cookingTime": "30to60",
     "videoPreview": "/assets/videos/video5.mp4",
+    "shortId": "XTA5GCJkNyQ",
     "description": "A luxuriously creamy Italian rice dish packed with umami mushroom flavor."
   },
   {
@@ -93,6 +98,7 @@
     "dietary": [],
     "cookingTime": "30to60",
     "videoPreview": "/assets/videos/video6.mp4",
+    "shortId": "Hi7gAfusjcQ",
     "description": "Flavorful ground beef tacos with all the fixings for a festive family dinner."
   },
   {
@@ -109,6 +115,7 @@
     "dietary": ["Vegetarian", "Vegan", "Gluten-Free"],
     "cookingTime": "under15",
     "videoPreview": "/assets/videos/video7.mp4",
+    "shortId": "4zdvJvQwaaQ",
     "description": "A nutrient-packed breakfast bowl topped with fresh berries and crunchy granola."
   },
   {
@@ -125,6 +132,7 @@
     "dietary": [],
     "cookingTime": "15to30",
     "videoPreview": "/assets/videos/video8.mp4",
+    "shortId": "HwlgjJsmDhs",
     "description": "A quick and flavorful pasta dish with garlicky buttery shrimp."
   },
   {
@@ -141,6 +149,7 @@
     "dietary": ["Vegetarian", "Vegan", "Gluten-Free"],
     "cookingTime": "15to30",
     "videoPreview": "/assets/videos/video9.mp4",
+    "shortId": "eX3mO8P5Aek",
     "description": "A nourishing bowl packed with colorful vegetables, grains, and plant-based protein."
   },
   {
@@ -157,6 +166,7 @@
     "dietary": ["Dairy-Free"],
     "cookingTime": "over60",
     "videoPreview": "/assets/videos/video10.mp4",
+    "shortId": "mzJUypsLf0I",
     "description": "A hearty, warming beef stew that cooks slowly to develop rich flavors."
   },
   {
@@ -173,6 +183,7 @@
     "dietary": ["Vegetarian"],
     "cookingTime": "over60",
     "videoPreview": "/assets/videos/video11.mp4",
+    "shortId": "FGQJKspLrFw",
     "description": "Artisanal sourdough bread with a crispy crust and tender, tangy interior."
   },
   {
@@ -189,6 +200,7 @@
     "dietary": ["Vegetarian", "Gluten-Free"],
     "cookingTime": "under15",
     "videoPreview": "/assets/videos/video12.mp4",
+    "shortId": "kqpWjT39Fo0",
     "description": "A soft, delicate French-style omelette that's creamy on the inside."
   },
   {
@@ -205,6 +217,7 @@
     "dietary": [],
     "cookingTime": "30to60",
     "videoPreview": "/assets/videos/video13.mp4",
+    "shortId": "AfeTK1Zvefs",
     "description": "A colorful Korean rice bowl topped with vegetables, meat, and a fried egg."
   },
   {
@@ -221,6 +234,7 @@
     "dietary": ["Vegan", "Vegetarian", "Gluten-Free"],
     "cookingTime": "30to60",
     "videoPreview": "/assets/videos/video14.mp4",
+    "shortId": "5AyYBQohqvY",
     "description": "A flavorful and protein-rich curry that's completely plant-based."
   },
   {
@@ -237,6 +251,7 @@
     "dietary": ["Vegetarian"],
     "cookingTime": "over60",
     "videoPreview": "/assets/videos/video15.mp4",
+    "shortId": "2CacF42sglE",
     "description": "A classic creamy cheesecake with a graham cracker crust and smooth texture."
   },
   {
@@ -253,6 +268,7 @@
     "dietary": ["Vegetarian"],
     "cookingTime": "15to30",
     "videoPreview": "/assets/videos/video16.mp4",
+    "shortId": "ebMe-IaI1-0",
     "description": "Crusty bread topped with creamy avocado and perfectly poached eggs."
   },
   {
@@ -269,6 +285,7 @@
     "dietary": [],
     "cookingTime": "over60",
     "videoPreview": "/assets/videos/video17.mp4",
+    "shortId": "76iKB2un1h4",
     "description": "A classic French stew with beef braised in red wine, mushrooms, and vegetables."
   },
   {
@@ -285,6 +302,7 @@
     "dietary": [],
     "cookingTime": "under15",
     "videoPreview": "/assets/videos/video18.mp4",
+    "shortId": "mdP-JfdgxMc",
     "description": "A light, umami-rich soup that's a staple in Japanese cuisine."
   },
   {
@@ -301,6 +319,7 @@
     "dietary": ["Gluten-Free"],
     "cookingTime": "30to60",
     "videoPreview": "/assets/videos/video19.mp4",
+    "shortId": "vGr_12B-g8A",
     "description": "Colorful bell peppers stuffed with a savory mixture of rice, meat, and vegetables."
   },
   {
@@ -317,6 +336,7 @@
     "dietary": ["Vegetarian", "Vegan"],
     "cookingTime": "30to60",
     "videoPreview": "/assets/videos/video20.mp4",
+    "shortId": "nFqSJQlvWRw",
     "description": "Crunchy, customizable granola that's perfect for breakfast or snacking."
   },
   {
