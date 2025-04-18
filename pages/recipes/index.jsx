@@ -471,6 +471,120 @@ export default function RecipesList({ cuisineTypeFromPath }) {
                     </div>
                   </div>
 
+                  {/* Active Filters Area */}
+                  {(currentFilters.cuisineType.length > 0 ||
+                    currentFilters.dietary.length > 0 ||
+                    currentFilters.mealType.length > 0 ||
+                    currentFilters.difficulty ||
+                    currentFilters.cookingTime) && (
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {/* Show cuisine type filters */}
+                      {currentFilters.cuisineType.map((cuisine) => (
+                        <button
+                          key={`cuisine-${cuisine}`}
+                          onClick={() => {
+                            const newFilters = {...currentFilters};
+                            newFilters.cuisineType = newFilters.cuisineType.filter(
+                              c => c !== cuisine && c !== cuisine.toLowerCase()
+                            );
+                            handleFilterChange(newFilters);
+                          }}
+                          disabled={cuisine.toLowerCase() === cuisineTypeFromPath?.toLowerCase()}
+                          className={`inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium
+                            ${cuisine.toLowerCase() === cuisineTypeFromPath?.toLowerCase()
+                              ? "bg-primary/20 text-primary/70 cursor-not-allowed"
+                              : "bg-primary/10 text-primary hover:bg-primary/20"
+                            }`}
+                        >
+                          {cuisine}
+                          {cuisine.toLowerCase() !== cuisineTypeFromPath?.toLowerCase() && (
+                            <X className="ml-1.5 h-3.5 w-3.5" />
+                          )}
+                        </button>
+                      ))}
+                      
+                      {/* Show dietary filters */}
+                      {currentFilters.dietary.map((diet) => (
+                        <button
+                          key={`diet-${diet}`}
+                          onClick={() => {
+                            const newFilters = {...currentFilters};
+                            newFilters.dietary = newFilters.dietary.filter(d => d !== diet);
+                            handleFilterChange(newFilters);
+                          }}
+                          className="inline-flex items-center px-3 py-1.5 bg-green-100 text-green-800 rounded-full text-sm font-medium hover:bg-green-200"
+                        >
+                          {diet}
+                          <X className="ml-1.5 h-3.5 w-3.5" />
+                        </button>
+                      ))}
+                      
+                      {/* Show meal type filters */}
+                      {currentFilters.mealType.map((meal) => (
+                        <button
+                          key={`meal-${meal}`}
+                          onClick={() => {
+                            const newFilters = {...currentFilters};
+                            newFilters.mealType = newFilters.mealType.filter(m => m !== meal);
+                            handleFilterChange(newFilters);
+                          }}
+                          className="inline-flex items-center px-3 py-1.5 hover:text-primary text-primary rounded-full text-sm font-medium "
+                        >
+                          {meal}
+                          <X className="ml-1.5 h-3.5 w-3.5" />
+                        </button>
+                      ))}
+                      
+                      {/* Show difficulty filter if set */}
+                      {currentFilters.difficulty && (
+                        <button
+                          onClick={() => {
+                            const newFilters = {...currentFilters};
+                            newFilters.difficulty = "";
+                            handleFilterChange(newFilters);
+                          }}
+                          className="inline-flex items-center px-3 py-1.5 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium hover:bg-yellow-200"
+                        >
+                          {currentFilters.difficulty}
+                          <X className="ml-1.5 h-3.5 w-3.5" />
+                        </button>
+                      )}
+                      
+                      {/* Show cooking time filter if set */}
+                      {currentFilters.cookingTime && (
+                        <button
+                          onClick={() => {
+                            const newFilters = {...currentFilters};
+                            newFilters.cookingTime = "";
+                            handleFilterChange(newFilters);
+                          }}
+                          className="inline-flex items-center px-3 py-1.5 bg-purple-100 text-purple-800 rounded-full text-sm font-medium hover:bg-purple-200"
+                        >
+                          {currentFilters.cookingTime === "under15" ? "Under 15 min" :
+                           currentFilters.cookingTime === "15to30" ? "15-30 min" :
+                           currentFilters.cookingTime === "30to60" ? "30-60 min" : "Over 60 min"}
+                          <X className="ml-1.5 h-3.5 w-3.5" />
+                        </button>
+                      )}
+                      
+                      {/* Clear all filters button */}
+                      {!cuisineTypeFromPath || 
+                       currentFilters.dietary.length > 0 || 
+                       currentFilters.mealType.length > 0 || 
+                       currentFilters.difficulty || 
+                       currentFilters.cookingTime || 
+                       currentFilters.cuisineType.length > (cuisineTypeFromPath ? 1 : 0) ? (
+                        <button
+                          onClick={handleClearFilters}
+                          className="inline-flex items-center px-3 py-1.5 bg-gray-100 text-gray-800 rounded-full text-sm font-medium hover:bg-gray-200"
+                        >
+                          Clear all
+                          <X className="ml-1.5 h-3.5 w-3.5" />
+                        </button>
+                      ) : null}
+                    </div>
+                  )}
+
                   <div className="flex flex-col space-y-6">
                     {filteredRecipes.map((recipe) => (
                       <div

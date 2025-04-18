@@ -85,7 +85,7 @@ const Navbar = () => {
     "American",
     "Brazilian",
     "Caribbean",
-    "African"
+    "African",
   ];
 
   return (
@@ -93,7 +93,7 @@ const Navbar = () => {
       {/* Top mini-nav (sign in, etc) - adjusted to match eBay spacing */}
       <div className="hidden sm:block bg-white py-2 text-sm border-b border-gray-200">
         <div className="container mx-auto flex justify-between items-center px-5">
-          <div>
+          <div className="flex items-center">
             <span className="text-gray-700 mr-1">Hi!</span>
             <Link href="/signin" className="text-primary hover:text-blue-800">
               Sign in
@@ -102,9 +102,19 @@ const Navbar = () => {
             <Link href="/register" className="text-primary hover:text-blue-800">
               register
             </Link>
+            <div className="flex items-center  ml-10 ">
+              <Link href={"/"} className=" text-primary border-r border-primary px-2">
+                Trending Recipes
+              </Link>
+              <Link href={"/top-10-recipes"} className=" text-primary border-r border-primary px-2">
+                Top 10 Picks
+              </Link>
+              <Link href={"/"} className=" text-primary border-r border-primary px-2">
+                Most Watched
+              </Link>
+            </div>
           </div>
           <div className="flex items-center space-x-5">
-        
             <Link
               href="/meal-planner"
               className="text-gray-700 hover:text-blue-600"
@@ -283,7 +293,6 @@ const Navbar = () => {
       <div className="hidden md:block bg-white border-t border-gray-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-start lg:justify-center space-x-4 sm:space-x-6 py-2 text-xs sm:text-sm overflow-x-auto">
-         
             <Link
               href="/recipes?filter=breakfast"
               className="text-gray-700 hover:text-primary whitespace-nowrap"
